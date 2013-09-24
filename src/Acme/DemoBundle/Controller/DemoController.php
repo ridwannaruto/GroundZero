@@ -18,6 +18,7 @@ class DemoController extends Controller
      */
     public function indexAction()
     {
+        echo "first commit";
         return array();
     }
 
