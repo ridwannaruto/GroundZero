@@ -23,7 +23,7 @@ class UserType extends AbstractType
                 'second_name' => 'confirm',
                 'type' => 'password',
             ))
-            ->add('firstname','text')
+            ->add('firstname','text')=
             ->add('lastname','text')
             ->add('email','email')
             ->add('gender','choice',array(
