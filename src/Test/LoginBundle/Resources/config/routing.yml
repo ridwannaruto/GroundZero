@@ -1,0 +1,3 @@
+test_login_homepage:
+    pattern:  /Login
+    defaults: { _controller: TestLoginBundle:Default:index }
