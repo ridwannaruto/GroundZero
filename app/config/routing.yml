@@ -1,0 +1,4 @@
+volunteer_management_system_registration:
+    resource: "@VolunteerManagementSystemRegistrationBundle/Resources/config/routing.yml"
+    prefix:   /
+
