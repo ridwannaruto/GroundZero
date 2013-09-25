@@ -64,3 +64,6 @@ e9dbb4,::1,POST,http://localhost/GroundZero/web/app_dev.php/register/create,1380
 518821,::1,GET,http://localhost/GroundZero/web/app_dev.php/register,1380090283,
 6dea84,::1,POST,http://localhost/GroundZero/web/app_dev.php/register/create,1380090312,
 c32eba,::1,POST,http://localhost/GroundZero/web/app_dev.php/register/create,1380090355,
+22ff54,::1,GET,http://localhost/GroundZero/web/app_dev.php/register,1380090636,
+ef80bb,::1,GET,http://localhost/GroundZero/web/app_dev.php/register/create,1380090659,
+adf19e,::1,POST,http://localhost/GroundZero/web/app_dev.php/register/create,1380090659,
