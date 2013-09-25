@@ -1,0 +1,11 @@
+volunteer_management_system_registration_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Default:index }
+
+account_register:
+   pattern:  /register
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Registration:register }
+
+account_create:
+   pattern:  /register/create
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Submission:submission }

@@ -133,6 +133,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // volunteer_management_system_registration_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_registration_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/register')) {
+            // account_register
+            if ($pathinfo === '/register') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'account_register',);
+            }
+
+            // account_create
+            if ($pathinfo === '/register/create') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\SubmissionController::submissionAction',  '_route' => 'account_create',);
+            }
+
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
