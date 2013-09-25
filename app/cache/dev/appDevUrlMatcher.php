@@ -133,11 +133,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // volunteer_management_system_registration_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_registration_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\DefaultController::indexAction',));
-        }
-
         if (0 === strpos($pathinfo, '/register')) {
             // account_register
             if ($pathinfo === '/register') {
@@ -149,6 +144,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\SubmissionController::submissionAction',  '_route' => 'account_create',);
             }
 
+        }
+
+        // welcome
+        if ($pathinfo === '/homepage') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\HomepageController::welcomeAction',  '_route' => 'welcome',);
         }
 
         // _welcome
