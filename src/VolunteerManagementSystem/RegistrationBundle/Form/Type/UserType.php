@@ -23,13 +23,13 @@ class UserType extends AbstractType
             'attr'   =>  array(
                 'class'   => 'login',
                 'placeholder' => "enter a unique user name",
-                'newline' => 'true'
-                
+                'newline' => 'true',
+                'widget' => 'text',
             
             )));
                 
            $builder      
-                
+            
             ->add('password','repeated',array(
                 'first_name' => 'Password',
                 'first_options'=> array (
@@ -81,13 +81,14 @@ class UserType extends AbstractType
             ))                   
              ->add('gender','choice',array(
                 'choices' => array( 'm' => 'Male', 'f' => 'Female')))
+                   
             ->add('dateOfBirth','date',array(
                 'input' => 'datetime',
-                'widget' => 'choice',
+                'widget' => 'single_text',
             ));
            $builder
                 
-            ->add('commit','submit', array(
+            ->add('submit','submit', array(
                 'label' => 'Register',
                 'attr' => array(
                     'class' => 'button'

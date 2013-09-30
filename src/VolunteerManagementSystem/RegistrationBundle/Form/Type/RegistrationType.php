@@ -12,9 +12,12 @@ class RegistrationType extends AbstractType
         $builder->add('user', new UserType());
         $builder->add(
             'terms',
-            'checkbox',
-            array('property_path' => 'termsAccepted')
-        );
+            'checkbox',             
+            array('property_path' => 'termsAccepted',
+                   'label'=> 'I accept the terms and conditions'))
+            
+                    
+        ;
     }
 
     public function getName()

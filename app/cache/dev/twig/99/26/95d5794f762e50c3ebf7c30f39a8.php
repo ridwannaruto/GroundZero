@@ -21,17 +21,18 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
     {
         // line 1
         echo "<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset=\"UTF-8\" />
         <title>";
-        // line 5
+        // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 6
+        // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 18
+        // line 19
         echo "      
     </head>
     <body>
@@ -43,7 +44,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
             \t<div class=\"container_12\">
                 \t<div class=\"grid_9\"><br>
                     \t<h2 align=\"center\"><img src=\"";
-        // line 28
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/volma.png"), "html", null, true);
         echo "\" width=\"245\" height=\"100\"></h2>
                     \t<h2 align=\"center\"><span class=\"price\">Volunteer Management System</span></h2>
@@ -88,16 +89,16 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                               
                                 <p>
                                     ";
-        // line 70
-        $this->displayBlock('body', $context, $blocks);
         // line 71
+        $this->displayBlock('body', $context, $blocks);
+        // line 72
         echo "                                        
                                     </p>
                                 
                                 
                                 <p align=\"center\">Developed by<br>
                           <img src=\"";
-        // line 76
+        // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/Footer.png"), "html", null, true);
         echo "\" width=\"190\" height=\"67\"></p></div></div>
                             <div class=\"container_12\"></div>
@@ -110,47 +111,47 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
     </section>
         
         ";
-        // line 86
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 87
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 88
         echo "    </body>
 </html>
 ";
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = array())
     {
         echo "Volma";
     }
 
-    // line 6
+    // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        // line 7
+        // line 8
         echo "       
         <link rel=\"stylesheet\" href=\"";
-        // line 8
+        // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/reset.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\">
         <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/style.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\">
         <link rel=\"stylesheet\" href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/grid.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\"> 
         <script src=\"";
-        // line 11
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery-1.6.2.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
         <script src=\"";
-        // line 12
+        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery.galleriffic.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
         <script src=\"";
-        // line 13
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery.opacityrollover.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>      
 \t
@@ -159,12 +160,12 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 ";
     }
 
-    // line 70
+    // line 71
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 86
+    // line 87
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -181,6 +182,6 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  168 => 86,  163 => 70,  154 => 13,  150 => 12,  146 => 11,  142 => 10,  138 => 9,  134 => 8,  131 => 7,  128 => 6,  122 => 5,  116 => 87,  114 => 86,  101 => 76,  94 => 71,  92 => 70,  47 => 28,  35 => 18,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  169 => 87,  164 => 71,  155 => 14,  151 => 13,  147 => 12,  143 => 11,  139 => 10,  135 => 9,  132 => 8,  129 => 7,  123 => 6,  117 => 88,  115 => 87,  102 => 77,  95 => 72,  93 => 71,  48 => 29,  36 => 19,  34 => 7,  30 => 6,  23 => 1,);
     }
 }
