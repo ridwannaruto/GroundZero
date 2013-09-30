@@ -69,7 +69,7 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
         
         ";
         // line 21
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "emailaddress"), 'row');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "email"), 'row');
         echo "        
         <br><br>
         ";

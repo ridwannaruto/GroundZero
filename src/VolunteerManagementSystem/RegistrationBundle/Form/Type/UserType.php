@@ -64,7 +64,7 @@ class UserType extends AbstractType
                 'placeholder' => "enter your last name"
                 )
             ))
-            ->add('emailaddress','email', array( 
+            ->add('email','email', array( 
             'label'  => 'Email Address',
             'attr'   =>  array(
                 'class'   => 'login',
