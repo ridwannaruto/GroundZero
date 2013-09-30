@@ -18,9 +18,7 @@ class SubmissionController extends Controller{
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $registration = $form->getData();
-            $em->persist($registration->getUser());
-            $em->flush();   
+            
             
             return $this->redirect($this->generateUrl('welcome'));//go to home page
         }

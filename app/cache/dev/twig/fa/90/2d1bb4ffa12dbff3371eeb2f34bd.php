@@ -25,21 +25,31 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
     public function block_title($context, array $blocks = array())
     {
         echo "Volma - Registration";
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = array())
     {
-        // line 6
-        echo "
-";
         // line 7
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        echo " <section class=\"container\">
+    <div class=\"login\">
+      <h1>Register</h1>
+           
+        
+okjoj<br>
+";
+        // line 13
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
+ </div>
+        
+
+  </section>
+
 
 ";
     }
@@ -56,6 +66,6 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  41 => 7,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  46 => 13,  38 => 7,  35 => 6,  29 => 4,);
     }
 }

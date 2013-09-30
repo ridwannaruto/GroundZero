@@ -7,27 +7,44 @@ class __TwigTemplate_c6860668329d1f53002c2c7438505b10 extends Twig_Template
     {
         parent::__construct($env);
 
-        $this->parent = false;
+        $this->parent = $this->env->loadTemplate("::base.html.twig");
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
+            'body' => array($this, 'block_body'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "::base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "<!DOCTYPE html>
-<html>
-<body>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
 
-<h1>You have sucessfully registered</h1>
+    // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        echo "Volma - Registration";
+    }
 
-</body>
-</html>
+    // line 3
+    public function block_stylesheets($context, array $blocks = array())
+    {
+    }
+
+    // line 4
+    public function block_body($context, array $blocks = array())
+    {
+        // line 5
+        echo "
+<h1>Please fill in the form correctly</h1>
 
 ";
-        // line 10
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
     }
 
     public function getTemplateName()
@@ -42,6 +59,6 @@ class __TwigTemplate_c6860668329d1f53002c2c7438505b10 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  30 => 10,  19 => 1,);
+        return array (  44 => 5,  41 => 4,  36 => 3,  30 => 2,);
     }
 }

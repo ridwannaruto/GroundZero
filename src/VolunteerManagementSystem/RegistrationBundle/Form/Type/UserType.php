@@ -17,24 +17,85 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username','text')
+            ->add('username', 'text', array( 
+            'label'  => 'User Name',
+                
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter a unique user name",
+                'newline' => 'true'
+                
+            
+            )));
+                
+           $builder      
+                
             ->add('password','repeated',array(
-                'first_name' => 'password',
-                'second_name' => 'confirm',
-                'type' => 'password',
+                'first_name' => 'Password',
+                'first_options'=> array (
+                    'label'=> 'Password',
+                    'attr' => array(
+                        'placeholder' => 'enter a password with at least 6 characters'
+                    )
+                ),
+                'second_name' => 'Confirm',
+                'second_options' => array(
+                    'label' => 'Confirm Password',
+                    'attr' => array(
+                        'placeholder' => 're-enter your password'
+                    )
+                ),
+                'type' => 'password'
+                
+                    
+                    
+                
             ))
-            ->add('firstname','text')=
-            ->add('lastname','text')
-            ->add('email','email')
-            ->add('gender','choice',array(
+            ->add('firstname','text', array( 
+            'label'  => 'First Name',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your first name")
+            ))
+            ->add('lastname','text', array( 
+            'label'  => 'Last Name',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your last name"
+                )
+            ))
+            ->add('emailaddress','email', array( 
+            'label'  => 'Email Address',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your contact email"
+                )
+                
+            ))
+       
+            ->add('phoneNumber','text', array(
+                'label' => 'Contact Number',
+                'attr'  => array(
+                    'placeholder' => 'enter your mobile number'
+                )
+            ))                   
+             ->add('gender','choice',array(
                 'choices' => array( 'm' => 'Male', 'f' => 'Female')))
-            ->add('phoneNumber','text')
             ->add('dateOfBirth','date',array(
                 'input' => 'datetime',
                 'widget' => 'choice',
-            ))
-            ->add('submit', 'submit');
+            ));
+           $builder
+                
+            ->add('commit','submit', array(
+                'label' => 'Register',
+                'attr' => array(
+                    'class' => 'button'
+                )
+                
+            ));
         ;
+        
     }
     
     /**
