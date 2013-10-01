@@ -6,6 +6,22 @@ account_create:
    pattern:  /register/create
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Submission:submission }
 
+confirm:
+  pattern: /confirm
+  defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Confirm:confirm }
+
+profile:
+   pattern: /profilepage
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Profilepage:profile }
+
 welcome:
    pattern: /homepage
-   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Homepage:welcome }
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Homepage:welcome }
+
+account_login:
+   pattern:  /login
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:login }
+   
+account_logout:
+   pattern:  /loginout
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }

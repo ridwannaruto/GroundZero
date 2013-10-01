@@ -12,6 +12,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
+            'menu' => array($this, 'block_menu'),
             'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -57,26 +58,15 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
         <div class=\"row-1\">
        \t  <div class=\"main\">
             \t<div class=\"container_12\" >
-                \t
-                \t<div class=\"grid_12\" >
-                    \t<nav>
-                            <ul class=\"menu\">
-                           
-                                <li><a href=\"index.html\">Home</a></li>
-                                <li><a href=\"services.html\">Profile</a></li>
-                                       <li><a href=\"services.html\">News Feed</a></li>
-                                <li><a href=\"catalogue.html\">Projects</a></li>
-                             
-                              <li><a href=\"contacts.html\">Contacts</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                \t";
+        // line 40
+        $this->displayBlock('menu', $context, $blocks);
+        // line 55
+        echo "                </div>
              
             </div>
         </div>   \t
-    </header><div class=\"ic\">More Website Templates  @ TemplateMonster.com - August22nd 2011!</div>
-    
+    </header>    
 <!-- content -->
     <section id=\"content\">
         <div class=\"bg-top\">
@@ -160,6 +150,26 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 ";
     }
 
+    // line 40
+    public function block_menu($context, array $blocks = array())
+    {
+        // line 41
+        echo "                \t<div class=\"grid_12\" >
+                    \t<nav>
+                            <ul class=\"menu\">
+                           
+                                <li><a href=\"homepage\">Home</a></li>
+                                <li><a href=\"profilepage\">Profile</a></li>
+                                       <li><a href=\"newspage\">News Feed</a></li>
+                                <li><a href=\"catalogue.html\">Projects</a></li>
+                             
+                              <li><a href=\"contacts.html\">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                       ";
+    }
+
     // line 71
     public function block_body($context, array $blocks = array())
     {
@@ -182,6 +192,6 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  169 => 87,  164 => 71,  155 => 14,  151 => 13,  147 => 12,  143 => 11,  139 => 10,  135 => 9,  132 => 8,  129 => 7,  123 => 6,  117 => 88,  115 => 87,  102 => 77,  95 => 72,  93 => 71,  48 => 29,  36 => 19,  34 => 7,  30 => 6,  23 => 1,);
+        return array (  179 => 87,  174 => 71,  157 => 41,  154 => 40,  145 => 14,  141 => 13,  137 => 12,  133 => 11,  129 => 10,  125 => 9,  122 => 8,  119 => 7,  113 => 6,  107 => 88,  105 => 87,  92 => 77,  85 => 72,  83 => 71,  65 => 55,  63 => 40,  49 => 29,  37 => 19,  35 => 7,  31 => 6,  24 => 1,);
     }
 }

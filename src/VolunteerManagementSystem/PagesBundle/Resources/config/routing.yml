@@ -1,0 +1,19 @@
+welcome:
+   pattern: /homepage
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Homepage:welcome }
+   
+profile:
+   pattern: /profilepage
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Profilepage:profile }
+
+news:
+   pattern: /newspage
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Newspage:news }
+
+login:
+   pattern:  /login
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:login }
+   
+logout:
+   pattern:  /loginout
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }

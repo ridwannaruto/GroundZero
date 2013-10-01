@@ -133,6 +133,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // news
+        if ($pathinfo === '/newspage') {
+            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:Newspage:news',  '_route' => 'news',);
+        }
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // login
+            if ($pathinfo === '/login') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::loginAction',  '_route' => 'login',);
+            }
+
+            // logout
+            if ($pathinfo === '/loginout') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::logoutAction',  '_route' => 'logout',);
+            }
+
+        }
+
         // volunteer_management_system_styles_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_styles_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StylesBundle\\Controller\\DefaultController::indexAction',));
@@ -151,9 +169,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // confirm
+        if ($pathinfo === '/confirm') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\ConfirmController::confirmAction',  '_route' => 'confirm',);
+        }
+
+        // profile
+        if ($pathinfo === '/profilepage') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ProfilepageController::profileAction',  '_route' => 'profile',);
+        }
+
         // welcome
         if ($pathinfo === '/homepage') {
-            return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\HomepageController::welcomeAction',  '_route' => 'welcome',);
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\HomepageController::welcomeAction',  '_route' => 'welcome',);
+        }
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // account_login
+            if ($pathinfo === '/login') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::loginAction',  '_route' => 'account_login',);
+            }
+
+            // account_logout
+            if ($pathinfo === '/loginout') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::logoutAction',  '_route' => 'account_logout',);
+            }
+
         }
 
         // _welcome

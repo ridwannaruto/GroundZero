@@ -11,6 +11,7 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
+            'menu' => array($this, 'block_menu'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -31,88 +32,93 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
         echo "Volma - Registration";
     }
 
-    // line 6
+    // line 5
+    public function block_menu($context, array $blocks = array())
+    {
+    }
+
+    // line 7
     public function block_body($context, array $blocks = array())
     {
-        // line 7
+        // line 8
         echo " <section class=\"container\">
     <div class=\"login\">
       <h1>Register</h1>
         ";
-        // line 10
+        // line 11
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
         ";
-        // line 11
+        // line 12
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
         ";
-        // line 12
+        // line 13
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "username"), 'row');
         echo "        
         <br><br>
         ";
-        // line 14
+        // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "password"), 'row');
         echo "        
         <br><br>
         ";
-        // line 16
+        // line 17
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "firstname"), 'row');
         echo "        
         <br>
         ";
-        // line 18
+        // line 19
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "lastname"), 'row');
         echo "        
         <br><br>
         
         ";
-        // line 21
+        // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "email"), 'row');
         echo "        
         <br><br>
         ";
-        // line 23
+        // line 24
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "phoneNumber"), 'row');
         echo "        
         <br><br>
         ";
-        // line 25
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "gender"), 'label');
         echo "<br>
         ";
-        // line 26
+        // line 27
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "gender"), 'widget');
         echo "
         <br><br>
         ";
-        // line 28
+        // line 29
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "dateOfBirth"), 'label');
         echo "<br>
         ";
-        // line 29
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "dateOfBirth"), 'widget');
         echo "
         <br><br>
         <p align=\"center\">
         ";
-        // line 32
+        // line 33
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "terms"), 'widget');
         echo "
         ";
-        // line 33
+        // line 34
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "terms"), 'label');
         echo "
         <br><br>
         
         ";
-        // line 36
+        // line 37
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "submit"), 'widget');
         echo "
          </p>
         ";
-        // line 38
+        // line 39
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
         
@@ -144,6 +150,6 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  116 => 38,  111 => 36,  105 => 33,  101 => 32,  95 => 29,  91 => 28,  86 => 26,  82 => 25,  77 => 23,  72 => 21,  66 => 18,  61 => 16,  56 => 14,  51 => 12,  47 => 11,  43 => 10,  38 => 7,  35 => 6,  29 => 4,);
+        return array (  122 => 39,  117 => 37,  111 => 34,  107 => 33,  101 => 30,  97 => 29,  92 => 27,  88 => 26,  83 => 24,  78 => 22,  72 => 19,  67 => 17,  62 => 15,  57 => 13,  53 => 12,  49 => 11,  44 => 8,  41 => 7,  36 => 5,  30 => 4,);
     }
 }

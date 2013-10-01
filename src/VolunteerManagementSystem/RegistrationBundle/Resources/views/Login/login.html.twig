@@ -1,0 +1,69 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Login
+{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block body %}
+{% block fos_user_content %}
+<div class="wrapper">
+                                  <article class="grid_12">
+                                    <h3 class="color-1">Our Services List</h3>
+                                    <div class="wrapper">
+                                      <article class="grid_6 alpha">
+                                        <p>
+                                          <figure class="img-indent frame"><img src="{{asset('bundles/volunteermanagementsystemstyles/images/volunteers.jpg')}}" alt="" width="347" height="230" /></figure>
+                                        </p>
+                                        
+                                      </article>
+                                      <div class="extra-wrap">
+                                        <div class="indent-top">
+                                          <ul class="list-1">
+                                            <li class="phone-numb">
+                                                        <h1 class="price">Sign In</h1>
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                              <table width="82%" border="0" cellspacing="0" cellpadding="4" align="center">
+                                                <tr style="vertical-align: top" align="center">
+                                                  <td width="62%" class="StoryContentColor"><h4 class="TitleColor">
+                                                     <form action="{{ path("account_login") }}" method="POST">
+                                                    </h4>
+                                                    {{name}}
+                                                    <h4 class="TitleColor"><strong>User Name</strong>
+
+                                                    <input type="text" id="username" name="username" placeholder="{{ 'username'|trans }}" required="required" />
+                                                    </h4>
+                                                    <p>&nbsp;</p>
+                                                    <h4 class="TitleColor"><strong>password</strong>
+                                                    <input type="password" id="password" name="password" placeholder="{{ 'password'|trans }}" required="required" />
+
+                                                    </h4>
+                                                    <p>&nbsp;</p>
+                                                    <h4 class="TitleColor"><strong>      </strong>
+                                                    <input type="checkbox" id="remember" name="remember" value="on" />
+                                                    <label for="remember">{{ 'remember_me'|trans }}</label>
+                                                     <input type="submit" id="_submit" name="_submit" value="{{ 'submit'|trans }}" />
+                                                     <a href="{{ path("account_register") }}">Sign Up</a>
+                                                     </form>
+                                                    </h4></td>
+                                                </tr>
+                                              </table>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </article>
+                                </div>
+    
+
+    
+
+    
+{% endblock fos_user_content %}
+{% endblock %}
+
+
+
+
