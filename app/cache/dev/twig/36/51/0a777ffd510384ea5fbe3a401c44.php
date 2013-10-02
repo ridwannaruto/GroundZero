@@ -51,7 +51,7 @@ class __TwigTemplate_36510a777ffd510384ea5fbe3a401c44 extends Twig_Template
         // line 9
         echo "<div class=\"wrapper\">
                                   <article class=\"grid_12\">
-                                    <h3 class=\"color-1\">Our Services List</h3>
+                                    
                                     <div class=\"wrapper\">
                                       <article class=\"grid_6 alpha\">
                                         <p>
@@ -78,41 +78,42 @@ class __TwigTemplate_36510a777ffd510384ea5fbe3a401c44 extends Twig_Template
         echo $this->env->getExtension('routing')->getPath("account_login");
         echo "\" method=\"POST\">
                                                     </h4>
-                                                    ";
-        // line 32
-        echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")), "html", null, true);
-        echo "
-                                                    <h4 class=\"TitleColor\"><strong>User Name</strong>
+                                                    
+                                                     <p align = \"right\">
 
                                                     <input type=\"text\" id=\"username\" name=\"username\" placeholder=\"";
         // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("username"), "html", null, true);
         echo "\" required=\"required\" />
                                                     </h4>
-                                                    <p>&nbsp;</p>
-                                                    <h4 class=\"TitleColor\"><strong>password</strong>
+                                                    <br>
+                                                    <br>
                                                     <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"";
         // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("password"), "html", null, true);
         echo "\" required=\"required\" />
-
-                                                    </h4>
-                                                    <p>&nbsp;</p>
-                                                    <h4 class=\"TitleColor\"><strong>      </strong>
+                                                    <br> <br>
                                                     <input type=\"checkbox\" id=\"remember\" name=\"remember\" value=\"on\" />
-                                                    <label for=\"remember\">";
-        // line 45
+                                                     <label for=\"remember\">";
+        // line 42
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("remember_me"), "html", null, true);
-        echo "</label>
-                                                     <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
-        // line 46
+        echo "</label><t> </t>
+                                              <br> <br>
+                                                    <input class =\"button\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("submit"), "html", null, true);
         echo "\" />
+                                                         
+                                                     </p>
+                                                    </h4>
+                                                    <p align=\"center\">
+                                                   Not a Volunteer?
                                                      <a href=\"";
-        // line 47
+        // line 50
         echo $this->env->getExtension('routing')->getPath("account_register");
         echo "\">Sign Up</a>
-                                                     </form>
+                                                    </p> </form>
+                                                                  <br><br>
                                                     </h4></td>
                                                 </tr>
                                               </table>
@@ -143,6 +144,6 @@ class __TwigTemplate_36510a777ffd510384ea5fbe3a401c44 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  113 => 47,  109 => 46,  105 => 45,  96 => 39,  89 => 35,  83 => 32,  78 => 30,  60 => 15,  52 => 9,  46 => 8,  43 => 7,  38 => 5,  31 => 3,);
+        return array (  113 => 50,  104 => 44,  99 => 42,  93 => 39,  86 => 35,  78 => 30,  60 => 15,  52 => 9,  46 => 8,  43 => 7,  38 => 5,  31 => 3,);
     }
 }

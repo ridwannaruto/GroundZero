@@ -3,12 +3,24 @@
 namespace VolunteerManagementSystem\PagesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
-class HomepageController extends Controller{
+class ContactpageController extends Controller{
     
-    public function contactAction(){
-        return $this->render('VolunteerManagementSystemPagesBundle:Contactpage:contactpage.html.twig');
-    }
+    public function contactAction(Request $request){
+         $id = $request->get('id');
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
+
+        $user = $repository->findOneBy(array('id' => $id));
+        if($user){
+           
+           return $this->render('VolunteerManagementSystemPagesBundle:Contactpage:contactpage.html.twig', array('id' => $id));
+       }
+        else{
+            
+            return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig');
+        } }
     
 }
 

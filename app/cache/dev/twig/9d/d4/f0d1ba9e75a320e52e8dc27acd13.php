@@ -11,6 +11,7 @@ class __TwigTemplate_9dd4f0d1ba9e75a320e52e8dc27acd13 extends Twig_Template
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
+            'menu' => array($this, 'block_menu'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -33,10 +34,15 @@ class __TwigTemplate_9dd4f0d1ba9e75a320e52e8dc27acd13 extends Twig_Template
 ";
     }
 
-    // line 7
+    // line 6
+    public function block_menu($context, array $blocks = array())
+    {
+    }
+
+    // line 8
     public function block_body($context, array $blocks = array())
     {
-        // line 8
+        // line 9
         echo "<h1 align = \"center\"> Confirm</h1>
 <p align=\"center\">
 We have sent you an confirmation email to your email address.<br> Please follow the link on it to activate your account.<br> Thank You!</p>
@@ -55,6 +61,6 @@ We have sent you an confirmation email to your email address.<br> Please follow 
 
     public function getDebugInfo()
     {
-        return array (  40 => 8,  37 => 7,  32 => 4,  29 => 3,);
+        return array (  46 => 9,  43 => 8,  38 => 6,  33 => 4,  30 => 3,);
     }
 }

@@ -1,14 +1,23 @@
 welcome:
-   pattern: /homepage
+   pattern: /home
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Homepage:welcome }
    
 profile:
-   pattern: /profilepage
+   pattern: /profile
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Profilepage:profile }
 
 news:
-   pattern: /newspage
+   pattern: /news
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Newspage:news }
+
+projects:
+   pattern: /projects
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Projectspage:projects }
+
+contact:
+   pattern: /contact
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Contactpage:contact }
+
 
 login:
    pattern:  /login

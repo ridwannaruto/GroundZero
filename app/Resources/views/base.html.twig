@@ -39,16 +39,18 @@
             	<div class="container_12" >
                 	{% block menu%}
                 	<div class="grid_12" >
+                            
                     	<nav>
                             <ul class="menu">
                            
-                                <li><a href="homepage">Home</a></li>
-                                <li><a href="profilepage">Profile</a></li>
-                                       <li><a href="newspage">News Feed</a></li>
-                                <li><a href="catalogue.html">Projects</a></li>
+                                <li><a href="home?id={{id}}"{% block selecthome%}{%endblock%}>Home</a></li>
+                                <li><a href="profile?id={{id}} "{% block selectprofile%}{%endblock%}>Profile</a></li>
+                                       <li><a href="news?id={{id}}" {% block selectnews%}{%endblock%}>News Feed</a></li>
+                                <li><a href="projects?id={{id}}"{% block selectprojects%}{%endblock%}>Projects</a></li>
                              
-                              <li><a href="contacts.html">Contacts</a></li>
+                              <li><a href="contact?id={{id}}"{% block selectcontacts%}{%endblock%}>Contacts</a></li>
                             </ul>
+                                
                         </nav>
                     </div>
                        {%endblock%}

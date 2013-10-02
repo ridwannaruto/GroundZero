@@ -134,8 +134,18 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // news
-        if ($pathinfo === '/newspage') {
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:Newspage:news',  '_route' => 'news',);
+        if ($pathinfo === '/news') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);
+        }
+
+        // projects
+        if ($pathinfo === '/projects') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ProjectspageController::projectsAction',  '_route' => 'projects',);
+        }
+
+        // contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ContactpageController::contactAction',  '_route' => 'contact',);
         }
 
         if (0 === strpos($pathinfo, '/login')) {
@@ -175,12 +185,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // profile
-        if ($pathinfo === '/profilepage') {
+        if ($pathinfo === '/profile') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ProfilepageController::profileAction',  '_route' => 'profile',);
         }
 
         // welcome
-        if ($pathinfo === '/homepage') {
+        if ($pathinfo === '/home') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\HomepageController::welcomeAction',  '_route' => 'welcome',);
         }
 

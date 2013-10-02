@@ -8,7 +8,7 @@
 {% block fos_user_content %}
 <div class="wrapper">
                                   <article class="grid_12">
-                                    <h3 class="color-1">Our Services List</h3>
+                                    
                                     <div class="wrapper">
                                       <article class="grid_6 alpha">
                                         <p>
@@ -29,23 +29,27 @@
                                                   <td width="62%" class="StoryContentColor"><h4 class="TitleColor">
                                                      <form action="{{ path("account_login") }}" method="POST">
                                                     </h4>
-                                                    {{name}}
-                                                    <h4 class="TitleColor"><strong>User Name</strong>
+                                                    
+                                                     <p align = "right">
 
                                                     <input type="text" id="username" name="username" placeholder="{{ 'username'|trans }}" required="required" />
                                                     </h4>
-                                                    <p>&nbsp;</p>
-                                                    <h4 class="TitleColor"><strong>password</strong>
+                                                    <br>
+                                                    <br>
                                                     <input type="password" id="password" name="password" placeholder="{{ 'password'|trans }}" required="required" />
-
-                                                    </h4>
-                                                    <p>&nbsp;</p>
-                                                    <h4 class="TitleColor"><strong>      </strong>
+                                                    <br> <br>
                                                     <input type="checkbox" id="remember" name="remember" value="on" />
-                                                    <label for="remember">{{ 'remember_me'|trans }}</label>
-                                                     <input type="submit" id="_submit" name="_submit" value="{{ 'submit'|trans }}" />
+                                                     <label for="remember">{{ 'remember_me'|trans }}</label><t> </t>
+                                              <br> <br>
+                                                    <input class ="button" type="submit" id="_submit" name="_submit" value="{{ 'submit'|trans }}" />
+                                                         
+                                                     </p>
+                                                    </h4>
+                                                    <p align="center">
+                                                   Not a Volunteer?
                                                      <a href="{{ path("account_register") }}">Sign Up</a>
-                                                     </form>
+                                                    </p> </form>
+                                                                  <br><br>
                                                     </h4></td>
                                                 </tr>
                                               </table>

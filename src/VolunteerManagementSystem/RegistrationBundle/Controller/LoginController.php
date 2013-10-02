@@ -29,10 +29,10 @@ class LoginController extends Controller
                 $login->setPassword($password);
                 $session->set('login', $login);
             }
-           return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig', array('fname' => $user-> getFirstname(),'lname' => $user->getLastname(),'email' => $user->getEmail(),'gender' => $user->getGender(),'phone' => $user->getPhoneNumber()));
-        }
+           return $this->redirect($this->generateUrl('welcome',$paramters = array('id' => $user->getId())));
+    }
         else{
-            return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig', array('name' => 'login failed'));
+            return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig', array('name' => 'Login Failed'));
         }
        }else{
            if($session->has('login')){
@@ -46,17 +46,17 @@ class LoginController extends Controller
         $user = $repository->findOneBy(array('username'=>$username,'password'=>$password));
         
         if($user){
-             return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig', array('fname' => $user-> getFirstname(),'lname' => $user->getLastname(),'email' => $user->getEmail(),'gender' => $user->getGender(),'phone' => $user->getPhoneNumber()));
-       
+             return $this->redirect($this->generateUrl('welcome',$paramters = array('id' => $user->getId())));
+    
         }
                
            }
-           return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig',array('name' => '') );
+           return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig',array('id' => '') );
        }
     }
     public function logoutAction(){
         $session=$this->getRequest()->getSession();
         $session->clear();
-        return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig',array('name' => '') );
+        return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig',array('id' => '') );
     }
 }

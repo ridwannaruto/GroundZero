@@ -11,6 +11,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
+            'selecthome' => array($this, 'block_selecthome'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -29,6 +30,12 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
     public function block_title($context, array $blocks = array())
     {
         echo "Volma - Home";
+    }
+
+    // line 4
+    public function block_selecthome($context, array $blocks = array())
+    {
+        echo "class=\"active\" ";
     }
 
     // line 6
@@ -51,6 +58,6 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  38 => 7,  35 => 6,  29 => 3,);
+        return array (  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
     }
 }

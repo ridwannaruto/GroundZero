@@ -11,11 +11,11 @@ confirm:
   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Confirm:confirm }
 
 profile:
-   pattern: /profilepage
+   pattern: /profile
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Profilepage:profile }
 
 welcome:
-   pattern: /homepage
+   pattern: /home
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Homepage:welcome }
 
 account_login:

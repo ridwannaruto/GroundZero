@@ -13,6 +13,11 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'menu' => array($this, 'block_menu'),
+            'selecthome' => array($this, 'block_selecthome'),
+            'selectprofile' => array($this, 'block_selectprofile'),
+            'selectnews' => array($this, 'block_selectnews'),
+            'selectprojects' => array($this, 'block_selectprojects'),
+            'selectcontacts' => array($this, 'block_selectcontacts'),
             'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -61,7 +66,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                 \t";
         // line 40
         $this->displayBlock('menu', $context, $blocks);
-        // line 55
+        // line 57
         echo "                </div>
              
             </div>
@@ -79,16 +84,16 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                               
                                 <p>
                                     ";
-        // line 71
+        // line 73
         $this->displayBlock('body', $context, $blocks);
-        // line 72
+        // line 74
         echo "                                        
                                     </p>
                                 
                                 
                                 <p align=\"center\">Developed by<br>
                           <img src=\"";
-        // line 77
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/Footer.png"), "html", null, true);
         echo "\" width=\"190\" height=\"67\"></p></div></div>
                             <div class=\"container_12\"></div>
@@ -101,9 +106,9 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
     </section>
         
         ";
-        // line 87
+        // line 89
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 88
+        // line 90
         echo "    </body>
 </html>
 ";
@@ -155,27 +160,79 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
     {
         // line 41
         echo "                \t<div class=\"grid_12\" >
+                            
                     \t<nav>
                             <ul class=\"menu\">
                            
-                                <li><a href=\"homepage\">Home</a></li>
-                                <li><a href=\"profilepage\">Profile</a></li>
-                                       <li><a href=\"newspage\">News Feed</a></li>
-                                <li><a href=\"catalogue.html\">Projects</a></li>
+                                <li><a href=\"home?id=";
+        // line 46
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"";
+        $this->displayBlock('selecthome', $context, $blocks);
+        echo ">Home</a></li>
+                                <li><a href=\"profile?id=";
+        // line 47
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo " \"";
+        $this->displayBlock('selectprofile', $context, $blocks);
+        echo ">Profile</a></li>
+                                       <li><a href=\"news?id=";
+        // line 48
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\" ";
+        $this->displayBlock('selectnews', $context, $blocks);
+        echo ">News Feed</a></li>
+                                <li><a href=\"projects?id=";
+        // line 49
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"";
+        $this->displayBlock('selectprojects', $context, $blocks);
+        echo ">Projects</a></li>
                              
-                              <li><a href=\"contacts.html\">Contacts</a></li>
+                              <li><a href=\"contact?id=";
+        // line 51
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"";
+        $this->displayBlock('selectcontacts', $context, $blocks);
+        echo ">Contacts</a></li>
                             </ul>
+                                
                         </nav>
                     </div>
                        ";
     }
 
-    // line 71
+    // line 46
+    public function block_selecthome($context, array $blocks = array())
+    {
+    }
+
+    // line 47
+    public function block_selectprofile($context, array $blocks = array())
+    {
+    }
+
+    // line 48
+    public function block_selectnews($context, array $blocks = array())
+    {
+    }
+
+    // line 49
+    public function block_selectprojects($context, array $blocks = array())
+    {
+    }
+
+    // line 51
+    public function block_selectcontacts($context, array $blocks = array())
+    {
+    }
+
+    // line 73
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 87
+    // line 89
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -192,6 +249,6 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  179 => 87,  174 => 71,  157 => 41,  154 => 40,  145 => 14,  141 => 13,  137 => 12,  133 => 11,  129 => 10,  125 => 9,  122 => 8,  119 => 7,  113 => 6,  107 => 88,  105 => 87,  92 => 77,  85 => 72,  83 => 71,  65 => 55,  63 => 40,  49 => 29,  37 => 19,  35 => 7,  31 => 6,  24 => 1,);
+        return array (  236 => 89,  231 => 73,  226 => 51,  221 => 49,  216 => 48,  211 => 47,  206 => 46,  194 => 51,  187 => 49,  181 => 48,  175 => 47,  169 => 46,  162 => 41,  159 => 40,  150 => 14,  146 => 13,  142 => 12,  138 => 11,  134 => 10,  130 => 9,  127 => 8,  124 => 7,  118 => 6,  112 => 90,  110 => 89,  97 => 79,  90 => 74,  88 => 73,  70 => 57,  68 => 40,  54 => 29,  42 => 19,  40 => 7,  36 => 6,  29 => 1,);
     }
 }
