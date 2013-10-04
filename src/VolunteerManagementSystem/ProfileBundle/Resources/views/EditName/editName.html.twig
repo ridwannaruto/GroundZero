@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}VolunteerManagementSystemProfileBundle:EditName:editName{% endblock %}
+
+{% block body %}
+<div class="inner">
+                               <table width="398" border="0" align="center" cellpadding="0">
+  <tr>
+    <td height="26" colspan="2">Your Profile Information 
+      </td>
+	<td><div align="right"><a href="{{ path("account_logout") }}">logout</a></div></td>
+  </tr>
+  <tr>
+    <td width="129" rowspan="5"><img src="<?php echo $picture ? >" alt="no image found" align="right"/></td>
+   
+        {{form_row(form.firstname)}} 
+        {{form_widget(form.submit)}}
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Last Name:</div></td>
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Gend</div></td>
+
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Email Address:</div></td>
+    
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Contact Number </div></td>
+    
+  </tr>
+</table>
+{% endblock %}

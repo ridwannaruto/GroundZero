@@ -15,7 +15,7 @@ class ProfilepageController extends Controller{
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
            
-           return $this->render('VolunteerManagementSystemPagesBundle:profilepage:profilepage.html.twig', array('id'=>$id,'fname' => $user-> getFirstname(),'lname' => $user->getLastname(),'email' => $user->getEmail(),'gender' => $user->getGender(),'phone' => $user->getPhoneNumber()));
+           return $this->render('VolunteerManagementSystemProfileBundle:Profile:profilepage.html.twig', array('id'=>$id,'user' =>$user,'username' => $user-> getUsername(),'pass' => $user-> getPassword(),'fname' => $user-> getFirstname(),'lname' => $user->getLastname(),'email' => $user->getEmail(),'gender' => $user->getGender(),'phone' => $user->getPhoneNumber(),'DFB'=> $user->getDateOfBirth()));
         }
         else{
             

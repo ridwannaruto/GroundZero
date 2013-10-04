@@ -1,3 +1,7 @@
+volunteer_management_system_profile:
+    resource: "@VolunteerManagementSystemProfileBundle/Resources/config/routing.yml"
+    prefix:   /
+
 volunteer_management_system_pages:
     resource: "@VolunteerManagementSystemPagesBundle/Resources/config/routing.yml"
     prefix:   /

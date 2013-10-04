@@ -133,6 +133,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // volunteer_management_system_profile_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_profile_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\ProfileBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        // edit_name
+        if ($pathinfo === '/editName') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ProfileBundle\\Controller\\EditNameController::editNameAction',  '_route' => 'edit_name',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);

@@ -2867,6 +2867,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle/Resources/views', 'VolunteerManagementSystemRegistration');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\StylesBundle/Resources/views', 'VolunteerManagementSystemStyles');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\PagesBundle/Resources/views', 'VolunteerManagementSystemPages');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ProfileBundle/Resources/views', 'VolunteerManagementSystemProfile');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3320,6 +3321,7 @@ class appDevDebugProjectContainer extends Container
                 'VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\VolunteerManagementSystemRegistrationBundle',
                 'VolunteerManagementSystemStylesBundle' => 'VolunteerManagementSystem\\StylesBundle\\VolunteerManagementSystemStylesBundle',
                 'VolunteerManagementSystemPagesBundle' => 'VolunteerManagementSystem\\PagesBundle\\VolunteerManagementSystemPagesBundle',
+                'VolunteerManagementSystemProfileBundle' => 'VolunteerManagementSystem\\ProfileBundle\\VolunteerManagementSystemProfileBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3715,7 +3717,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.variables' => array(
 
             ),
-            'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
+            'assetic.java.bin' => 'C:\\Program Files\\Java\\jdk1.7.0_25\\bin\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',

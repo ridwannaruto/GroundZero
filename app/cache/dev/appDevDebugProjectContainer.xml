@@ -19,6 +19,7 @@
       <parameter key="VolunteerManagementSystemRegistrationBundle">VolunteerManagementSystem\RegistrationBundle\VolunteerManagementSystemRegistrationBundle</parameter>
       <parameter key="VolunteerManagementSystemStylesBundle">VolunteerManagementSystem\StylesBundle\VolunteerManagementSystemStylesBundle</parameter>
       <parameter key="VolunteerManagementSystemPagesBundle">VolunteerManagementSystem\PagesBundle\VolunteerManagementSystemPagesBundle</parameter>
+      <parameter key="VolunteerManagementSystemProfileBundle">VolunteerManagementSystem\ProfileBundle\VolunteerManagementSystemProfileBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -400,7 +401,7 @@
     <parameter key="assetic.read_from">C:/xampp/htdocs/GroundZero/app/../web</parameter>
     <parameter key="assetic.write_to">C:/xampp/htdocs/GroundZero/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
-    <parameter key="assetic.java.bin">C:\Windows\system32\java.EXE</parameter>
+    <parameter key="assetic.java.bin">C:\Program Files\Java\jdk1.7.0_25\bin\java.EXE</parameter>
     <parameter key="assetic.node.bin">/usr/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
@@ -2661,6 +2662,10 @@
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\PagesBundle/Resources/views</argument>
         <argument>VolunteerManagementSystemPages</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProfileBundle/Resources/views</argument>
+        <argument>VolunteerManagementSystemProfile</argument>
       </call>
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\Acme\DemoBundle/Resources/views</argument>
