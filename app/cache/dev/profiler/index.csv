@@ -851,3 +851,4 @@ b0e2ce,::1,GET,http://localhost/GroundZero/web/app_dev.php/contact?id=16,1380656
 d2bcfa,::1,GET,http://localhost/GroundZero/web/app_dev.php/logout,1380656587,
 4806b2,::1,GET,http://localhost/GroundZero/web/app_dev.php/account_logout,1380656596,
 ae1299,::1,GET,http://localhost/GroundZero/web/app_dev.php/account_logout,1380656596,
+b5cf48,::1,GET,http://localhost:81/GroundZero/web/app_dev.php/register,1381125887,
