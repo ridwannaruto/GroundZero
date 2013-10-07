@@ -56,69 +56,102 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
         // line 13
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "username"), 'row');
         echo "        
-        <br><br>
+        <br>
         ";
         // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "password"), 'row');
         echo "        
         <br><br>
+        
         ";
-        // line 17
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "namewithinitials"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 20
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "firstname"), 'row');
         echo "        
         <br>
         ";
-        // line 19
+        // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "lastname"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "nic"), 'row');
         echo "        
         <br><br>
         
         ";
-        // line 22
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "email"), 'row');
-        echo "        
-        <br><br>
-        ";
-        // line 24
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "phoneNumber"), 'row');
-        echo "        
-        <br><br>
-        ";
-        // line 26
+        // line 27
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "gender"), 'label');
         echo "<br>
         ";
-        // line 27
+        // line 28
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "gender"), 'widget');
         echo "
-        <br><br>
+        <br>
         ";
-        // line 29
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "dateOfBirth"), 'label');
         echo "<br>
         ";
-        // line 30
+        // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "dateOfBirth"), 'widget');
         echo "
         <br><br>
+        
+        ";
+        // line 34
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "email"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 36
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "mobilenumber"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 38
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "phoneNumber"), 'row');
+        echo "        
+        <br><br>
+        
+        ";
+        // line 41
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "address"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "city"), 'row');
+        echo "        
+        <br>
+        ";
+        // line 45
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "country"), 'row');
+        echo "        
+        <br><br>
         <p align=\"center\">
         ";
-        // line 33
+        // line 48
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "terms"), 'widget');
         echo "
         ";
-        // line 34
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "terms"), 'label');
         echo "
         <br><br>
         
         ";
-        // line 37
+        // line 52
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "submit"), 'widget');
         echo "
          </p>
         ";
-        // line 39
+        // line 54
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
         
@@ -150,6 +183,6 @@ class __TwigTemplate_fa902d1bb4ffa12dbff3371eeb2f34bd extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  122 => 39,  117 => 37,  111 => 34,  107 => 33,  101 => 30,  97 => 29,  92 => 27,  88 => 26,  83 => 24,  78 => 22,  72 => 19,  67 => 17,  62 => 15,  57 => 13,  53 => 12,  49 => 11,  44 => 8,  41 => 7,  36 => 5,  30 => 4,);
+        return array (  155 => 54,  150 => 52,  144 => 49,  140 => 48,  134 => 45,  129 => 43,  124 => 41,  118 => 38,  113 => 36,  108 => 34,  102 => 31,  98 => 30,  93 => 28,  89 => 27,  83 => 24,  78 => 22,  73 => 20,  68 => 18,  62 => 15,  57 => 13,  53 => 12,  49 => 11,  44 => 8,  41 => 7,  36 => 5,  30 => 4,);
     }
 }
