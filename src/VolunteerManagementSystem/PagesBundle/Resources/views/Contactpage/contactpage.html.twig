@@ -4,6 +4,12 @@
 {% block selectcontacts %} class="active" {%endblock%}
 
 {% block body %}
-Contacts
-
+    {% for res in result %}
+        <li>{{ res['firstname'] }}</li>
+        <li>{{ res['lastname'] }}</li>
+        <li>{{ res['email'] }}</li>
+        <li>{{ res['mobilenumber'] }}</li>
+        <li>{{ res['accesslevel'] }}</li>
+        <br>
+    {% endfor %}
 {% endblock %}
