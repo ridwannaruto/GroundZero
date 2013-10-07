@@ -1,7 +1,0 @@
-volunteer_management_system_profile_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: VolunteerManagementSystemProfileBundle:Default:index }
-
-edit_name:
-    pattern: /editName
-    defaults: { _controller: VolunteerManagementSystemProfileBundle:EditName:editName }

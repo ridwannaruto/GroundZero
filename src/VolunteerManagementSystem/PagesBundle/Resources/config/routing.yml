@@ -26,3 +26,12 @@ login:
 logout:
    pattern:  /loginout
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }
+edit_profile:
+   pattern: /edit_profile
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editProfile }
+  
+account_save:
+   pattern:  /edit/save
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:save }
+   
+

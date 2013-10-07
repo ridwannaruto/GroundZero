@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+{% block title %}Volma - Registration{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block body %}
+
+<h1 align ="center"> Please fill the form in the correct format </h1>
+ <section class="container">
+    <div class="login">
+      <h1>Register</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{form_row(form.user.username)}}        
+        <br><br>
+        {{form_row(form.user.password)}}        
+        <br><br>
+        {{form_row(form.user.firstname)}}        
+        <br>
+        {{form_row(form.user.lastname)}}        
+        <br><br>
+        
+        {{form_row(form.user.email)}}        
+        <br><br>
+        {{form_row(form.user.phoneNumber)}}        
+        <br><br>
+        {{form_label(form.user.gender)}}<br>
+        {{form_widget(form.user.gender)}}
+        <br><br>
+        {{form_label(form.user.dateOfBirth)}}<br>
+        {{form_widget(form.user.dateOfBirth)}}
+        <br><br>
+        <p align="center">
+        {{form_widget(form.terms)}}
+        {{form_label(form.terms)}}
+        <br><br>
+        
+        {{form_widget(form.user.submit)}}
+         </p>
+        {{ form_end(form) }}
+        
+        
+        
+        
+        
+ 
+        
+ 
+    </div>
+        
+
+  </section>
+
+
+{% endblock %}
+
