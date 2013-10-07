@@ -133,6 +133,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // _track_record
+        if ($pathinfo === '/TrackRecord') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\TrackRecordController::TrackRecordAction',  '_route' => '_track_record',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);

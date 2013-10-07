@@ -19,6 +19,7 @@
       <parameter key="VolunteerManagementSystemRegistrationBundle">VolunteerManagementSystem\RegistrationBundle\VolunteerManagementSystemRegistrationBundle</parameter>
       <parameter key="VolunteerManagementSystemStylesBundle">VolunteerManagementSystem\StylesBundle\VolunteerManagementSystemStylesBundle</parameter>
       <parameter key="VolunteerManagementSystemPagesBundle">VolunteerManagementSystem\PagesBundle\VolunteerManagementSystemPagesBundle</parameter>
+      <parameter key="VolunteerManagementSystemReportGenerationBundle">VolunteerManagementSystem\ReportGenerationBundle\VolunteerManagementSystemReportGenerationBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -2218,6 +2219,7 @@
           <call method="setEntityNamespaces">
             <argument type="collection">
               <argument key="VolunteerManagementSystemRegistrationBundle">VolunteerManagementSystem\RegistrationBundle\Entity</argument>
+              <argument key="VolunteerManagementSystemReportGenerationBundle">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2260,6 +2262,19 @@
                     </service>
                   </argument>
                   <argument>VolunteerManagementSystem\RegistrationBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -2661,6 +2676,10 @@
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\PagesBundle/Resources/views</argument>
         <argument>VolunteerManagementSystemPages</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle/Resources/views</argument>
+        <argument>VolunteerManagementSystemReportGeneration</argument>
       </call>
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\Acme\DemoBundle/Resources/views</argument>
