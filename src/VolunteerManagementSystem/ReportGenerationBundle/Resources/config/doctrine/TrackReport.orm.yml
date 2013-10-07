@@ -1,0 +1,32 @@
+VolunteerManagementSystem\ReportGenerationBundle\Entity\TrackReport:
+    type: entity
+    table: null
+    repositoryClass: VolunteerManagementSystem\ReportGenerationBundle\Entity\TrackReportRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        userId:
+            type: integer
+            column: UserId
+        joinedDate:
+            type: date
+            column: JoinedDate
+        overallRating:
+            type: float
+            column: OverallRating
+        totalWeight:
+            type: integer
+            column: TotalWeight
+        eventHistory:
+            type: array
+            column: EventHistory
+        comments:
+            type: array
+            column: Comments
+        workshopsAttended:
+            type: array
+            column: WorkshopsAttended
+    lifecycleCallbacks: {  }

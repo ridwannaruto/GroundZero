@@ -557,23 +557,27 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity'));
         $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $e->addDriver($d, 'VolunteerManagementSystem\\RegistrationBundle\\Entity');
+        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity'));
+        $e->setGlobalBasename('mapping');
 
-        $f = new \Doctrine\ORM\Configuration();
-        $f->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity'));
-        $f->setMetadataCacheImpl($a);
-        $f->setQueryCacheImpl($b);
-        $f->setResultCacheImpl($c);
-        $f->setMetadataDriverImpl($e);
-        $f->setProxyDir('C:/xampp/htdocs/GroundZero/app/cache/dev/doctrine/orm/Proxies');
-        $f->setProxyNamespace('Proxies');
-        $f->setAutoGenerateProxyClasses(true);
-        $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-        $f->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
-        $f->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
+        $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
+        $f->addDriver($d, 'VolunteerManagementSystem\\RegistrationBundle\\Entity');
+        $f->addDriver($e, 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity');
 
-        $this->services['doctrine.orm.default_entity_manager'] = $instance = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
+        $g = new \Doctrine\ORM\Configuration();
+        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity'));
+        $g->setMetadataCacheImpl($a);
+        $g->setQueryCacheImpl($b);
+        $g->setResultCacheImpl($c);
+        $g->setMetadataDriverImpl($f);
+        $g->setProxyDir('C:/xampp/htdocs/GroundZero/app/cache/dev/doctrine/orm/Proxies');
+        $g->setProxyNamespace('Proxies');
+        $g->setAutoGenerateProxyClasses(true);
+        $g->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $g->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
+        $g->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
+
+        $this->services['doctrine.orm.default_entity_manager'] = $instance = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $g);
 
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
 
@@ -2870,6 +2874,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle/Resources/views', 'VolunteerManagementSystemRegistration');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\StylesBundle/Resources/views', 'VolunteerManagementSystemStyles');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\PagesBundle/Resources/views', 'VolunteerManagementSystemPages');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle/Resources/views', 'VolunteerManagementSystemReportGeneration');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3323,6 +3328,7 @@ class appDevDebugProjectContainer extends Container
                 'VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\VolunteerManagementSystemRegistrationBundle',
                 'VolunteerManagementSystemStylesBundle' => 'VolunteerManagementSystem\\StylesBundle\\VolunteerManagementSystemStylesBundle',
                 'VolunteerManagementSystemPagesBundle' => 'VolunteerManagementSystem\\PagesBundle\\VolunteerManagementSystemPagesBundle',
+                'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\VolunteerManagementSystemReportGenerationBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
