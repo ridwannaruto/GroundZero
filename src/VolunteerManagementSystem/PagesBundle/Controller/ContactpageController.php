@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ContactpageController extends Controller{
     
     public function contactAction(Request $request){
-         $id = $request->get('id');
+        $id = $request->get('id');
         $em = $this->getDoctrine()->getEntityManager();
         $repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
 

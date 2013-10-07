@@ -64,6 +64,51 @@ class UserType extends AbstractType
                 'placeholder' => "enter your last name"
                 )
             ))
+            ->add('namewithinitials','text', array( 
+            'label'  => 'Name with Initials',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your name with the initials"
+                )
+            ))
+             ->add('nic','text', array( 
+            'label'  => 'NIC',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your NIC number"
+                )
+            ))      
+            ->add('mobilenumber','text', array( 
+            'label'  => 'Mobile Number',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your mobile number"
+                )
+            ))
+            ->add('accesslevel','hidden', array( 
+                'data' => 'Volunteer'
+            ))
+                   ->add('address','text', array( 
+            'label'  => 'Address',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your address"
+                )
+            ))
+                   ->add('city','text', array( 
+            'label'  => 'City',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your city"
+                )
+            ))
+                   ->add('country','text', array( 
+            'label'  => 'Country',
+            'attr'   =>  array(
+                'class'   => 'login',
+                'placeholder' => "enter your country"
+                )
+            ))
             ->add('email','email', array( 
             'label'  => 'Email Address',
             'attr'   =>  array(
@@ -76,7 +121,7 @@ class UserType extends AbstractType
             ->add('phoneNumber','text', array(
                 'label' => 'Contact Number',
                 'attr'  => array(
-                    'placeholder' => 'enter your mobile number'
+                    'placeholder' => 'enter your telephone number'
                 )
             ))                   
              ->add('gender','choice',array(

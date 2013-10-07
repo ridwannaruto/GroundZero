@@ -11,23 +11,38 @@
         {{ form_start(form) }}
         {{ form_errors(form) }}
         {{form_row(form.user.username)}}        
-        <br><br>
+        <br>
         {{form_row(form.user.password)}}        
         <br><br>
+        
+        {{form_row(form.user.namewithinitials)}}        
+        <br>
         {{form_row(form.user.firstname)}}        
         <br>
         {{form_row(form.user.lastname)}}        
+        <br>
+        {{form_row(form.user.nic)}}        
+        <br><br>
+        
+        {{form_label(form.user.gender)}}<br>
+        {{form_widget(form.user.gender)}}
+        <br>
+        {{form_label(form.user.dateOfBirth)}}<br>
+        {{form_widget(form.user.dateOfBirth)}}
         <br><br>
         
         {{form_row(form.user.email)}}        
-        <br><br>
+        <br>
+        {{form_row(form.user.mobilenumber)}}        
+        <br>
         {{form_row(form.user.phoneNumber)}}        
         <br><br>
-        {{form_label(form.user.gender)}}<br>
-        {{form_widget(form.user.gender)}}
-        <br><br>
-        {{form_label(form.user.dateOfBirth)}}<br>
-        {{form_widget(form.user.dateOfBirth)}}
+        
+        {{form_row(form.user.address)}}        
+        <br>
+        {{form_row(form.user.city)}}        
+        <br>
+        {{form_row(form.user.country)}}        
         <br><br>
         <p align="center">
         {{form_widget(form.terms)}}
