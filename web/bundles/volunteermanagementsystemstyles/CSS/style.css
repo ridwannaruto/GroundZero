@@ -274,7 +274,7 @@ div.content a, div.navigation a {text-decoration: none;display:block;position:re
 div.content a img, div.navigation a img {position:relative;	z-index:1}
 div.content a span, div.navigation a span {display:block;	width:140px;	height:121px;	background:#000;	position:absolute;	left:0;	top:0;	z-index:2}
 div.content a span.selected,
-div.navigation a span.selected {display:none !important}
+div.navigation a span.selected {display:none !important; background:#000;}
 div.content a:focus, div.content a:hover, div.content a:active {text-decoration: underline}
 div.controls {}
 div.controls a {padding: 0px}

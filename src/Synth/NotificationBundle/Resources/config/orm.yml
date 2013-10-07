@@ -1,0 +1,7 @@
+services:
+    synth_notification.notification_manager.default:
+        class: %synth_notification.notification_manager.class%
+        arguments:
+            - @service_container
+            - @doctrine.orm.entity_manager
+            - %synth_notification.notification.class%

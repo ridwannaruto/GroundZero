@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Volma{% endblock %}</title>
-        {% block stylesheets %}
+        
        
         <link rel="stylesheet" href="{{asset('bundles/volunteermanagementsystemstyles/CSS/reset.css')}}" type="text/css" media="screen">
         <link rel="stylesheet" href="{{asset('bundles/volunteermanagementsystemstyles/CSS/style.css')}}" type="text/css" media="screen">
@@ -13,9 +13,10 @@
         <script src="{{asset('bundles/volunteermanagementsystemstyles/JS/jquery.galleriffic.js')}}" type="text/javascript"></script>
         <script src="{{asset('bundles/volunteermanagementsystemstyles/JS/jquery.opacityrollover.js')}}" type="text/javascript"></script>      
 	
-   
+    {% block stylesheets %}
 
-{% endblock %}
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
       
     </head>
     <body>
@@ -86,6 +87,5 @@
        
     </section>
         
-        {% block javascripts %}{% endblock %}
     </body>
 </html>
