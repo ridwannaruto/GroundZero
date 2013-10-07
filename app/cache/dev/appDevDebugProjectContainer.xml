@@ -2252,11 +2252,13 @@
               <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false">
                 <call method="addDriver">
                   <argument type="service">
-                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                      <argument type="service" id="annotation_reader"/>
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
                       <argument type="collection">
-                        <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\RegistrationBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\RegistrationBundle\Resources\config\doctrine">VolunteerManagementSystem\RegistrationBundle\Entity</argument>
                       </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
                     </service>
                   </argument>
                   <argument>VolunteerManagementSystem\RegistrationBundle\Entity</argument>
