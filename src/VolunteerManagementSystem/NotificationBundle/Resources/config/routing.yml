@@ -1,3 +1,6 @@
 volunteer_management_system_notification_homepage:
     pattern:  /email
     defaults: { _controller: VolunteerManagementSystemNotificationBundle:Email:send }
+just:
+    pattern:  /just
+    defaults: { _controller: VolunteerManagementSystemNotificationBundle:Default:index }

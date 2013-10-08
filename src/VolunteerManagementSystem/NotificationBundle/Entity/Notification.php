@@ -32,7 +32,7 @@ class Notification
     /**
      * @var array
      */
-    private $users;
+    private $userid;
 
     /**
      * @var string
@@ -125,9 +125,9 @@ class Notification
      * @param array $users
      * @return Notification
      */
-    public function setUsers($users)
+    public function setUserid($users)
     {
-        $this->users = $users;
+        $this->userid = $users;
     
         return $this;
     }
@@ -137,7 +137,7 @@ class Notification
      *
      * @return array 
      */
-    public function getUsers()
+    public function getUserid()
     {
         return $this->users;
     }

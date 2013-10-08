@@ -30,8 +30,18 @@
 <p align ="justify">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
 <p> <div class="inner">
  <table width="398" border="10" align="center" cellpadding="0">
-   
-        <li><strong>{{ result['name'] }}</strong><br>{{result['details']}}</li>
+   {% for n in notify %}
+        <p>
+        <section class="container">
+        <div class="notify" width="500px">
+        <strong>{{n.getName()}}</strong><br>
+        <strong>Details: </strong><p>{{ n.getDetails() }}</p><br>
+        <strong>Project: </strong>{{ n.getProject() }}<br>       
+        <strong>Notified Date: </strong>{{ n.getDate|date('Y-m-d') }}
+        </div></section>
+        </p>
+    {% endfor %}
+        
        
 </table></div></p>
 <p> </p>

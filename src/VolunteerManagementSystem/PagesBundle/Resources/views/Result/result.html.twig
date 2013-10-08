@@ -5,26 +5,28 @@
 
 {% block body %}
 <section class="container">
-    <div class="login">
+    <div class="notify">
         <h1>Search Volunteers</h1>
-     <p align="center">   
+       
    <strong> {{ form_start(form) }}
-        {{ form_errors(form) }}</strong><br>
-        {{form_row(form.firstname)}}   
-        </p><p align="right">
+        {{ form_errors(form) }}</strong><t>
+<p align="center">         
+{{form_widget(form.firstname)}}   
+        
         {{form_widget(form.submit)}}
     {{ form_end(form) }}
       </p>
        </div></section>
        <section class="container">
-    <div class="login">
+    <div class="notify">
+        <table width=90%>
         <h1>Search Reults</h1>
     {% for res in result %}
-        <p>
-        <strong>{{ res.getFirstname() }}</strong><br>{{ res.getLastname() }}<br>
-        {{ res.getEmail() }}<br>
-        {{ res.getMobilenumber() }}<br>
-        {{ res.getAccesslevel() }}</p>
-{% endfor %}  
+        <tr><td>
+        <strong>{{ res.getFirstname() }}&nbsp;{{ res.getLastname() }}</strong><br></td><td>
+        {{ res.getEmail() }}</td><td>
+        {{ res.getMobilenumber() }}</td><td>
+        {{ res.getAccesslevel() }}</td></tr>
+{% endfor %}  </table>
 </div></section>
 {% endblock %}

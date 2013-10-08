@@ -15,8 +15,8 @@ VolunteerManagementSystem\NotificationBundle\Entity\Notification:
             type: text
         date:
             type: date
-        users:
-            type: array
+        userid:
+            type: integer
         project:
             type: string
             length: 255
