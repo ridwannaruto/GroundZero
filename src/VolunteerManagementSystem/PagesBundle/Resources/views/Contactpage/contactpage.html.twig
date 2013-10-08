@@ -4,12 +4,18 @@
 {% block selectcontacts %} class="active" {%endblock%}
 
 {% block body %}
+     <p align="center">   
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{form_row(form.firstname)}}   
+        {{form_widget(form.submit)}}
+    {{ form_end(form) }}
+      </p>
+       
     {% for res in result %}
-        <li>{{ res['firstname'] }}</li>
-        <li>{{ res['lastname'] }}</li>
-        <li>{{ res['email'] }}</li>
-        <li>{{ res['mobilenumber'] }}</li>
-        <li>{{ res['accesslevel'] }}</li>
-        <br>
-    {% endfor %}
+        {{ res['firstname'] }}&nbsp;{{ res['lastname'] }}&nbsp;&nbsp;
+        {{ res['email'] }}&nbsp;&nbsp;
+        {{ res['mobilenumber'] }}&nbsp;&nbsp;
+        {{ res['accesslevel'] }}<br>
+    {% endfor %}  
 {% endblock %}
