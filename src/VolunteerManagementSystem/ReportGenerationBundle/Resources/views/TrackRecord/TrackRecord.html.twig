@@ -1,7 +1,46 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}VolunteerManagementSystemReportGenerationBundle:TrackRecord:TrackRecord{% endblock %}
+{% block title %}Volma - Track Record{% endblock %}
 
 {% block body %}
-<h1>Welcome to the TrackRecord:TrackRecord page</h1>
+<h1>Track Record: {{fname}}</h1>
+<br><br>Name:</t>
+
+
+<div class="inner">
+    <table width="398" border="0" align="center" cellpadding="0">
+        <tr>
+            <td height="26" colspan="2">Volunteer Track Rcord
+            </td>
+            
+        </tr>
+        <tr>
+            
+            <td valign="top"><div align="left">Name:{{fname}} {{lname}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Joined date:{{jdate}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Overall Rating:{{overallrating}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Events Participated:{{events}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Comments:{{comments}} </div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Workshops Attended:{{workshops}} </div></td>
+
+        </tr>
+
+    </table>
+
+
 {% endblock %}

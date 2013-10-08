@@ -133,6 +133,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // volunteer_management_system_report_generation_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_report_generation_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/TrackRecord')) {
+            // _track_record
+            if ($pathinfo === '/TrackRecord') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\TrackRecordController::TrackRecordAction',  '_route' => '_track_record',);
+            }
+
+            // _track_record_initialize
+            if ($pathinfo === '/TrackRecordInitialize') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\TrackRecordController::InitializeTrackRecordAction',  '_route' => '_track_record_initialize',);
+            }
+
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);
