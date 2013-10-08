@@ -18,7 +18,6 @@ contact:
    pattern: /contact
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Contactpage:contact }
 
-
 login:
    pattern:  /login
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:login }
@@ -26,3 +25,7 @@ login:
 logout:
    pattern:  /loginout
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }
+   
+search_result:
+  pattern: /result
+  defaults: { _controller: VolunteerManagementSystemPagesBundle:Search:search}
