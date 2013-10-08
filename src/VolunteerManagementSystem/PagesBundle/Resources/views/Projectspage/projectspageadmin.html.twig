@@ -1,0 +1,9 @@
+{% extends 'VolunteerManagementSystemPagesBundle:Projectspage:projectspage.html.twig' %}
+
+{% block admin %}
+<form action="{{ path('just') }}" method="post" >
+<p align="right">
+            <button type="submit">Create Project</button>
+ </p>
+</form>
+{% endblock %}

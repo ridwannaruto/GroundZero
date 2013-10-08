@@ -15,7 +15,9 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
             'stylesheets' => array($this, 'block_stylesheets'),
             'javascripts' => array($this, 'block_javascripts'),
             'body' => array($this, 'block_body'),
-            'admin' => array($this, 'block_admin'),
+            'adminpromotion' => array($this, 'block_adminpromotion'),
+            'adminevent' => array($this, 'block_adminevent'),
+            'adminreport' => array($this, 'block_adminreport'),
         );
     }
 
@@ -70,6 +72,29 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
     \$('#calendar').fullCalendar({
     dayClick: function() {
         alert('a day has been clicked!');
+        
+    },
+    
+    events: function(start, end, callback) {
+        \$.ajax({
+            url: 'myxmlfeed.php',
+            dataType: 'xml',
+            data: {
+                // our hypothetical feed requires UNIX timestamps
+                start: Math.round(start.getTime() / 1000),
+                end: Math.round(end.getTime() / 1000)
+            },
+            success: function(doc) {
+                var events = [];
+                \$(doc).find('event').each(function() {
+                    events.push({
+                        title: \$(this).attr('title'),
+                        start: \$(this).attr('start') // will be parsed
+                    });
+                });
+                callback(events);
+            }
+        });
     }
 });
 
@@ -78,39 +103,39 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 ";
     }
 
-    // line 26
+    // line 49
     public function block_body($context, array $blocks = array())
     {
-        // line 27
-        $this->displayBlock('admin', $context, $blocks);
-        // line 29
+        // line 50
+        $this->displayBlock('adminpromotion', $context, $blocks);
+        // line 52
         echo "<h1 class=\"price\">Notifications</h1>
 <p align =\"justify\">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
 <p> <div class=\"inner\">
  <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
    ";
-        // line 33
+        // line 56
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["notify"]) ? $context["notify"] : $this->getContext($context, "notify")));
         foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
-            // line 34
+            // line 57
             echo "        <p>
         <section class=\"container\">
-        <div class=\"notify\" width=\"500px\">
-        <strong>";
-            // line 37
+        <div class=\"notify\" >
+        <p align=\"right\"><strong>";
+            // line 60
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
-            echo "</strong><br>
-        <strong>Details: </strong><p>";
-            // line 38
+            echo "</strong></p><p>
+        <strong>Details: </strong>";
+            // line 61
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDetails", array(), "method"), "html", null, true);
-            echo "</p><br>
+            echo "<br>
         <strong>Project: </strong>";
-            // line 39
+            // line 62
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getProject", array(), "method"), "html", null, true);
             echo "<br>       
         <strong>Notified Date: </strong>";
-            // line 40
+            // line 63
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDate"), "Y-m-d"), "html", null, true);
             echo "
         </div></section>
@@ -120,21 +145,37 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 67
         echo "        
        
 </table></div></p>
 <p> </p>
-<h1 class=\"price\">Calendar</h1>
+";
+        // line 71
+        $this->displayBlock('adminevent', $context, $blocks);
+        // line 73
+        echo "<h1 class=\"price\">Calendar</h1>
 <p align =\"justify\">Following calendar displays up to date project scheduled events and organized workshops that are open for every volunteer. It also indicate special days which are deadlines or progress dates for events your registered to.</p>
 <div id='calendar'></div>
 
-
+<p></p>
 ";
+        // line 78
+        $this->displayBlock('adminreport', $context, $blocks);
     }
 
-    // line 27
-    public function block_admin($context, array $blocks = array())
+    // line 50
+    public function block_adminpromotion($context, array $blocks = array())
+    {
+    }
+
+    // line 71
+    public function block_adminevent($context, array $blocks = array())
+    {
+    }
+
+    // line 78
+    public function block_adminreport($context, array $blocks = array())
     {
     }
 
@@ -150,6 +191,6 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  137 => 27,  124 => 44,  114 => 40,  110 => 39,  106 => 38,  102 => 37,  97 => 34,  93 => 33,  87 => 29,  85 => 27,  82 => 26,  64 => 12,  59 => 11,  56 => 10,  48 => 6,  45 => 5,  39 => 4,  33 => 3,);
+        return array (  178 => 78,  173 => 71,  168 => 50,  164 => 78,  157 => 73,  155 => 71,  149 => 67,  139 => 63,  135 => 62,  131 => 61,  127 => 60,  122 => 57,  118 => 56,  112 => 52,  110 => 50,  107 => 49,  66 => 12,  61 => 11,  58 => 10,  50 => 6,  47 => 5,  41 => 4,  35 => 3,);
     }
 }

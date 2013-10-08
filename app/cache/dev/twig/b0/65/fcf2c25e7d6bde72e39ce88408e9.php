@@ -10,7 +10,9 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
         $this->parent = $this->env->loadTemplate("VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig");
 
         $this->blocks = array(
-            'admin' => array($this, 'block_admin'),
+            'adminpromotion' => array($this, 'block_adminpromotion'),
+            'adminevent' => array($this, 'block_adminevent'),
+            'adminreport' => array($this, 'block_adminreport'),
         );
     }
 
@@ -25,8 +27,41 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
     }
 
     // line 2
-    public function block_admin($context, array $blocks = array())
+    public function block_adminpromotion($context, array $blocks = array())
     {
+        // line 3
+        echo "
+<form action=\"";
+        // line 4
+        echo $this->env->getExtension('routing')->getPath("just");
+        echo "\" method=\"post\" >
+<p align=\"right\">
+            <button type=\"submit\">Promote Administrator</button>
+ </p>
+</form>
+";
+    }
+
+    // line 10
+    public function block_adminevent($context, array $blocks = array())
+    {
+        // line 11
+        echo "<form action=\"";
+        echo $this->env->getExtension('routing')->getPath("just");
+        echo "\" method=\"post\" >
+        <p align=\"right\">
+            <button type=\"submit\">Manage Events</button>
+       </p>
+</form>
+";
+    }
+
+    // line 17
+    public function block_adminreport($context, array $blocks = array())
+    {
+        // line 18
+        echo "
+";
     }
 
     public function getTemplateName()
@@ -41,6 +76,6 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  28 => 2,);
+        return array (  63 => 18,  60 => 17,  49 => 11,  46 => 10,  36 => 4,  33 => 3,  30 => 2,);
     }
 }

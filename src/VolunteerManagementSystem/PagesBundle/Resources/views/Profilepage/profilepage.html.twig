@@ -4,11 +4,16 @@
 {% block selectprofile %}class="active" {%endblock%}
 
 {% block body %}
-
+<form action="{{ path('just')}}" method="post" >
+<p align="right">
+            <button type="submit">Generate Career Report</button>
+ </p>
+</form>
 <div class="inner">
-    <p align="center">
+    
+        <div class="propic" >
    <img src="{{asset('bundles/volunteermanagementsystemstyles/images/me.jpg')}}" width="200" height="200"></h2>
-                    	 </p>
+             </div>       	
  <table width="93%">
   <tr>
     <th width="18%" height="33" scope="row">&nbsp;</th>

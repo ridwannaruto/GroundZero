@@ -107,7 +107,16 @@ a:hover {text-decoration:none}
 .login-help a:hover {
     text-decoration: underline;
 }
-
+.propic {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 5px 5px;
+    width: 200px;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
 .notify {
     position: relative;
     margin: 0 auto;
@@ -334,7 +343,7 @@ h1 span {display:inline-block;	font-size:28px;	line-height:1.2em;	color:#949494;
 .menu {padding:0;width:100%}
 .menu li {float:left;position:relative}
 .menu li:first-child {background:url(../images/menu-a-tail.gif) 0 -71px no-repeat}
-.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:2px 0 2px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
+.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:150px;font-size:21px;line-height:1.238em;padding:2px 0 2px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
 .menu li a:hover,
 .menu li a.active {color:#fff;background-position:left top;background-repeat:repeat-x;background-color:#000}
 /***** search form *****/

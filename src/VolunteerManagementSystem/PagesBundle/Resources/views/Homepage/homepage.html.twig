@@ -17,6 +17,29 @@
     $('#calendar').fullCalendar({
     dayClick: function() {
         alert('a day has been clicked!');
+        
+    },
+    
+    events: function(start, end, callback) {
+        $.ajax({
+            url: 'myxmlfeed.php',
+            dataType: 'xml',
+            data: {
+                // our hypothetical feed requires UNIX timestamps
+                start: Math.round(start.getTime() / 1000),
+                end: Math.round(end.getTime() / 1000)
+            },
+            success: function(doc) {
+                var events = [];
+                $(doc).find('event').each(function() {
+                    events.push({
+                        title: $(this).attr('title'),
+                        start: $(this).attr('start') // will be parsed
+                    });
+                });
+                callback(events);
+            }
+        });
     }
 });
 
@@ -24,7 +47,7 @@
 </script>
 {% endblock %}
 {% block body %}
-{% block admin %}
+{% block adminpromotion %}
 {% endblock %}
 <h1 class="price">Notifications</h1>
 <p align ="justify">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
@@ -33,9 +56,9 @@
    {% for n in notify %}
         <p>
         <section class="container">
-        <div class="notify" width="500px">
-        <strong>{{n.getName()}}</strong><br>
-        <strong>Details: </strong><p>{{ n.getDetails() }}</p><br>
+        <div class="notify" >
+        <p align="right"><strong>{{n.getName()}}</strong></p><p>
+        <strong>Details: </strong>{{ n.getDetails() }}<br>
         <strong>Project: </strong>{{ n.getProject() }}<br>       
         <strong>Notified Date: </strong>{{ n.getDate|date('Y-m-d') }}
         </div></section>
@@ -45,9 +68,13 @@
        
 </table></div></p>
 <p> </p>
+{% block adminevent %}
+{% endblock %}
 <h1 class="price">Calendar</h1>
 <p align ="justify">Following calendar displays up to date project scheduled events and organized workshops that are open for every volunteer. It also indicate special days which are deadlines or progress dates for events your registered to.</p>
 <div id='calendar'></div>
 
-
+<p></p>
+{% block adminreport %}
+{% endblock %}
 {% endblock %}

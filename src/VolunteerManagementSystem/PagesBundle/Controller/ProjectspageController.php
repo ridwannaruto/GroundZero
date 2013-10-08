@@ -15,8 +15,12 @@ class ProjectspageController extends Controller{
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
            
+          if($user->getAccessLevel()=='Volunteer'){
            return $this->render('VolunteerManagementSystemPagesBundle:Projectspage:projectspage.html.twig', array('id' => $id));
-       }
+           }
+           if($user->getAccessLevel()=='Admin'){
+           return $this->render('VolunteerManagementSystemPagesBundle:Projectspage:projectspageadmin.html.twig', array('id' => $id));
+           } }
         else{
             
             return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig');

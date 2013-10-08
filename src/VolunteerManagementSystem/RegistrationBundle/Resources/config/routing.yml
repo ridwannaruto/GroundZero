@@ -23,5 +23,5 @@ account_login:
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:login }
    
 account_logout:
-   pattern:  /loginout
+   pattern:  /logout
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }

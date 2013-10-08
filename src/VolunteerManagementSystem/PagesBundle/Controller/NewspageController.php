@@ -15,8 +15,12 @@ class NewspageController extends Controller{
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
            
+       if($user->getAccessLevel()=='Volunteer'){
            return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspage.html.twig', array('id' => $id));
-       }
+           }
+           if($user->getAccessLevel()=='Admin'){
+           return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspageadmin.html.twig', array('id' => $id));
+           } }
         else{
             
             return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig');

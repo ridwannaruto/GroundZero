@@ -327,14 +327,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\HomepageController::welcomeAction',  '_route' => 'welcome',);
         }
 
-        if (0 === strpos($pathinfo, '/login')) {
+        if (0 === strpos($pathinfo, '/log')) {
             // account_login
             if ($pathinfo === '/login') {
                 return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::loginAction',  '_route' => 'account_login',);
             }
 
             // account_logout
-            if ($pathinfo === '/loginout') {
+            if ($pathinfo === '/logout') {
                 return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::logoutAction',  '_route' => 'account_logout',);
             }
 

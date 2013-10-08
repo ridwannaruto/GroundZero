@@ -1,7 +1,6 @@
 <?php
 
 namespace VolunteerManagementSystem\NotificationBundle\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class EmailController extends Controller

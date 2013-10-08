@@ -96,7 +96,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                 \t";
         // line 41
         $this->displayBlock('menu', $context, $blocks);
-        // line 58
+        // line 60
         echo "                </div>
              
             </div>
@@ -114,16 +114,16 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                               
                                 <p>
                                     ";
-        // line 74
+        // line 76
         $this->displayBlock('body', $context, $blocks);
-        // line 75
+        // line 77
         echo "                                        
                                     </p>
                                 
                                 
                                 <p align=\"center\">Developed by<br>
                           <img src=\"";
-        // line 80
+        // line 82
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/Footer.png"), "html", null, true);
         echo "\" width=\"190\" height=\"67\"></p></div></div>
                             <div class=\"container_12\"></div>
@@ -199,6 +199,8 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
         echo "\"";
         $this->displayBlock('selectcontacts', $context, $blocks);
         echo ">Contacts</a></li>
+                             <li><a href=\"logout\">Log Out</a></li>
+                           
                             </ul>
                                 
                         </nav>
@@ -231,7 +233,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
     {
     }
 
-    // line 74
+    // line 76
     public function block_body($context, array $blocks = array())
     {
     }
@@ -248,6 +250,6 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  235 => 74,  230 => 52,  225 => 50,  220 => 49,  215 => 48,  210 => 47,  198 => 52,  191 => 50,  185 => 49,  179 => 48,  173 => 47,  166 => 42,  163 => 41,  158 => 19,  153 => 17,  150 => 16,  144 => 6,  127 => 80,  120 => 75,  118 => 74,  100 => 58,  98 => 41,  84 => 30,  72 => 20,  69 => 19,  67 => 16,  62 => 14,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  36 => 6,  29 => 1,  82 => 25,  79 => 24,  63 => 12,  58 => 13,  55 => 10,  47 => 6,  44 => 5,  38 => 4,  32 => 3,);
+        return array (  237 => 76,  232 => 52,  227 => 50,  222 => 49,  217 => 48,  212 => 47,  198 => 52,  191 => 50,  185 => 49,  179 => 48,  173 => 47,  166 => 42,  163 => 41,  158 => 19,  153 => 17,  150 => 16,  144 => 6,  127 => 82,  120 => 77,  118 => 76,  100 => 60,  98 => 41,  84 => 30,  72 => 20,  69 => 19,  67 => 16,  62 => 14,  58 => 13,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  36 => 6,  29 => 1,);
     }
 }
