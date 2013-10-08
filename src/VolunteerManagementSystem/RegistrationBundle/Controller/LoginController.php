@@ -22,6 +22,7 @@ class LoginController extends Controller
         $user = $repository->findOneBy(array('username'=>$username,'password'=>$password));
         
         if($user){
+            $session->set('user', $user);
             if($remember=='on'){
                
                 $login=new Login();
