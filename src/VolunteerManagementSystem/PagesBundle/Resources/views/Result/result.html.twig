@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Contacts{% endblock %}
+{% block selectcontacts %} class="active" {%endblock%}
+
+{% block body %}
+     <p align="center">   
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{form_row(form.firstname)}}   
+        {{form_widget(form.submit)}}
+    {{ form_end(form) }}
+      </p>
+       
+    {% for res in result %}
+        {{ res.getFirstname() }}&nbsp;{{ res.getLastname() }}&nbsp;&nbsp;
+        {{ res.getEmail() }}&nbsp;&nbsp;
+        {{ res.getMobilenumber() }}&nbsp;&nbsp;
+        {{ res.getAccesslevel() }}<br>
+{% endfor %}  
+
+{% endblock %}
