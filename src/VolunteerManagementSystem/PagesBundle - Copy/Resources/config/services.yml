@@ -1,7 +1,0 @@
-parameters:
-#    volunteer_management_system_pages.example.class: VolunteerManagementSystem\PagesBundle\Example
-
-services:
-#    volunteer_management_system_pages.example:
-#        class: %volunteer_management_system_pages.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
