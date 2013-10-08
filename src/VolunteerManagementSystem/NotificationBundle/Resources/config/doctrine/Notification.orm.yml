@@ -1,0 +1,23 @@
+VolunteerManagementSystem\NotificationBundle\Entity\Notification:
+    type: entity
+    table: null
+    repositoryClass: VolunteerManagementSystem\NotificationBundle\Entity\NotificationRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        details:
+            type: text
+        date:
+            type: date
+        users:
+            type: array
+        project:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

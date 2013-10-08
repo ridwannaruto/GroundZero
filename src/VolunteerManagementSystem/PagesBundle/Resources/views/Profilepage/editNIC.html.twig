@@ -1,0 +1,115 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Profile{% endblock %}
+{% block selectprofile %}class="active" {%endblock%}
+
+{% block body %}
+
+<div class="inner">
+ <table width="93%">
+  <tr>
+    <th width="18%" height="33" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="18%" rowspan="6" scope="row"><img src="file:///C|/wamp/www/volmaa/mm_product_lg.gif" width="193" height="189" alt="ff" /></th>
+    <td width="3%" height="35">&nbsp;</td>
+    <td width="18%">User Name </td>
+    <td width="55%">{{user.username}}</td>
+    <td width="7%"><a href="{{ path("edit_UserName") }}">edit</a></td>
+  </tr>
+  <tr>
+    <td height="34">&nbsp;</td>
+    <td>Password </td>
+    <td>{{user.password}}</td>
+    <td><a href="{{ path("edit_Password") }}">edit</a></td>
+  </tr>
+  <tr>
+    <td height="34">&nbsp;</td>
+    <td>Name with Initials</td>
+    <td>{{user.namewithinitials}}</td>
+    <td><a href="{{ path("edit_Name") }}">edit</a></td>
+  </tr>
+  <tr>
+    <td height="34">&nbsp;</td>
+    <td>First Name </td>
+    <td>{{user.firstname}}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="34">&nbsp;</td>
+    <td>Last Name </td>
+    <td>{{user.lastname}}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="34">&nbsp;</td>
+    <td>{{ form_start(form) }}<p> </p>
+    
+        {{ form_errors(form) }}
+        {{form_row(form.nic)}}<p align="center">
+        {{form_widget(form.submit)}} </p>{{ form_end(form) }}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th width="18%" scope="row">&nbsp;</th>
+    <td height="34">&nbsp;</td>
+    <td>Gender</td>
+    <td>{{user.gender}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th width="18%" scope="row">&nbsp;</th>
+    <td height="34">&nbsp;</td>
+    <td>Date of Borth </td>
+    <td>{{user.firstname}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>Email</td>
+    <td>{{user.email}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>Mobile Number </td>
+    <td>{{user.mobilenumber}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>Contact Number </td>
+    <td>{{user.phonenumber}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>Adress</td>
+    <td>{{user.address}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>City</td>
+    <td>{{user.city}}</td>
+    <td>edit</td>
+  </tr>
+  <tr>
+    <th height="34" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>Country</td>
+    <td>{{user.country}}</td>
+    <td>edit</td>
+  </tr>
+</table>
+{% endblock %}

@@ -133,6 +133,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // volunteer_management_system_notification_homepage
+        if ($pathinfo === '/email') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\NotificationBundle\\Controller\\EmailController::sendAction',  '_route' => 'volunteer_management_system_notification_homepage',);
+        }
+
         // volunteer_management_system_report_generation_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_report_generation_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\DefaultController::indexAction',));
@@ -156,6 +161,106 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // contact
         if ($pathinfo === '/contact') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ContactpageController::contactAction',  '_route' => 'contact',);
+        }
+
+        // edit_UserName
+        if ($pathinfo === '/edit_UserName') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editUserNameAction',  '_route' => 'edit_UserName',);
+        }
+
+        // save_UserName
+        if ($pathinfo === '/save_UserName') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveUserNameAction',  '_route' => 'save_UserName',);
+        }
+
+        // edit_Name
+        if ($pathinfo === '/edit_Name') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editNameAction',  '_route' => 'edit_Name',);
+        }
+
+        // save_Name
+        if ($pathinfo === '/save_Name') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveNameAction',  '_route' => 'save_Name',);
+        }
+
+        // edit_Password
+        if ($pathinfo === '/edit_Password') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editPasswordAction',  '_route' => 'edit_Password',);
+        }
+
+        // save_Password
+        if ($pathinfo === '/save_Password') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::savePasswordAction',  '_route' => 'save_Password',);
+        }
+
+        // edit_NIC
+        if ($pathinfo === '/edit_NIC') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editNICAction',  '_route' => 'edit_NIC',);
+        }
+
+        // save_NIC
+        if ($pathinfo === '/save_NIC') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveNICAction',  '_route' => 'save_NIC',);
+        }
+
+        // edit_DOB
+        if ($pathinfo === '/edit_DOB') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editDOBAction',  '_route' => 'edit_DOB',);
+        }
+
+        // save_DOB
+        if ($pathinfo === '/save_DOB') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveDOBAction',  '_route' => 'save_DOB',);
+        }
+
+        // edit_Gender
+        if ($pathinfo === '/edit_Gender') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editGenderAction',  '_route' => 'edit_Gender',);
+        }
+
+        // save_Gender
+        if ($pathinfo === '/save_Gender') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveGenderAction',  '_route' => 'save_Gender',);
+        }
+
+        // edit_Email
+        if ($pathinfo === '/edit_Email') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editEmailAction',  '_route' => 'edit_Email',);
+        }
+
+        // save_Email
+        if ($pathinfo === '/save_Email') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveEmailAction',  '_route' => 'save_Email',);
+        }
+
+        // edit_MobileNumb
+        if ($pathinfo === '/edit_MobileNumb') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editMobileNumbAction',  '_route' => 'edit_MobileNumb',);
+        }
+
+        // save_MobileNumb
+        if ($pathinfo === '/save_MobileNumb') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveMobileNumbAction',  '_route' => 'save_MobileNumb',);
+        }
+
+        // edit_ContactNumb
+        if ($pathinfo === '/edit_ContactNumb') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editContactNumbAction',  '_route' => 'edit_ContactNumb',);
+        }
+
+        // save_ContactNumb
+        if ($pathinfo === '/save_contactNumb') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveContactNumbAction',  '_route' => 'save_ContactNumb',);
+        }
+
+        // edit_Address
+        if ($pathinfo === '/edit_Address') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\EditProfileController::editAddressAction',  '_route' => 'edit_Address',);
+        }
+
+        // save_Address
+        if ($pathinfo === '/save_Address') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SaveUserController::saveAddressAction',  '_route' => 'save_Address',);
         }
 
         if (0 === strpos($pathinfo, '/login')) {

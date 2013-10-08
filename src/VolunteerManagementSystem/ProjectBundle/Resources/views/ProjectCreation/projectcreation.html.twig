@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Project Creation{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block body %}
+ <section class="container">
+    <div class="login">
+      <h1>Create Project</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{form_row(form.name)}}        
+        <br><br>
+        {{form_row(form.description)}}        
+        <br><br>
+        {{form_row(form.objectives)}}        
+        <br><br>
+        {{form_row(form.projectmanager)}}        
+        <br><br>
+        {{form_row(form.startdate)}}        
+        <br><br>
+        {{form_row(form.enddate)}}        
+        <br><br>
+        {{form_widget(form.submit)}}
+        {{ form_end(form) }}
+    </div>
+        
+
+  </section>
+
+
+{% endblock %}
+
+
+
+
+

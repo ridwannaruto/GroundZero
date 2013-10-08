@@ -15,6 +15,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
             'stylesheets' => array($this, 'block_stylesheets'),
             'javascripts' => array($this, 'block_javascripts'),
             'body' => array($this, 'block_body'),
+            'admin' => array($this, 'block_admin'),
         );
     }
 
@@ -81,9 +82,21 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 27
+        $this->displayBlock('admin', $context, $blocks);
+        // line 29
         echo "<h1 class=\"price\">Notifications</h1>
 <p align =\"justify\">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
-
+<p> <div class=\"inner\">
+ <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
+   
+        <li><strong>";
+        // line 34
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")), "name", array(), "array"), "html", null, true);
+        echo "</strong><br>";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")), "details", array(), "array"), "html", null, true);
+        echo "</li>
+       
+</table></div></p>
 <p> </p>
 <h1 class=\"price\">Calendar</h1>
 <p align =\"justify\">Following calendar displays up to date project scheduled events and organized workshops that are open for every volunteer. It also indicate special days which are deadlines or progress dates for events your registered to.</p>
@@ -91,6 +104,11 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
 
 ";
+    }
+
+    // line 27
+    public function block_admin($context, array $blocks = array())
+    {
     }
 
     public function getTemplateName()
@@ -105,6 +123,6 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  84 => 27,  81 => 26,  63 => 12,  58 => 11,  55 => 10,  47 => 6,  44 => 5,  38 => 4,  32 => 3,);
+        return array (  110 => 27,  94 => 34,  87 => 29,  85 => 27,  82 => 26,  64 => 12,  59 => 11,  56 => 10,  48 => 6,  45 => 5,  39 => 4,  33 => 3,  28 => 2,);
     }
 }

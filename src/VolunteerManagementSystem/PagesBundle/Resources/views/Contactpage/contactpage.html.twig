@@ -4,18 +4,30 @@
 {% block selectcontacts %} class="active" {%endblock%}
 
 {% block body %}
+<section class="container">
+    <div class="login">
+        <h1>Search Volunteers</h1>
      <p align="center">   
-    {{ form_start(form) }}
-        {{ form_errors(form) }}
+   <strong> {{ form_start(form) }}
+        {{ form_errors(form) }}</strong><br>
         {{form_row(form.firstname)}}   
+        </p><p align="right">
         {{form_widget(form.submit)}}
     {{ form_end(form) }}
       </p>
-       
+       </div></section>
+<section class="container">
+    <div class="login" width=500>
+        <h1>Contact List </h1>
     {% for res in result %}
-        {{ res['firstname'] }}&nbsp;{{ res['lastname'] }}&nbsp;&nbsp;
-        {{ res['email'] }}&nbsp;&nbsp;
-        {{ res['mobilenumber'] }}&nbsp;&nbsp;
-        {{ res['accesslevel'] }}<br>
-    {% endfor %}  
+        <p>
+        <strong>{{ res['firstname'] }}</strong><br>
+        {{ res['lastname'] }}<br>
+        {{ res['email'] }}<br>
+        {{ res['mobilenumber'] }}<br>
+        {{ res['accesslevel'] }}
+        </p>
+    {% endfor %}
+        </div></section>
 {% endblock %}
+
