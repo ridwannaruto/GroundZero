@@ -25,7 +25,7 @@ class TrackRecordController extends Controller {
             return $this->render('VolunteerManagementSystemPagesBundle:TrackRecord:TrackRecord.html.twig', array('fname' => $user->getFirstname(), 'lname' => $user->getLastname(), 'jdate' => $trackRecord->getJoinedDate(), 'overallrating' => $trackRecord->getOverallRating(), 'events' => $trackRecord->getEventHistory(), 'comments' => $trackRecord->getComments(), 'workshops' => $trackRecord->getWorkshopAttended()));
         } else {
 
-            return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig');
+            return new Response('User not found!!!');
         }
     }
 
