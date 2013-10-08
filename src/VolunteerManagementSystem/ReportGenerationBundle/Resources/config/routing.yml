@@ -5,3 +5,7 @@ volunteer_management_system_report_generation_homepage:
 _track_record:
     pattern: /TrackRecord
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:TrackRecord:TrackRecord }
+
+_track_record_initialize:
+    pattern: /TrackRecordInitialize
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:TrackRecord:InitializeTrackRecord }
