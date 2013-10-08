@@ -133,6 +133,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // volunteer_management_system_report_generation_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_report_generation_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        // _track_record
+        if ($pathinfo === '/TrackRecord') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\TrackRecordController::TrackRecordAction',  '_route' => '_track_record',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);
@@ -159,6 +169,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'VolunteerManagementSystem\\RegistrationBundle\\Controller\\LoginController::logoutAction',  '_route' => 'logout',);
             }
 
+        }
+
+        // search_result
+        if ($pathinfo === '/result') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SearchController::searchAction',  '_route' => 'search_result',);
         }
 
         // volunteer_management_system_styles_homepage

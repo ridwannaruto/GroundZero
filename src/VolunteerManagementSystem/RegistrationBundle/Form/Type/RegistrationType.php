@@ -15,8 +15,6 @@ class RegistrationType extends AbstractType
             'checkbox',             
             array('property_path' => 'termsAccepted',
                    'label'=> 'I accept the terms and conditions'))
-            
-                    
         ;
     }
 
