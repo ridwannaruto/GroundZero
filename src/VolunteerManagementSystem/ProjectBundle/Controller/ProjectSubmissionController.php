@@ -25,6 +25,8 @@ class ProjectSubmissionController extends Controller
         $Project = $form->getData();
         $Projectmanager=$Project->getProjectmanager();
         $projectmanagerid=$Projectmanager->getId();
+        $Projectmanagername=$Projectmanager->getfirstname();
+        $Projectname=$Project->getName();
         $Project->setProjectManager($projectmanagerid);
         $em->persist($Project);
         try{
@@ -34,7 +36,7 @@ class ProjectSubmissionController extends Controller
             return $this->render('VolunteerManagementSystemProjectBundle:projectsubmission:projectsubmission.html.twig', array('id' => $id,'form' => $form->createView()));
         }
 
-        return $this->redirect($this->generateUrl('projectconfirmation',array('id'=>$id)));
+        return $this->redirect($this->generateUrl('projectconfirmation',array('id'=>$id,'pmid'=>$projectmanagerid,'pm'=>$Projectmanagername,'project'=>$Projectname)));
         }
 
     return $this->render(
