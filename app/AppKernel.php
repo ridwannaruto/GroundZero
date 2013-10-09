@@ -21,6 +21,9 @@ class AppKernel extends Kernel
             new VolunteerManagementSystem\PagesBundle\VolunteerManagementSystemPagesBundle(),
             new VolunteerManagementSystem\ReportGenerationBundle\VolunteerManagementSystemReportGenerationBundle(),
             new VolunteerManagementSystem\NotificationBundle\VolunteerManagementSystemNotificationBundle(),
+            new VolunteerManagementSystem\NewsBundle\VolunteerManagementSystemNewsBundle(),
+            new VolunteerManagementSystem\EventBundle\VolunteerManagementSystemEventBundle(),
+            new VolunteerManagementSystem\StatBundle\VolunteerManagementSystemStatBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,3 +1,15 @@
+volunteer_management_system_stat:
+    resource: "@VolunteerManagementSystemStatBundle/Resources/config/routing.yml"
+    prefix:   /
+
+volunteer_management_system_event:
+    resource: "@VolunteerManagementSystemEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+volunteer_management_system_news:
+    resource: "@VolunteerManagementSystemNewsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 volunteer_management_system_notification:
     resource: "@VolunteerManagementSystemNotificationBundle/Resources/config/routing.yml"
     prefix:   /

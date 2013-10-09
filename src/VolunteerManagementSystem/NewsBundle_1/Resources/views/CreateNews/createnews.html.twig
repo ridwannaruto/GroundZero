@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - News Creation{% endblock %}
+
+{% block body %}
+ <section class="container">
+    <div class="notify">
+      <h1>Create News</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <strong>Heading</strong><br>
+        {{form_widget(form.heading)}}        
+        <br><br>
+        <strong>What is your news?</strong><br>
+        {{form_widget(form.description)}}        
+        <br><br>
+        <p align="right">
+       
+        {{form_widget(form.submit)}}
+         </p>
+        {{ form_end(form) }}
+        
+    </div>
+        
+  </section>
+
+
+{% endblock %}
+
+
+
+
+
