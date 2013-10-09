@@ -22,7 +22,7 @@ class TrackRecordController extends Controller {
 
         if ($user) {
 
-            return $this->render('VolunteerManagementSystemPagesBundle:TrackRecord:TrackRecord.html.twig', array('fname' => $user->getFirstname(), 'lname' => $user->getLastname(), 'jdate' => $trackRecord->getJoinedDate(), 'overallrating' => $trackRecord->getOverallRating(), 'events' => $trackRecord->getEventHistory(), 'comments' => $trackRecord->getComments(), 'workshops' => $trackRecord->getWorkshopAttended()));
+            return $this->render('VolunteerManagementSystemPagesBundle:TrackRecord:TrackRecord.html.twig', array('fname' => $user->getFirstname(), 'lname' => $user->getLastname(), 'jdate' => $trackRecord->getJoinedDate(), 'overallrating' => $trackRecord->getOverallRating(), 'events' => $trackRecord->getEventHistory(), 'comments' => $trackRecord->getComments(), 'workshops' => $trackRecord->getWorkshopsAttended()));
         } else {
 
             return new Response('User not found!!!');

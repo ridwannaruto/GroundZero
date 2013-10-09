@@ -172,7 +172,12 @@ class TrackReport
      */
     public function getEventHistory()
     {
-        return $this->eventHistory;
+       
+       $array=$this->eventHistory;
+       $returnString=  implode(',', $array);        
+       
+        
+        return $returnString;
     }
 
     /**
@@ -195,7 +200,15 @@ class TrackReport
      */
     public function getComments()
     {
-        return $this->comments;
+        
+        
+       
+       $array=$this->comments;
+       $returnString=  implode(',', $array);        
+       
+       
+        
+        return $returnString;
     }
 
     /**
@@ -218,6 +231,13 @@ class TrackReport
      */
     public function getWorkshopsAttended()
     {
-        return $this->workshopsAttended;
+        
+       
+       $array=$this->workshopsAttended;
+       $returnString=  implode(',', $array); 
+        
+        return $returnString;
     }
+        
+    
 }
