@@ -154,6 +154,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectConfirmationController::projectconfirmationAction',  '_route' => 'projectconfirmation',);
             }
 
+            // projectview
+            if ($pathinfo === '/project_view') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectViewController::projectviewAction',  '_route' => 'projectview',);
+            }
+
         }
 
         // volunteer_management_system_event_homepage
