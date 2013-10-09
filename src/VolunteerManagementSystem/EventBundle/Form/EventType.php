@@ -23,8 +23,7 @@ class EventType extends AbstractType
             ->add('starttime')
             ->add('deadline')
             ->add('deadlinetime')
-            ->add('enddate')
-            ->add('endtime')
+         
         ;
         $builder->add('teamleader', 'entity', array(
             'label' =>'Project Manager  ',

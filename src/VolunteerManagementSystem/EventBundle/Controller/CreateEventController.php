@@ -39,6 +39,10 @@ class CreateEventController extends Controller
         if ($form->isValid()) {
         
      //   $event = $form->getData();
+        $enddate= $event->getDeadline();
+        $endtime=$event->getDeadlinetime();
+        $event->setEnddate($enddate);
+        $event->setEndtime($endtime);
         $Teamleader=$event->getTeamleader();
         $teamleaderid=$Teamleader->getId();
         $event->setTeamleader($teamleaderid);

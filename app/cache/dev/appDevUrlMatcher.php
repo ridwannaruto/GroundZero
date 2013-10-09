@@ -330,6 +330,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SearchController::searchAction',  '_route' => 'search_result',);
         }
 
+        if (0 === strpos($pathinfo, '/promote')) {
+            // promote
+            if ($pathinfo === '/promote') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\VolunteertoAdminController::volunteertoadminselectionAction',  '_route' => 'promote',);
+            }
+
+            // promote_to_admin
+            if ($pathinfo === '/promotetoAdmin') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
+            }
+
+        }
+
         // volunteer_management_system_styles_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_styles_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StylesBundle\\Controller\\DefaultController::indexAction',));
