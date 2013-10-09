@@ -37,6 +37,11 @@ class TrackReport
     /**
      * @var array
      */
+    private $projectHistory;
+    
+    /**
+     * @var array
+     */
     private $eventHistory;
 
     /**
@@ -238,6 +243,56 @@ class TrackReport
         
         return $returnString;
     }
+    
+    
+    /**
+     * Set projectHistory
+     *
+     * @param array $projectHistory
+     * @return TrackReport
+     */
+    public function setProjectHistory($projectHistory)
+    {
+        $this->projectHistory = $projectHistory;
+    
+        return $this;
+    }
+
+    /**
+     * Get projectHistory
+     *
+     * @return array 
+     */
+    public function getProjectHistory()
+    {
+       
+       $array=$this->projectHistory;
+       $returnString=  implode(',', $array);        
+       
         
+        return $returnString;
+    }
+    /**
+     * Update Ratings
+     *
+     * @param integer $projectID
+     * @param integer $eventID
+     * @param float $rating
+     * @return TrackReport
+     */
+    public function UpdateRating($projectId,$eventId,$eventWeight,$rating) {
+        $currentRating = $this->getOverallRating();
+        $currentOverallWeight=$this->getTotalWeight();
+        $newRating=($currentRating*$currentOverallWeight+$rating)/($currentOverallWeight+$eventWeight);
+        
+        $this->setOverallRating($newRating);
+        $this->setTotalWeight($currentOverallWeight+$eventWeight);
+        
+        $this->eventHistory[]=$eventId;
+        $this->projectHistory[]=$projectId;
+        
+        
+        
+    }    
     
 }
