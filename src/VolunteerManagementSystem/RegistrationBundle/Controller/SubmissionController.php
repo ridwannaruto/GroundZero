@@ -19,13 +19,14 @@ class SubmissionController extends Controller {
         if ($form->isValid()) {
             $registration = $form->getData();
             $em->persist($registration->getUser());
-       
             
+           
             try {
             
                 $em->flush();
+                
                
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 return $this->render('VolunteerManagementSystemRegistrationBundle:Submission:submission.html.twig', array('form' => $form->createView()));
             }
 

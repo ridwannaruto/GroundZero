@@ -120,7 +120,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
             // line 57
             echo "        <p>
-        <section class=\"container\">
+        
         <div class=\"notify\" >
         <p align=\"right\"><strong>";
             // line 60
@@ -138,7 +138,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
             // line 63
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDate"), "Y-m-d"), "html", null, true);
             echo "
-        </div></section>
+        </div>
         </p>
     ";
         }

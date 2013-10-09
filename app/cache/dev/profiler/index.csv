@@ -1149,6 +1149,7 @@ cd4634,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_Email,1381315630
 744b88,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_Address,1381315937,
 4cad35,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_Address,1381316132,
 639647,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_Name,1381316138,
+<<<<<<< HEAD
 a4ad40,::1,GET,http://localhost/GroundZero/web/app_dev.php/news?id=1,1381317290,
 fe32dd,::1,POST,http://localhost/GroundZero/web/app_dev.php/createNews?id=1,1381317301,
 15a60f,::1,GET,http://localhost/GroundZero/web/app_dev.php/login,1381319940,
@@ -1173,3 +1174,17 @@ cb4c43,::1,POST,http://localhost/GroundZero/web/app_dev.php/TrackRecord?userId=1
 559e06,::1,GET,http://localhost/GroundZero/web/app_dev.php/home?id=1,1381322951,
 b9a8de,::1,GET,http://localhost/GroundZero/web/app_dev.php/myxmlfeed.php?end=1384021800&start=1380393000,1381322953,
 a00585,::1,GET,http://localhost/GroundZero/web/app_dev.php/myxmlfeed.php?end=1384021800&start=1380393000,1381322953,
+=======
+ca3b15,::1,GET,http://localhost/GroundZero/web/app_dev.php/login,1381323827,
+0b91c2,::1,POST,http://localhost/GroundZero/web/app_dev.php/login,1381323859,
+1cc13d,::1,GET,http://localhost/GroundZero/web/app_dev.php/home?id=45,1381323860,
+64ea9b,::1,GET,http://localhost/GroundZero/web/app_dev.php/home?id=45,1381323860,
+0c7aba,::1,GET,http://localhost/GroundZero/web/app_dev.php/profile?id=45,1381323886,
+9a2c15,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_UserName,1381323892,
+bbb8b2,::1,GET,http://localhost/GroundZero/web/app_dev.php/edit_Password,1381323903,
+>>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
+0a8f84,::1,GET,http://localhost/GroundZero/web/app_dev.php/home?id=1,1381325236,
+ae37bc,::1,GET,http://localhost/GroundZero/web/app_dev.php/myxmlfeed.php?end=1384021800&start=1380393000,1381325239,
+8359cc,::1,GET,http://localhost/GroundZero/web/app_dev.php/myxmlfeed.php?end=1384021800&start=1380393000,1381325240,
+e7df26,::1,GET,http://localhost/GroundZero/web/app_dev.php/news?id=1,1381325332,
+e9bb9f,::1,GET,http://localhost/GroundZero/web/app_dev.php/projects?id=1,1381325346,

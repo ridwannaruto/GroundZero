@@ -20,8 +20,9 @@ class HomepageController extends Controller
             
 
             $query = $notifications->createQueryBuilder('p')
-                    ->where('p.id = :id')
-                    ->setParameter('id', 1)
+                    ->where('p.userid = :id')
+                    ->setParameter('id', $id)
+                    ->setMaxResults(10)
                     ->orderBy('p.id','ASC')
                     ->getQuery();
 
