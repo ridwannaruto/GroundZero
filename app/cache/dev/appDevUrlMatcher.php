@@ -133,6 +133,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/hello')) {
+            // volunteer_management_system_stat_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // volunteer_management_system_event_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_event_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // volunteer_management_system_news_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_news_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\NewsBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+        }
+
         // volunteer_management_system_notification_homepage
         if ($pathinfo === '/email') {
             return array (  '_controller' => 'VolunteerManagementSystem\\NotificationBundle\\Controller\\EmailController::sendAction',  '_route' => 'volunteer_management_system_notification_homepage',);
@@ -166,9 +184,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);
         }
 
-        // projects
-        if ($pathinfo === '/projects') {
-            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ProjectspageController::projectsAction',  '_route' => 'projects',);
+        if (0 === strpos($pathinfo, '/project')) {
+            // projects
+            if ($pathinfo === '/projects') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\ProjectspageController::projectsAction',  '_route' => 'projects',);
+            }
+
+            // projectcreation
+            if ($pathinfo === '/projectcreation') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectCreationController::projectcreationAction',  '_route' => 'projectcreation',);
+            }
+
+            // projectsubmission
+            if ($pathinfo === '/projectsubmission') {
+                return array (  '_controller' => 'VolunteerManagementSystemProjectBundle:ProjectSubmission:projectsubmission',  '_route' => 'projectsubmission',);
+            }
+
+            // projectconfirmation
+            if ($pathinfo === '/projectconfirmation') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectConfirmationController::projectconfirmationAction',  '_route' => 'projectconfirmation',);
+            }
+
         }
 
         // contact

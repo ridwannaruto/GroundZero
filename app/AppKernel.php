@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new VolunteerManagementSystem\RegistrationBundle\VolunteerManagementSystemRegistrationBundle(),
             new VolunteerManagementSystem\StylesBundle\VolunteerManagementSystemStylesBundle(),
             new VolunteerManagementSystem\PagesBundle\VolunteerManagementSystemPagesBundle(),
+            new VolunteerManagementSystem\ProjectBundle\VolunteerManagementSystemProjectBundle(),
             new VolunteerManagementSystem\ReportGenerationBundle\VolunteerManagementSystemReportGenerationBundle(),
             new VolunteerManagementSystem\NotificationBundle\VolunteerManagementSystemNotificationBundle(),
             new VolunteerManagementSystem\NewsBundle\VolunteerManagementSystemNewsBundle(),

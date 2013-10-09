@@ -13,6 +13,16 @@ news:
 projects:
    pattern: /projects
    defaults: { _controller: VolunteerManagementSystemPagesBundle:Projectspage:projects }
+projectcreation:
+    pattern: /projectcreation
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectCreation:projectcreation }
+projectsubmission:
+    pattern: /projectsubmission
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectSubmission:projectsubmission }
+
+projectconfirmation:
+    pattern: /projectconfirmation
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectConfirmation:projectconfirmation }
 
 contact:
    pattern: /contact

@@ -44,7 +44,7 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
     {
         // line 7
         $this->displayBlock('admin', $context, $blocks);
-        // line 9
+        // line 12
         echo "Projects
 ";
     }
@@ -52,6 +52,11 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
     // line 7
     public function block_admin($context, array $blocks = array())
     {
+        // line 8
+        echo "<p align=\"right\">
+          <a href=\"projectcreation\">  <button >create project</button></a>;
+ </p>
+";
     }
 
     public function getTemplateName()
@@ -66,6 +71,6 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  53 => 7,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  56 => 8,  53 => 7,  48 => 12,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }
