@@ -10,20 +10,21 @@ class ProjectReportController extends Controller {
 
     public function ProjectReportAction(Request $request) {
         $projectId = $request->get('projectId');
-        $id=$request->get('Id');
+        $id=$request->get('id');
         $em = $this->getDoctrine()->getEntityManager();
         $ProjectRepository = $em->getRepository('VolunteerManagementSystemProjectBundle:Project');
 
         $project = $ProjectRepository->findOneBy(array('id' => $projectId));
 
-        $today_dt = strtotime (date('Y-m-d'));
-        $end_dt = strtotime($project->getEnddate()->format('Y-m-d'));
+       
 
-        if ($end_dt < $today_dt) { 
+        if ($project->getEnddate()!=NULL) { 
             $status = "Finished";
         }else{
             $status = "Ongoing";
-        }    
+        }
+            
+         
 
         if ($project) {
 
