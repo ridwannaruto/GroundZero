@@ -28,14 +28,17 @@ class CreateEventController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
       $id = $request->get('id');
         $event = new Event();
-        
-        $form = $this->createForm(new EventType(), new Event());
+        $event->setProject($projectid);
+        $array=array();
+        $event->setVolunteerslist($array);
+        $event->setSubscribers($array);
+        $form = $this->createForm(new EventType(), $event);
         
        $form->handleRequest($request);
        
         if ($form->isValid()) {
         
-        $event = $form->getData();
+     //   $event = $form->getData();
         $Teamleader=$event->getTeamleader();
         $teamleaderid=$Teamleader->getId();
         $event->setTeamleader($teamleaderid);
