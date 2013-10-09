@@ -4,7 +4,7 @@
 {% block selectprofile %}class="active" {%endblock%}
 
 {% block body %}
-<form action="{{ path('just')}}" method="post" >
+<form action="TrackRecord?userId={{id}}" method="post" >
 <p align="right">
             <button type="submit">Generate Career Report</button>
  </p>

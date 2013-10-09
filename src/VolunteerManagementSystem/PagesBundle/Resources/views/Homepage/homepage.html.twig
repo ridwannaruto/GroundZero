@@ -55,13 +55,13 @@
  <table width="398" border="10" align="center" cellpadding="0">
    {% for n in notify %}
         <p>
-        <section class="container">
+        
         <div class="notify" >
         <p align="right"><strong>{{n.getName()}}</strong></p><p>
         <strong>Details: </strong>{{ n.getDetails() }}<br>
         <strong>Project: </strong>{{ n.getProject() }}<br>       
         <strong>Notified Date: </strong>{{ n.getDate|date('Y-m-d') }}
-        </div></section>
+        </div>
         </p>
     {% endfor %}
         

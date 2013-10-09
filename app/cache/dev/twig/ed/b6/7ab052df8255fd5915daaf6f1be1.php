@@ -42,8 +42,8 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 7
-        echo "<form action=\"";
-        echo $this->env->getExtension('routing')->getPath("just");
+        echo "<form action=\"TrackRecord?userId=";
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\" method=\"post\" >
 <p align=\"right\">
             <button type=\"submit\">Generate Career Report</button>

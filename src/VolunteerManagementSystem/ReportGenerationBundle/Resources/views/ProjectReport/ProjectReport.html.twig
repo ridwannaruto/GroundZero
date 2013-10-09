@@ -1,10 +1,10 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}{{projectname}}-Project Report{% endblock %}
+{% block title %}Volma-Project Report{% endblock %}
 
 {% block body %}
-<h1>Track Record: {{fname}}</h1>
-<br><br>Name:</t>
+<h1>Project Report: {{projectname}}</h1>
+
 
 
 <div class="inner">
@@ -16,27 +16,31 @@
         </tr>
         <tr>
             
-            <td valign="top"><div align="left">Name:{{fname}} {{lname}}</div></td>
+            <td valign="top"><div align="left">Project Name:{{projectname}}</div></td>
 
         </tr>
         <tr>
-            <td valign="top"><div align="left">Joined date:{{jdate|date("m/d/Y")}}</div></td>
+            <td valign="top"><div align="left">Status:{{status}} </div></td>
 
         </tr>
         <tr>
-            <td valign="top"><div align="left">Overall Rating:{{overallrating}}</div></td>
+            <td valign="top"><div align="left">Description:{{description}}</div></td>
 
         </tr>
         <tr>
-            <td valign="top"><div align="left">Events Participated:{{events}}</div></td>
+            <td valign="top"><div align="left">Objectives:{{objectives}}</div></td>
 
         </tr>
         <tr>
-            <td valign="top"><div align="left">Comments:{{comments}} </div></td>
+            <td valign="top"><div align="left">Start Date :{{startdate}}</div></td>
 
         </tr>
         <tr>
-            <td valign="top"><div align="left">Workshops Attended:{{workshops}} </div></td>
+            <td valign="top"><div align="left">End Date :{{enddate}} </div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Project Manager:{{projectmanager}} </div></td>
 
         </tr>
 
