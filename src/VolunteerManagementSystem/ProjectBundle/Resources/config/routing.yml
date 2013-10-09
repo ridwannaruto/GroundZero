@@ -10,3 +10,7 @@ projectsubmission:
 projectconfirmation:
     pattern: /projectconfirmation
     defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectConfirmation:projectconfirmation }
+
+projectview:
+    pattern: /project_view
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectView:projectview }

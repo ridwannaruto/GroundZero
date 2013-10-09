@@ -76,10 +76,10 @@ class __TwigTemplate_c787d18930b1e5b4d3c2e817c8da8889 extends Twig_Template
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "startdate"), 'widget');
         echo "        
         <br><br>
-        <strong>End Date</strong><br>   
+        <strong>Schedule End Date</strong><br>   
         ";
         // line 27
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "enddate"), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "deadline"), 'widget');
         echo "        
         <br><br>
         <p align=\"right\">
