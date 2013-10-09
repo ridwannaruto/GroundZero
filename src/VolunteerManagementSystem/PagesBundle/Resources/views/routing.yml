@@ -1,0 +1,88 @@
+welcome:
+   pattern: /home
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Homepage:welcome }
+   
+profile:
+   pattern: /profile
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Profilepage:profile }
+
+news:
+   pattern: /news
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Newspage:news }
+
+projects:
+   pattern: /projects
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Projectspage:projects }
+
+contact:
+   pattern: /contact
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:Contactpage:contact }
+   
+edit_UserName:
+   pattern: /edit_UserName
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editUserName }
+save_UserName:
+   pattern: /save_UserName
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveUserName }
+edit_Name:
+   pattern: /edit_Name
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editName }
+save_Name:
+   pattern: /save_Name
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveName }
+edit_Password:
+   pattern: /edit_Password
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editPassword }
+save_Password:
+   pattern: /save_Password
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:savePassword }
+edit_NIC:
+   pattern: /edit_NIC
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editNIC }
+save_NIC:
+   pattern: /save_NIC
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveNIC }
+edit_DOB:
+   pattern: /edit_DOB
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editDOB}
+save_DOB:
+   pattern: /save_DOB
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveDOB }
+edit_Gender:
+   pattern: /edit_Gender
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editGender }
+save_Gender:
+   pattern: /save_Gender
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveGender }
+edit_Email:
+   pattern: /edit_Email
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editEmail }
+save_Email:
+   pattern: /save_Email
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveEmail }
+edit_MobileNumb:
+   pattern: /edit_MobileNumb
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editMobileNumb }
+save_MobileNumb:
+   pattern: /save_MobileNumb
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveMobileNumb }
+edit_ContactNumb:
+   pattern: /edit_ContactNumb
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editContactNumb }
+save_ContactNumb:
+   pattern: /save_contactNumb
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveContactNumb }
+edit_Address:
+   pattern: /edit_Address
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:EditProfile:editAddress }
+save_Address:
+   pattern: /save_Address
+   defaults: { _controller: VolunteerManagementSystemPagesBundle:SaveUser:saveAddress }
+
+login:
+   pattern:  /login
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:login }
+   
+logout:
+   pattern:  /loginout
+   defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }

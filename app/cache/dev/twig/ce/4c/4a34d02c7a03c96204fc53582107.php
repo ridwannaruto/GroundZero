@@ -42,60 +42,71 @@ class __TwigTemplate_ce4c4a34d02c7a03c96204fc53582107 extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 7
-        echo "     <p align=\"center\">   
-    ";
-        // line 8
+        echo "<section class=\"container\">
+    <div class=\"notify\">
+        <h1>Search Volunteers</h1>
+       
+   <strong> ";
+        // line 11
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
         ";
-        // line 9
+        // line 12
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
-        echo "
-        ";
-        // line 10
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname"), 'row');
+        echo "</strong><t>
+<p align=\"center\">         
+";
+        // line 14
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "firstname"), 'widget');
         echo "   
+        
         ";
-        // line 11
+        // line 16
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "submit"), 'widget');
         echo "
     ";
-        // line 12
+        // line 17
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
       </p>
-       
+       </div></section>
+       <section class=\"container\">
+    <div class=\"notify\">
+        <table width=90%>
+        <h1>Search Reults</h1>
     ";
-        // line 15
+        // line 24
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")));
         foreach ($context['_seq'] as $context["_key"] => $context["res"]) {
-            // line 16
-            echo "        ";
+            // line 25
+            echo "        <tr><td>
+        <strong>";
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "getFirstname", array(), "method"), "html", null, true);
             echo "&nbsp;";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "getLastname", array(), "method"), "html", null, true);
-            echo "&nbsp;&nbsp;
+            echo "</strong><br></td><td>
         ";
-            // line 17
+            // line 27
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "getEmail", array(), "method"), "html", null, true);
-            echo "&nbsp;&nbsp;
+            echo "</td><td>
         ";
-            // line 18
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "getMobilenumber", array(), "method"), "html", null, true);
-            echo "&nbsp;&nbsp;
+            echo "</td><td>
         ";
-            // line 19
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "getAccesslevel", array(), "method"), "html", null, true);
-            echo "<br>
+            echo "</td></tr>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['res'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
-        echo "  
-
+        // line 30
+        echo "  </table>
+</div></section>
 ";
     }
 
@@ -111,6 +122,6 @@ class __TwigTemplate_ce4c4a34d02c7a03c96204fc53582107 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  97 => 20,  89 => 19,  85 => 18,  81 => 17,  74 => 16,  70 => 15,  64 => 12,  60 => 11,  56 => 10,  52 => 9,  48 => 8,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
+        return array (  108 => 30,  100 => 29,  96 => 28,  92 => 27,  86 => 26,  83 => 25,  79 => 24,  69 => 17,  65 => 16,  60 => 14,  55 => 12,  51 => 11,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
     }
 }

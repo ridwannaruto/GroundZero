@@ -20,6 +20,7 @@
       <parameter key="VolunteerManagementSystemStylesBundle">VolunteerManagementSystem\StylesBundle\VolunteerManagementSystemStylesBundle</parameter>
       <parameter key="VolunteerManagementSystemPagesBundle">VolunteerManagementSystem\PagesBundle\VolunteerManagementSystemPagesBundle</parameter>
       <parameter key="VolunteerManagementSystemReportGenerationBundle">VolunteerManagementSystem\ReportGenerationBundle\VolunteerManagementSystemReportGenerationBundle</parameter>
+      <parameter key="VolunteerManagementSystemNotificationBundle">VolunteerManagementSystem\NotificationBundle\VolunteerManagementSystemNotificationBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -34,9 +35,9 @@
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">null</parameter>
     <parameter key="mailer_transport">smtp</parameter>
-    <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">null</parameter>
-    <parameter key="mailer_password">null</parameter>
+    <parameter key="mailer_host">smtp.gmail.com</parameter>
+    <parameter key="mailer_user">rshariffdeen</parameter>
+    <parameter key="mailer_password">Naruto1!</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
@@ -357,15 +358,15 @@
     <parameter key="swiftmailer.data_collector.class">Symfony\Bundle\SwiftmailerBundle\DataCollector\MessageDataCollector</parameter>
     <parameter key="swiftmailer.mailer.default.transport.name">smtp</parameter>
     <parameter key="swiftmailer.mailer.default.delivery.enabled">true</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.host">127.0.0.1</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">ssl</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.port">563</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.host">smtp.gmail.com</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">rshariffdeen</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">Naruto1!</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">C:/xampp/htdocs/GroundZero/app/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.file.path">C:/xampp/htdocs/GroundZero/app/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
     <parameter key="swiftmailer.spool.enabled">true</parameter>
@@ -2220,6 +2221,7 @@
             <argument type="collection">
               <argument key="VolunteerManagementSystemRegistrationBundle">VolunteerManagementSystem\RegistrationBundle\Entity</argument>
               <argument key="VolunteerManagementSystemReportGenerationBundle">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+              <argument key="VolunteerManagementSystemNotificationBundle">VolunteerManagementSystem\NotificationBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2270,6 +2272,7 @@
                     <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
                       <argument type="collection">
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2277,6 +2280,20 @@
                     </service>
                   </argument>
                   <argument>VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>VolunteerManagementSystem\NotificationBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -2684,6 +2701,10 @@
         <argument>VolunteerManagementSystemReportGeneration</argument>
       </call>
       <call method="addPath">
+        <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle/Resources/views</argument>
+        <argument>VolunteerManagementSystemNotification</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\Acme\DemoBundle/Resources/views</argument>
         <argument>AcmeDemo</argument>
       </call>
@@ -2724,7 +2745,9 @@
         <argument type="service" id="swiftmailer.mailer.default.plugin.messagelogger"/>
       </call>
     </service>
-    <service id="swiftmailer.mailer.default.spool" class="Swift_MemorySpool"/>
+    <service id="swiftmailer.mailer.default.spool" class="Swift_FileSpool">
+      <argument>C:/xampp/htdocs/GroundZero/app/spool/default</argument>
+    </service>
     <service id="swiftmailer.mailer.default.transport.real" class="Swift_Transport_EsmtpTransport">
       <argument type="service">
         <service class="Swift_Transport_StreamBuffer" public="false">
@@ -2752,22 +2775,22 @@
       </argument>
       <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
       <call method="setHost">
-        <argument>127.0.0.1</argument>
+        <argument>smtp.gmail.com</argument>
       </call>
       <call method="setPort">
-        <argument>25</argument>
+        <argument>563</argument>
       </call>
       <call method="setEncryption">
-        <argument>null</argument>
+        <argument>ssl</argument>
       </call>
       <call method="setUsername">
-        <argument>null</argument>
+        <argument>rshariffdeen</argument>
       </call>
       <call method="setPassword">
-        <argument>null</argument>
+        <argument>Naruto1!</argument>
       </call>
       <call method="setAuthMode">
-        <argument>null</argument>
+        <argument>login</argument>
       </call>
       <call method="setTimeout">
         <argument>30</argument>

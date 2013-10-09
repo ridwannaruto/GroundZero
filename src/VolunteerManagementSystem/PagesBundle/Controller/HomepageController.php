@@ -12,12 +12,29 @@ class HomepageController extends Controller
         $id = $request->get('id');
         $em = $this->getDoctrine()->getEntityManager();
         $repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
-
+        $notifications = $em->getRepository('VolunteerManagementSystemNotificationBundle:Notification');
+        
+        $result = array('name'=>'Exmo Exhibition','details'=>'Due date changed on tomorrow');
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
+            
+
+            $query = $notifications->createQueryBuilder('p')
+                    ->where('p.id = :id')
+                    ->setParameter('id', 1)
+                    ->orderBy('p.id','ASC')
+                    ->getQuery();
+
+            $notify = $query->getResult();
+            
+           if($user->getAccessLevel()=='Volunteer'){
+           return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig', array('id' => $id,'notify'=>$notify));
+           }
+           if($user->getAccessLevel()=='Admin'){
+           return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepageadmin.html.twig', array('id' => $id,'notify'=>$notify));
+           }
            
-           return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig', array('id' => $id));
-       }
+        }
         else{
             
             return $this->render('VolunteerManagementSystemRegistrationBundle:Login:login.html.twig');

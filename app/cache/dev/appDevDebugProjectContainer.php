@@ -557,15 +557,16 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity'));
         $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\NotificationBundle\\Entity'));
         $e->setGlobalBasename('mapping');
 
         $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
         $f->addDriver($d, 'VolunteerManagementSystem\\RegistrationBundle\\Entity');
         $f->addDriver($e, 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity');
+        $f->addDriver($e, 'VolunteerManagementSystem\\NotificationBundle\\Entity');
 
         $g = new \Doctrine\ORM\Configuration();
-        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity'));
+        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\Entity'));
         $g->setMetadataCacheImpl($a);
         $g->setQueryCacheImpl($b);
         $g->setResultCacheImpl($c);
@@ -2156,11 +2157,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return Swift_MemorySpool A Swift_MemorySpool instance.
+     * @return Swift_FileSpool A Swift_FileSpool instance.
      */
     protected function getSwiftmailer_Mailer_Default_SpoolService()
     {
-        return $this->services['swiftmailer.mailer.default.spool'] = new \Swift_MemorySpool();
+        return $this->services['swiftmailer.mailer.default.spool'] = new \Swift_FileSpool('C:/xampp/htdocs/GroundZero/app/spool/default');
     }
 
     /**
@@ -2192,12 +2193,12 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['swiftmailer.mailer.default.transport.real'] = $instance = new \Swift_Transport_EsmtpTransport(new \Swift_Transport_StreamBuffer(new \Swift_StreamFilters_StringReplacementFilterFactory()), array(0 => new \Swift_Transport_Esmtp_AuthHandler(array(0 => new \Swift_Transport_Esmtp_Auth_CramMd5Authenticator(), 1 => new \Swift_Transport_Esmtp_Auth_LoginAuthenticator(), 2 => new \Swift_Transport_Esmtp_Auth_PlainAuthenticator()))), $this->get('swiftmailer.mailer.default.transport.eventdispatcher'));
 
-        $instance->setHost('127.0.0.1');
-        $instance->setPort(25);
-        $instance->setEncryption(NULL);
-        $instance->setUsername(NULL);
-        $instance->setPassword(NULL);
-        $instance->setAuthMode(NULL);
+        $instance->setHost('smtp.gmail.com');
+        $instance->setPort(563);
+        $instance->setEncryption('ssl');
+        $instance->setUsername('rshariffdeen');
+        $instance->setPassword('Naruto1!');
+        $instance->setAuthMode('login');
         $instance->setTimeout(30);
         $instance->setSourceIp(NULL);
 
@@ -2875,6 +2876,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\StylesBundle/Resources/views', 'VolunteerManagementSystemStyles');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\PagesBundle/Resources/views', 'VolunteerManagementSystemPages');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle/Resources/views', 'VolunteerManagementSystemReportGeneration');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle/Resources/views', 'VolunteerManagementSystemNotification');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3329,6 +3331,7 @@ class appDevDebugProjectContainer extends Container
                 'VolunteerManagementSystemStylesBundle' => 'VolunteerManagementSystem\\StylesBundle\\VolunteerManagementSystemStylesBundle',
                 'VolunteerManagementSystemPagesBundle' => 'VolunteerManagementSystem\\PagesBundle\\VolunteerManagementSystemPagesBundle',
                 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\VolunteerManagementSystemReportGenerationBundle',
+                'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\VolunteerManagementSystemNotificationBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3343,9 +3346,9 @@ class appDevDebugProjectContainer extends Container
             'database_user' => 'root',
             'database_password' => NULL,
             'mailer_transport' => 'smtp',
-            'mailer_host' => '127.0.0.1',
-            'mailer_user' => NULL,
-            'mailer_password' => NULL,
+            'mailer_host' => 'smtp.gmail.com',
+            'mailer_user' => 'rshariffdeen',
+            'mailer_password' => 'Naruto1!',
             'locale' => 'en',
             'secret' => 'ThisTokenIsNotSoSecretChangeIt',
             'controller_resolver.class' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver',
@@ -3674,15 +3677,15 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.data_collector.class' => 'Symfony\\Bundle\\SwiftmailerBundle\\DataCollector\\MessageDataCollector',
             'swiftmailer.mailer.default.transport.name' => 'smtp',
             'swiftmailer.mailer.default.delivery.enabled' => true,
-            'swiftmailer.mailer.default.transport.smtp.encryption' => NULL,
-            'swiftmailer.mailer.default.transport.smtp.port' => 25,
-            'swiftmailer.mailer.default.transport.smtp.host' => '127.0.0.1',
-            'swiftmailer.mailer.default.transport.smtp.username' => NULL,
-            'swiftmailer.mailer.default.transport.smtp.password' => NULL,
-            'swiftmailer.mailer.default.transport.smtp.auth_mode' => NULL,
+            'swiftmailer.mailer.default.transport.smtp.encryption' => 'ssl',
+            'swiftmailer.mailer.default.transport.smtp.port' => 563,
+            'swiftmailer.mailer.default.transport.smtp.host' => 'smtp.gmail.com',
+            'swiftmailer.mailer.default.transport.smtp.username' => 'rshariffdeen',
+            'swiftmailer.mailer.default.transport.smtp.password' => 'Naruto1!',
+            'swiftmailer.mailer.default.transport.smtp.auth_mode' => 'login',
             'swiftmailer.mailer.default.transport.smtp.timeout' => 30,
             'swiftmailer.mailer.default.transport.smtp.source_ip' => NULL,
-            'swiftmailer.spool.default.memory.path' => 'C:/xampp/htdocs/GroundZero/app/cache/dev/swiftmailer/spool/default',
+            'swiftmailer.spool.default.file.path' => 'C:/xampp/htdocs/GroundZero/app/spool/default',
             'swiftmailer.mailer.default.spool.enabled' => true,
             'swiftmailer.mailer.default.single_address' => NULL,
             'swiftmailer.spool.enabled' => true,

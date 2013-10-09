@@ -13,6 +13,7 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
             'title' => array($this, 'block_title'),
             'selectnews' => array($this, 'block_selectnews'),
             'body' => array($this, 'block_body'),
+            'admin' => array($this, 'block_admin'),
         );
     }
 
@@ -42,8 +43,15 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 7
+        $this->displayBlock('admin', $context, $blocks);
+        // line 9
         echo "News Feed
 ";
+    }
+
+    // line 7
+    public function block_admin($context, array $blocks = array())
+    {
     }
 
     public function getTemplateName()
@@ -58,6 +66,6 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  45 => 7,  42 => 6,  36 => 5,  30 => 3,);
+        return array (  53 => 7,  48 => 9,  46 => 7,  43 => 6,  37 => 5,  31 => 3,);
     }
 }

@@ -1,0 +1,26 @@
+VolunteerManagementSystem\ProjectBundle\Entity\Project:
+    type: entity
+    table: project
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+            strategy: 'IDENTITY'
+        name:
+            type: string
+            length: '30'
+        description:
+            type: string
+            length: 255
+        objectives:
+            type: string
+            length: 255
+        startdate:
+            type: date
+        enddate:
+            type: date
+        projectmanager:
+            type: string
+            length: '30'
+    lifecycleCallbacks: {  }

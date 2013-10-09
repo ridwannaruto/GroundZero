@@ -107,7 +107,97 @@ a:hover {text-decoration:none}
 .login-help a:hover {
     text-decoration: underline;
 }
+.propic {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 5px 5px;
+    width: 200px;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.notify {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 96%;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.notify:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+.notify h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px whitesmoke;
+}
+.notify p {
+    margin: 20px 0 0;
+}
+.notify p:first-child {
+    margin-top: 0;
+}
+.notify input[type=text], .login input[type=password] {
+    width: 278px;
+}
+.notify p.remember_me {
+    float: left;
+    line-height: 31px;
+}
+.notify p.remember_me label {
+    font-size: 12px;
+    color: #777;
+    cursor: pointer;
+}
+.notify p.remember_me input {
+    position: relative;
+    bottom: 1px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.notify p.submit {
+    text-align: right;
+}
 
+.notify-help {
+    margin: 20px 0;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px #2a85a1;
+}
+.notify-help a {
+    color: #cce7fa;
+    text-decoration: none;
+}
+.notify-help a:hover {
+    text-decoration: underline;
+}
 
 :-moz-placeholder {
   color: #c9c9c9 !important;
@@ -253,7 +343,7 @@ h1 span {display:inline-block;	font-size:28px;	line-height:1.2em;	color:#949494;
 .menu {padding:0;width:100%}
 .menu li {float:left;position:relative}
 .menu li:first-child {background:url(../images/menu-a-tail.gif) 0 -71px no-repeat}
-.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:2px 0 2px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
+.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:150px;font-size:21px;line-height:1.238em;padding:2px 0 2px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
 .menu li a:hover,
 .menu li a.active {color:#fff;background-position:left top;background-repeat:repeat-x;background-color:#000}
 /***** search form *****/

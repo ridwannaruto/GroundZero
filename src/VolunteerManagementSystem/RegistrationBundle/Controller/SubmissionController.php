@@ -11,7 +11,7 @@ class SubmissionController extends Controller {
 
     public function submissionAction(Request $request) {
         $em = $this->getDoctrine()->getEntityManager();
-
+        
         $form = $this->createForm(new RegistrationType(), new Registration());
 
         $form->handleRequest($request);
@@ -19,9 +19,12 @@ class SubmissionController extends Controller {
         if ($form->isValid()) {
             $registration = $form->getData();
             $em->persist($registration->getUser());
-
+       
+            
             try {
+            
                 $em->flush();
+               
             } catch (\Exception $e) {
                 return $this->render('VolunteerManagementSystemRegistrationBundle:Submission:submission.html.twig', array('form' => $form->createView()));
             }
