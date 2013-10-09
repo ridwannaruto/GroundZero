@@ -19,7 +19,7 @@ class CreateEventController extends Controller
         
         return $this->render(
             'VolunteerManagementSystemEventBundle:Default:createevent.html.twig',
-            array('form' => $form->createView())
+            array('form' => $form->createView(),'id'=>$id)
         );}
         
      public function eventSaveAction(Request $request)
@@ -58,9 +58,7 @@ class CreateEventController extends Controller
         return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
        }
 
-    return $this->render(
-        'ProjectBundle:Error:error.html.twig',
-       array('form' => $form->createView(),'id'=>$id)
-    );
+        return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
+    
     }
 }

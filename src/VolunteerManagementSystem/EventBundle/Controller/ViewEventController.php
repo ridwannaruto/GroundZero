@@ -7,60 +7,36 @@ use VolunteerManagementSystem\EventBundle\Form\EventType;
 use VolunteerManagementSystem\EventBundle\Entity\Event;
 use Symfony\Component\HttpFoundation\Request;
 
-class CreateEventController extends Controller
+class ViewEventController extends Controller
 {
-    public function viewEventAction()
-    {   $event = new Event();
+    public function viewEventAction(Request $request)
+    {   
+        $eventid=3;
         $id=45;
-        $projectId= 3;
-        $form = $this->createForm(new EventType(), $event, array(
-            'action' => $this->generateUrl('save_event',array('id'=>$id,'projectId'=>$projectId)),
-        ));
+        $em =$this->getDoctrine()->getEntityManager();
+        $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
+        $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         
+        $event = $repository->findOneBy(array('id'=>$eventid));
+       
+        if($event){
+            $array = $event->getSubscribers();
+            $array[]=$id;
+            $event->setSubscribers($array);
+            $em->persist($event);
+            $em->flush();
+            $teamleaderid=$event->getTeamleader();
+            $teamleader=$repository2->findOneBy(array('id'=>$teamleaderid));
+            if($teamleader){
+          return $this->render(
+            'VolunteerManagementSystemEventBundle:Event:event.html.twig',
+            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName())
+        );  
+        }}
         return $this->render(
             'VolunteerManagementSystemEventBundle:Default:createevent.html.twig',
-            array('form' => $form->createView())
+            array('id'=>$id)
         );}
         
-     public function eventSaveAction(Request $request)
-    {
-       $projectid = $request->get('projectId');
-        $em = $this->getDoctrine()->getEntityManager();
-      $id = $request->get('id');
-        $event = new Event();
-        $event->setProject($projectid);
-        $array=array();
-        $event->setVolunteerslist($array);
-        $event->setSubscribers($array);
-        $form = $this->createForm(new EventType(), $event);
-        
-       $form->handleRequest($request);
-       
-        if ($form->isValid()) {
-        
-     //   $event = $form->getData();
-        $enddate= $event->getDeadline();
-        $endtime=$event->getDeadlinetime();
-        $event->setEnddate($enddate);
-        $event->setEndtime($endtime);
-        $Teamleader=$event->getTeamleader();
-        $teamleaderid=$Teamleader->getId();
-        $event->setTeamleader($teamleaderid);
-        
-        $em->persist($event);
-        try{
-            $em->flush();
-        }
-        catch(\Exception $e){
-            return $this->render('ProjectBundle:Submission:projectsubmission.html.twig', array('id' => $id,'form' => $form->createView()));
-        }
-
-        return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
-       }
-
-    return $this->render(
-        'ProjectBundle:Error:error.html.twig',
-       array('form' => $form->createView(),'id'=>$id)
-    );
-    }
+     
 }
