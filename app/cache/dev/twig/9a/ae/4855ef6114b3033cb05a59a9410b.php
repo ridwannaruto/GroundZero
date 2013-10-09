@@ -49,7 +49,12 @@ class __TwigTemplate_9aae4855ef6114b3033cb05a59a9410b extends Twig_Template
     <div class=\"notify\">
         <h1> Event</h1>
         <table>
-            <tr>
+            <tr><a href=\"register_event?eid=";
+        // line 13
+        echo twig_escape_filter($this->env, (isset($context["eid"]) ? $context["eid"] : $this->getContext($context, "eid")), "html", null, true);
+        echo "&id=";
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"><button>Register</button></a>
             <td><strong>Event Name</strong></td><td>";
         // line 14
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "name"), "html", null, true);
@@ -115,6 +120,6 @@ class __TwigTemplate_9aae4855ef6114b3033cb05a59a9410b extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 7,  90 => 34,  83 => 30,  76 => 26,  69 => 22,  62 => 18,  55 => 14,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  107 => 7,  95 => 34,  88 => 30,  81 => 26,  74 => 22,  67 => 18,  60 => 14,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }
