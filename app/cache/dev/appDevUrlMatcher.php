@@ -146,6 +146,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // create_event
+        if ($pathinfo === '/create_evet') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CreateEventController::createEventAction',  '_route' => 'create_event',);
+        }
+
+        // save_event
+        if ($pathinfo === '/save_evet') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CreateEventController::eventSaveAction',  '_route' => 'save_event',);
+        }
+
         if (0 === strpos($pathinfo, '/createNews')) {
             // news_create_confirm
             if ($pathinfo === '/createNewsConfirmation') {
@@ -323,6 +333,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // search_result
         if ($pathinfo === '/result') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SearchController::searchAction',  '_route' => 'search_result',);
+        }
+
+        if (0 === strpos($pathinfo, '/promote')) {
+            // promote
+            if ($pathinfo === '/promote') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\VolunteertoAdminController::volunteertoadminselectionAction',  '_route' => 'promote',);
+            }
+
+            // promote_to_admin
+            if ($pathinfo === '/promotetoAdmin') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
+            }
+
         }
 
         // volunteer_management_system_styles_homepage
