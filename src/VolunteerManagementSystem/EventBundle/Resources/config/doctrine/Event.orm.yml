@@ -1,0 +1,40 @@
+VolunteerManagementSystem\EventBundle\Entity\Event:
+    type: entity
+    table: null
+    repositoryClass: VolunteerManagementSystem\EventBundle\Entity\EventRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '50'
+        teamleader:
+            type: integer
+        project:
+            type: integer
+        weight:
+            type: integer
+        description:
+            type: text
+        goals:
+            type: text
+        volunteerslist:
+            type: array
+        subscribers:
+            type: array
+        startdate:
+            type: date
+        starttime:
+            type: time
+        deadline:
+            type: date
+        deadlinetime:
+            type: time
+        enddate:
+            type: date
+        endtime:
+            type: time
+    lifecycleCallbacks: {  }
