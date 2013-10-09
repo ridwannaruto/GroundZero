@@ -15,6 +15,10 @@ VolunteerManagementSystem\ProjectBundle\Entity\Project:
             type: date
         enddate:
             type: date
+            nullable: TRUE
+        deadline:
+            type: date
+            
         projectmanager:
             type: integer
         events:

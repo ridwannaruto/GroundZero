@@ -1,28 +1,35 @@
 {% extends '::base.html.twig' %}
 
 {% block title %}Volma - Project Creation{% endblock %}
-{% block menu %}
-{% endblock %}
+
 {% block body %}
  <section class="container">
-    <div class="login">
-      <h1>Create Project</h1>
+    <div class="notify">
+      <h1>Enter Project Information</h1>
         {{ form_start(form) }}
         {{ form_errors(form) }}
-        {{form_row(form.name)}}        
+      <strong>Project Name</strong><br>
+        {{form_widget(form.name)}}        
         <br><br>
-        {{form_row(form.description)}}        
+        <strong>Project Description</strong><br>        
+        {{form_widget(form.description)}}        
         <br><br>
-        {{form_row(form.objectives)}}        
+        <strong>Project Objectives</strong><br>   
+        {{form_widget(form.objectives)}}        
         <br><br>
-        {{form_row(form.projectmanager)}}        
+        <strong>Project Manager</strong><br>   
+        {{form_widget(form.projectmanager)}}        
         <br><br>
-        {{form_row(form.startdate)}}        
+        <strong>Start Date</strong><br>   
+        {{form_widget(form.startdate)}}        
         <br><br>
-        {{form_row(form.enddate)}}        
+        <strong>Schedule End Date</strong><br>   
+        {{form_widget(form.deadline)}}        
         <br><br>
+        <p align="right">
         {{form_widget(form.submit)}}
         {{ form_end(form) }}
+                </p>
     </div>
         
 
