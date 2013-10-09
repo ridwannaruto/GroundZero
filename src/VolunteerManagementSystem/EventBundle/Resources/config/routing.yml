@@ -1,3 +1,9 @@
 volunteer_management_system_event_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: VolunteerManagementSystemEventBundle:Default:index }
+create_event:
+    pattern:  /create_evet
+    defaults: { _controller: VolunteerManagementSystemEventBundle:CreateEvent:createEvent }
+save_event:
+    pattern:  /save_evet
+    defaults: { _controller: VolunteerManagementSystemEventBundle:CreateEvent:eventSave }
