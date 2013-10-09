@@ -7,8 +7,37 @@
 {% block body %}
  <section class="container">
     <div class="login">
-      <h1>Register</h1>
-      {{form(form)}}
+      <h1>Create New Event</h1>
+      {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{form_row(form.name)}}        
+        <br>
+        {{form_row(form.weight)}}        
+        <br><br>
+        
+        {{form_row(form.description)}}        
+        <br>
+        {{form_row(form.goals)}}        
+        <br>
+        {{form_label(form.startdate)}}{{form_widget(form.startdate)}}        {{form_widget(form.starttime)}}        
+        <br><br>
+        
+        {{form_label(form.deadline)}}<br>
+        {{form_widget(form.deadline)}}
+        <br>
+        {{form_label(form.deadlinetime)}}<br>
+        {{form_widget(form.deadlinetime)}}
+        <br><br>
+        
+        {{form_row(form.teamleader)}}        
+        <br><br>
+        <p align="center">
+        
+        <br><br>
+        
+        {{form_widget(form.submit)}}
+         </p>
+        {{ form_end(form) }}
         
         
         
