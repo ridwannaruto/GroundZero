@@ -16,6 +16,7 @@ class ProjectReportController extends Controller
         
         $project = $ProjectRepository->findOneBy(array('id' => $projectId));
         
+        
         if($project){
             
             return $this->render('VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport.html.twig', array('projectname' => $project->getName(), 'description' => $project->getDescription(), 'startdate' => $project->getStartdate(), 'enddate' => $project->getEnddate(), 'projectmanager' => $project->getProjectmanager(), 'objectives' => $project->getObjectives(),'id' => $userId));
