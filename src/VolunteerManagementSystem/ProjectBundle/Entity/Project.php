@@ -27,7 +27,7 @@ class Project
     /**
      * @var \DateTime
      */
-    private $enddate;
+    private $enddate = null;
 
     /**
      * @var \stdClass
@@ -46,6 +46,7 @@ class Project
 
     private $events;
     private $volunteers;
+    private $deadline;
     /**
      * Get id
      *
@@ -97,6 +98,31 @@ class Project
     {
         return $this->name;
     }
+    
+    
+    /**
+     * Set deadline
+     *
+     * @param \DateTime $deadline
+     * @return Project
+     */
+    public function setDeadline($deadline)
+    {
+        $this->deadline = $deadline;
+    
+        return $this;
+    }
+
+    /**
+     * Get deadline
+     *
+     * @return \DateTime 
+     */
+    public function getDeadline()
+    {
+        return $this->deadline;
+    }
+
 
     /**
      * Set startdate

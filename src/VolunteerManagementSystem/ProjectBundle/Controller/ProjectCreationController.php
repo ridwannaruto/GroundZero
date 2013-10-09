@@ -22,7 +22,7 @@ class ProjectCreationController extends Controller
         ));
         return $this->render(
             'VolunteerManagementSystemProjectBundle:ProjectCreation:projectcreation.html.twig',
-            array('form' => $form->createView())
+            array('form' => $form->createView(), 'id'=> $id)
         );
         }
     
