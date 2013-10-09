@@ -10,3 +10,6 @@ save_event:
 view_event:
     pattern:  /view_event
     defaults: { _controller: VolunteerManagementSystemEventBundle:ViewEvent:viewEvent }
+register_event:
+    pattern:  /register_event
+    defaults: { _controller: VolunteerManagementSystemEventBundle:RegisterEvent:register }

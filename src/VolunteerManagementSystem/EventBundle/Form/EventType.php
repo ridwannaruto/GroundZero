@@ -70,7 +70,7 @@ class EventType extends AbstractType
          
         ;
         $builder->add('teamleader', 'entity', array(
-            'label' =>'Project Manager  ',
+            'label' =>'Team Leader  ',
             'class' => 'VolunteerManagementSystemRegistrationBundle:User',
             'property' => 'username',
             ));

@@ -181,6 +181,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\ViewEventController::viewEventAction',  '_route' => 'view_event',);
         }
 
+        // register_event
+        if ($pathinfo === '/register_event') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\RegisterEventController::registerAction',  '_route' => 'register_event',);
+        }
+
         if (0 === strpos($pathinfo, '/createNews')) {
             // news_create_confirm
             if ($pathinfo === '/createNewsConfirmation') {
