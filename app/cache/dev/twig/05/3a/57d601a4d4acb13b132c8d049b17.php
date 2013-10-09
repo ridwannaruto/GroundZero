@@ -1,7 +1,7 @@
 <?php
 
-/* VolunteerManagementSystemEventBundle:Default:event.html.twig */
-class __TwigTemplate_998faf6fe7650ecdb6f5d5ce17dd9bd5 extends Twig_Template
+/* VolunteerManagementSystemEventBundle:Default:createevent.html.twig */
+class __TwigTemplate_053a57d601a4d4acb13b132c8d049b17 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -180,7 +180,7 @@ class __TwigTemplate_998faf6fe7650ecdb6f5d5ce17dd9bd5 extends Twig_Template
 
     public function getTemplateName()
     {
-        return "VolunteerManagementSystemEventBundle:Default:event.html.twig";
+        return "VolunteerManagementSystemEventBundle:Default:createevent.html.twig";
     }
 
     public function isTraitable()

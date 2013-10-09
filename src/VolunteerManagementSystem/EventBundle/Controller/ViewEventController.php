@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class CreateEventController extends Controller
 {
-    public function createEventAction()
+    public function viewEventAction()
     {   $event = new Event();
         $id=45;
         $projectId= 3;
