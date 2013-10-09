@@ -1,3 +1,7 @@
-volunteer_management_system_news_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: VolunteerManagementSystemNewsBundle:Default:index }
+news_create_confirm:
+    pattern:  /createNewsConfirmation
+    defaults: { _controller: VolunteerManagementSystemNewsBundle:CreationConfirmation:creationconfirm }
+
+create_news:
+   pattern:  /createNews
+   defaults: { _controller: VolunteerManagementSystemNewsBundle:Creation:create }

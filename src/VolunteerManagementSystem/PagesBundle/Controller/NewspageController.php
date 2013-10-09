@@ -14,12 +14,17 @@ class NewspageController extends Controller{
 
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
-           
+            $stmt = $this->getDoctrine()->getEntityManager()
+                        ->getConnection()
+                        ->prepare('select * from news where id > ((select COUNT(*) from news) - 10) order by id DESC');
+                        $stmt->execute();
+           $result = $stmt->fetchAll();
+          
        if($user->getAccessLevel()=='Volunteer'){
-           return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspage.html.twig', array('id' => $id));
+           return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspage.html.twig', array('id' => $id,'result'=>$result));
            }
            if($user->getAccessLevel()=='Admin'){
-           return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspageadmin.html.twig', array('id' => $id));
+           return $this->render('VolunteerManagementSystemPagesBundle:Newspage:newspageadmin.html.twig', array('id' => $id,'result'=>$result));
            } }
         else{
             

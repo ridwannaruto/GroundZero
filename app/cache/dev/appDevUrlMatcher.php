@@ -133,6 +133,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/hello')) {
+            // volunteer_management_system_stat_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // volunteer_management_system_event_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_event_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/createNews')) {
+            // news_create_confirm
+            if ($pathinfo === '/createNewsConfirmation') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\NewsBundle\\Controller\\CreationConfirmationController::creationconfirmAction',  '_route' => 'news_create_confirm',);
+            }
+
+            // create_news
+            if ($pathinfo === '/createNews') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\NewsBundle\\Controller\\CreationController::createAction',  '_route' => 'create_news',);
+            }
+
+        }
+
         // volunteer_management_system_notification_homepage
         if ($pathinfo === '/email') {
             return array (  '_controller' => 'VolunteerManagementSystem\\NotificationBundle\\Controller\\EmailController::sendAction',  '_route' => 'volunteer_management_system_notification_homepage',);

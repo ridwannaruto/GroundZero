@@ -28,8 +28,8 @@ class __TwigTemplate_460e22b904766892ee2d71067f958769 extends Twig_Template
     public function block_admin($context, array $blocks = array())
     {
         // line 4
-        echo "<form action=\"";
-        echo $this->env->getExtension('routing')->getPath("just");
+        echo "<form action=\"createNews?id=";
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\" method=\"post\" >
 <p align=\"right\">
             <button type=\"submit\">Create News</button>

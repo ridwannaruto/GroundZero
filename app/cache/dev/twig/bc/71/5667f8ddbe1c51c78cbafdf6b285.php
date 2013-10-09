@@ -45,7 +45,32 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
         // line 7
         $this->displayBlock('admin', $context, $blocks);
         // line 9
-        echo "News Feed
+        echo "<h1 class=\"price\">News Feed</h1>
+";
+        // line 10
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")));
+        foreach ($context['_seq'] as $context["_key"] => $context["res"]) {
+            // line 11
+            echo " <p>
+        
+        <div class=\"notify\" >
+        <p align=\"left\"><strong>
+        ";
+            // line 15
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "heading", array(), "array"), "html", null, true);
+            echo "</strong><br>
+        ";
+            // line 16
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "description", array(), "array"), "html", null, true);
+            echo "<br></div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['res'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 17
+        echo " 
 ";
     }
 
@@ -66,6 +91,6 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  53 => 7,  48 => 9,  46 => 7,  43 => 6,  37 => 5,  31 => 3,);
+        return array (  78 => 7,  73 => 17,  65 => 16,  61 => 15,  55 => 11,  51 => 10,  48 => 9,  46 => 7,  43 => 6,  37 => 5,  31 => 3,);
     }
 }
