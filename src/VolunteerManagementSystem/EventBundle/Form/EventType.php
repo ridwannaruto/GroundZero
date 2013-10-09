@@ -15,14 +15,58 @@ class EventType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', 'text', array( 
+            'label'  => 'Event Name',
+            'attr'  => array(
+               'placeholder' =>'type your Event name' 
+            )
+            ))
             ->add('weight')
-            ->add('description')
-            ->add('goals')
-            ->add('startdate')
-            ->add('starttime')
-            ->add('deadline')
-            ->add('deadlinetime')
+            ->add('description','textarea',array(
+                'label' =>'description',
+                'attr'=>array(
+                    'placeholder'=>'Give description about event'
+                    )
+            ))
+            ->add('goals','textarea',array(
+                'label' =>'Objectives',
+                'attr'=>array(
+                    'placeholder'=>'Give objectives'
+                    )
+            ))
+            ->add('startdate','date',array(
+                'input' => 'datetime',
+                'widget' => 'single_text',
+            'label' =>'Start Date',
+                'attr'=>array(
+                    'placeholder'=>'project start date'
+                    )
+            ))
+            ->add('starttime','time',array(
+                'input' => 'datetime',
+                'widget' => 'single_text',
+            'label' =>'Start Date',
+                'attr'=>array(
+                    'placeholder'=>'project start date'
+                    )
+            ))
+             ->add('deadline','date',array(
+                'input' => 'datetime',
+                'widget' => 'single_text',
+            'label' =>'Start Date',
+                'attr'=>array(
+                    'placeholder'=>'project start date'
+                    )
+            ))
+            ->add('deadlinetime','time',array(
+                'input' => 'datetime',
+                'widget' => 'single_text',
+            'label' =>'Start Date',
+                'attr'=>array(
+                    'placeholder'=>'project start date'
+                    )
+            ))
+          
          
         ;
         $builder->add('teamleader', 'entity', array(
