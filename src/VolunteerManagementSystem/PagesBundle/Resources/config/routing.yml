@@ -90,3 +90,11 @@ logout:
 search_result:
   pattern: /result
   defaults: { _controller: VolunteerManagementSystemPagesBundle:Search:search}
+  
+promote:
+  pattern: /promote
+  defaults: { _controller: VolunteerManagementSystemPagesBundle:VolunteertoAdmin:volunteertoadminselection}
+  
+promote_to_admin:
+  pattern: /promotetoAdmin
+  defaults: { _controller: VolunteerManagementSystemPagesBundle:PromoteAdmin:promotetoadmin}
