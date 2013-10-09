@@ -1,0 +1,7 @@
+news_create_confirm:
+    pattern:  /createNewsConfirmation
+    defaults: { _controller: VolunteerManagementSystemNewsBundle:CreationConfirmation:creationconfirm }
+
+create_news:
+   pattern:  /createNews
+   defaults: { _controller: VolunteerManagementSystemNewsBundle:Creation:create }

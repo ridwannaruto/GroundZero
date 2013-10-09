@@ -2877,6 +2877,8 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\PagesBundle/Resources/views', 'VolunteerManagementSystemPages');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle/Resources/views', 'VolunteerManagementSystemReportGeneration');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle/Resources/views', 'VolunteerManagementSystemNotification');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NewsBundle/Resources/views', 'VolunteerManagementSystemNews');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\EventBundle/Resources/views', 'VolunteerManagementSystemEvent');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3332,6 +3334,8 @@ class appDevDebugProjectContainer extends Container
                 'VolunteerManagementSystemPagesBundle' => 'VolunteerManagementSystem\\PagesBundle\\VolunteerManagementSystemPagesBundle',
                 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\VolunteerManagementSystemReportGenerationBundle',
                 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\VolunteerManagementSystemNotificationBundle',
+                'VolunteerManagementSystemNewsBundle' => 'VolunteerManagementSystem\\NewsBundle\\VolunteerManagementSystemNewsBundle',
+                'VolunteerManagementSystemEventBundle' => 'VolunteerManagementSystem\\EventBundle\\VolunteerManagementSystemEventBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',

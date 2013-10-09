@@ -1,0 +1,3 @@
+volunteer_management_system_stat_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: VolunteerManagementSystemStatBundle:Default:index }
