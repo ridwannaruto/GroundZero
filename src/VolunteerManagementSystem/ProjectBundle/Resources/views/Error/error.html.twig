@@ -1,50 +1,28 @@
 {% extends '::base.html.twig' %}
-{% block title %}Volma - Registration{% endblock %}
-{% block menu %}
-{% endblock %}
-{% block body %}
 
+{% block title %}Volma - Project Creation{% endblock %}
+
+{% block body %}
 <h1 align ="center"> Please fill the details in the correct format !</h1>
  <section class="container">
     <div class="login">
-      <h1>Register</h1>
+      <h1>Create Project</h1>
         {{ form_start(form) }}
         {{ form_errors(form) }}
-        {{form_row(form.user.username)}}        
+        {{form_row(form.name)}}        
         <br><br>
-        {{form_row(form.user.password)}}        
+        {{form_row(form.description)}}        
         <br><br>
-        {{form_row(form.user.firstname)}}        
-        <br>
-        {{form_row(form.user.lastname)}}        
+        {{form_row(form.objectives)}}        
         <br><br>
-        
-        {{form_row(form.user.email)}}        
+        {{form_row(form.projectmanager)}}        
         <br><br>
-        {{form_row(form.user.phoneNumber)}}        
+        {{form_row(form.startdate)}}        
         <br><br>
-        {{form_label(form.user.gender)}}<br>
-        {{form_widget(form.user.gender)}}
+        {{form_row(form.enddate)}}        
         <br><br>
-        {{form_label(form.user.dateOfBirth)}}<br>
-        {{form_widget(form.user.dateOfBirth)}}
-        <br><br>
-        <p align="center">
-        {{form_widget(form.terms)}}
-        {{form_label(form.terms)}}
-        <br><br>
-        
-        {{form_widget(form.user.submit)}}
-         </p>
+        {{form_widget(form.submit)}}
         {{ form_end(form) }}
-        
-        
-        
-        
-        
- 
-        
- 
     </div>
         
 
@@ -52,4 +30,8 @@
 
 
 {% endblock %}
+
+
+
+
 

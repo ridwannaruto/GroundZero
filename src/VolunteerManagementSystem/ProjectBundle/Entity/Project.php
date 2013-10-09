@@ -3,7 +3,7 @@
 namespace VolunteerManagementSystem\ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-//use VolunteerManagementSystem\RegistrationBundle\Entity\User;
+
 /**
  * Project
  */
@@ -11,10 +11,6 @@ class Project
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
@@ -24,14 +20,8 @@ class Project
     private $name;
 
     /**
-     * @var string
-     */
-    private $description;
-
-    /**
      * @var \DateTime
      */
-    private $objectives;
     private $startdate;
 
     /**
@@ -39,9 +29,23 @@ class Project
      */
     private $enddate;
 
- 
-
+    /**
+     * @var \stdClass
+     */
     private $projectmanager;
+
+    /**
+     * @var string
+     */
+    private $description;
+
+    /**
+     * @var string
+     */
+    private $objectives;
+
+    private $events;
+    private $volunteers;
     /**
      * Get id
      *
@@ -51,7 +55,15 @@ class Project
     {
         return $this->id;
     }
-
+    public function getVolunteers()
+    {
+        return $this->volunteers;
+    }
+     public function getEvents()
+    {
+        return $this->events;
+    }
+    
     /**
      * Set name
      *
@@ -62,6 +74,17 @@ class Project
     {
         $this->name = $name;
     
+        return $this;
+    }
+    public function setEvents($events)
+    {
+        $this->events = $events;
+    
+        return $this;
+    }
+    public function setVolunteers($name)
+    {
+        $this->volunteers = $volunteers;
         return $this;
     }
 
@@ -75,38 +98,6 @@ class Project
         return $this->name;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     * @return Project
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-    public function setObjectives($objectives)
-    {
-        $this->objectives = $objectives;
-    
-        return $this;
-    }
-    public function getObjectives()
-    {
-        return $this->objectives;
-    }
     /**
      * Set startdate
      *
@@ -156,7 +147,7 @@ class Project
     /**
      * Set projectmanager
      *
-     * @param  $projectmanager
+     * @param \stdClass $projectmanager
      * @return Project
      */
     public function setProjectmanager($projectmanager)
@@ -169,10 +160,56 @@ class Project
     /**
      * Get projectmanager
      *
-     * @return string 
+     * @return \stdClass 
      */
     public function getProjectmanager()
     {
         return $this->projectmanager;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Project
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set objectives
+     *
+     * @param string $objectives
+     * @return Project
+     */
+    public function setObjectives($objectives)
+    {
+        $this->objectives = $objectives;
+    
+        return $this;
+    }
+
+    /**
+     * Get objectives
+     *
+     * @return string 
+     */
+    public function getObjectives()
+    {
+        return $this->objectives;
     }
 }

@@ -13,6 +13,8 @@ class ProjectCreationController extends Controller
 {
     public function projectcreationAction(Request $request)
     {
+        
+        
         $id = $request->get('id');
         $Project = new Project();
         $form = $this->createForm(new ProjectType(),$Project,array(
