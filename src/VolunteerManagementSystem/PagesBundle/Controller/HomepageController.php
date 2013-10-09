@@ -22,7 +22,7 @@ class HomepageController extends Controller
                     ->where('p.userid = :id')
                     ->setParameter('id', $id)                    
                     ->setMaxResults(10)
-                    ->orderBy('p.id','ASC')
+                    ->orderBy('p.id','DESC')
                     ->getQuery();
 
             $notify = $query->getResult();
