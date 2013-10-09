@@ -85,10 +85,7 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
 
         </tr>
         <tr>
-            <td valign=\"top\"><div align=\"left\">End Date :";
-        // line 39
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["enddate"]) ? $context["enddate"] : $this->getContext($context, "enddate")), "m/d/Y"), "html", null, true);
-        echo " </div></td>
+            <td valign=\"top\"><div align=\"left\">End Date : </div></td>
 
         </tr>
         <tr>
@@ -115,6 +112,6 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  97 => 43,  90 => 39,  83 => 35,  76 => 31,  69 => 27,  62 => 23,  55 => 19,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  94 => 43,  83 => 35,  76 => 31,  69 => 27,  62 => 23,  55 => 19,  38 => 6,  35 => 5,  29 => 3,);
     }
 }
