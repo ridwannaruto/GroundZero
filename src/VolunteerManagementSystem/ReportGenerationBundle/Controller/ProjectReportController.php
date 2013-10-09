@@ -10,11 +10,19 @@ class ProjectReportController extends Controller
 {
     public function ProjectReportAction(Request $request)
     {
-        $request->get('projectId');
+        $projectId= $request->get('projectId');
         $em = $this->getDoctrine()->getEntityManager();
         $ProjectRepository = $em->getRepository('VolunteerManagementSystemProjectBundle:Project');
         
+        $project = $ProjectRepository->findOneBy(array('id' => $projectId));
         
+        if($project){
+            
+            return $this->render('VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport.html.twig', array('projectname' => $project->getName(), 'description' => $project->getDescription(), 'startdate' => $project->getStartdate(), 'enddate' => $project->getEnddate(), 'projectmanager' => $project->getProjectmanager(), 'objectives' => $project->getObjectives(),'id' => $userId));
+            
+        } else {
+            return new Response('Project not found!!!');
+        }
         
     }
 

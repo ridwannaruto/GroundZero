@@ -75,7 +75,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td width=\"7%\"><a href=\"";
         // line 29
         echo $this->env->getExtension('routing')->getPath("edit_UserName");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   
   <tr>
@@ -88,7 +88,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 36
         echo $this->env->getExtension('routing')->getPath("edit_Password");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -100,7 +100,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 42
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -112,7 +112,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 48
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -124,7 +124,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 54
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -136,7 +136,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 60
         echo $this->env->getExtension('routing')->getPath("edit_NIC");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
@@ -149,7 +149,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 67
         echo $this->env->getExtension('routing')->getPath("edit_Gender");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
@@ -162,7 +162,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 74
         echo $this->env->getExtension('routing')->getPath("edit_DOB");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -175,7 +175,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 81
         echo $this->env->getExtension('routing')->getPath("edit_Email");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -188,7 +188,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 88
         echo $this->env->getExtension('routing')->getPath("edit_MobileNumb");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -201,7 +201,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 95
         echo $this->env->getExtension('routing')->getPath("edit_ContactNumb");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -214,7 +214,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 102
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -227,7 +227,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 109
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -240,7 +240,7 @@ class __TwigTemplate_edb67ab052df8255fd5915daaf6f1be1 extends Twig_Template
     <td><a href=\"";
         // line 116
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
 </table>
 ";
