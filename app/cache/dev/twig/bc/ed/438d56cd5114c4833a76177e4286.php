@@ -45,8 +45,29 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
         // line 7
         $this->displayBlock('admin', $context, $blocks);
         // line 9
-        echo "Projects
-";
+        echo "List of projects<br><br>
+ ";
+        // line 10
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")));
+        foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
+            echo " 
+        <div class=\"notify\" >
+        <p align=\"left\"><a href=\"project_view?id=";
+            // line 12
+            echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+            echo "&pid=";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getId", array(), "method"), "html", null, true);
+            echo "\"<strong>";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getName", array(), "method"), "html", null, true);
+            echo "</strong></a></p>
+        </div>
+        </p>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['r'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
     }
 
     // line 7
@@ -66,6 +87,6 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  53 => 7,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  74 => 7,  58 => 12,  51 => 10,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }

@@ -39,7 +39,12 @@ class __TwigTemplate_bf0b983683a67dc9dc84c786d7b1ee71 extends Twig_Template
         // line 8
         echo "<h1 align = \"center\"> Confirm Project Creation</h1>
 <p align=\"center\">
-Project has been created successfully!</p>
+Project has been created successfully!<br>
+We have informed <strong>";
+        // line 11
+        echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")), "html", null, true);
+        echo "</strong> about his appointment
+</p>
 ";
     }
 
@@ -55,6 +60,6 @@ Project has been created successfully!</p>
 
     public function getDebugInfo()
     {
-        return array (  40 => 8,  37 => 7,  32 => 4,  29 => 3,);
+        return array (  45 => 11,  40 => 8,  37 => 7,  32 => 4,  29 => 3,);
     }
 }

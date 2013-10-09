@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+Volma - Projects
+{% endblock %}
+{% block body %}
+<h1 class="price" align = "center">{{project.getName()}}</h1>
+<section class="container">
+    <div class="notify">
+<h1>Basic Information</h1>
+<p align="left">
+<strong>Description</strong>
+<br>{{project.getDescription()}}<br><br>
+<strong>Objectives</strong>
+<br>{{project.getObjectives()}}<br><br>
+<strong>Project Manager</strong>
+<br>{{pm.getFirstname()}}<br><br><br>
+
+
+<h1>Events</h1>
+
+
+
+<h1>Volunteers</h1>
+</p>
+</div></section>
+{% endblock %}

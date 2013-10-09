@@ -38,7 +38,7 @@ class __TwigTemplate_35593cc3a700298a6bf2d624a768f1ec extends Twig_Template
         echo "<h1>Track Record: ";
         echo twig_escape_filter($this->env, (isset($context["fname"]) ? $context["fname"] : $this->getContext($context, "fname")), "html", null, true);
         echo "</h1>
-<br><br>Name:</t>
+
 
 
 <div class=\"inner\">
