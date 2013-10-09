@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Volma-Project Report{% endblock %}
+
+{% block body %}
+<h1>Project Report: {{projectname}}</h1>
+
+
+
+<div class="inner">
+    <table width="398" border="0" align="center" cellpadding="0">
+        <tr>
+            <td height="26" colspan="2">Project Report
+            </td>
+            
+        </tr>
+        <tr>
+            
+            <td valign="top"><div align="left">Project Name:{{projectname}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Status:{{status}} </div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Description:{{description}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Objectives:{{objectives}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Start Date :{{startdate}}</div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">End Date :{{enddate}} </div></td>
+
+        </tr>
+        <tr>
+            <td valign="top"><div align="left">Project Manager:{{projectmanager}} </div></td>
+
+        </tr>
+
+    </table>
+{% endblock %}
