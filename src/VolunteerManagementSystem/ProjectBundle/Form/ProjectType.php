@@ -27,7 +27,9 @@ class ProjectType extends AbstractType
             ->add('description','textarea',array(
                 'label' =>'Project description',
                 'attr'=>array(
-                    'placeholder'=>'project description'
+                    'placeholder'=>'enter project description',
+                    'rows'=>20,
+                    'cols'=>70
                     )
             ));
         
@@ -35,13 +37,15 @@ class ProjectType extends AbstractType
             ->add('objectives','textarea',array(
                 'label' =>'Objectives',
                 'attr'=>array(
-                    'placeholder'=>'specify the objectives of the project'
+                    'placeholder'=>'specify the objectives of the project',
+                    'rows'=>10,
+                    'cols'=>70
                     )
             ));
        
      
         $builder->add('projectmanager', 'entity', array(
-            'label' =>'Project Manager  ',
+            'label' =>'Project Manager',
             'class' => 'VolunteerManagementSystemRegistrationBundle:User',
             'property' => 'username',
             ));
@@ -50,20 +54,23 @@ class ProjectType extends AbstractType
         $builder 
             ->add('startdate','date',array(
             'label' =>'Start Date',
+            'widget'=>'single_text',
                 'attr'=>array(
                     'placeholder'=>'project start date'
+                    
                     )
             ));
         $builder 
-            ->add('enddate','date',array(
-            'label' =>'End Date',
+            ->add('deadline','date',array(
+            'label' =>'Dead Line',
+            'widget'=>'single_text',
                 'attr'=>array(
-                    'placeholder'=>'project end date'
+                    'placeholder'=>'schedule end date'
                     )
             ));
         $builder 
          ->add('submit','submit', array(
-                'label' => 'Create',
+                'label' => 'Create Project',
                 'attr' => array(
                     'class' => 'button'
                 )

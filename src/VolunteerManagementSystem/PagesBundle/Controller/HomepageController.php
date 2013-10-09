@@ -14,16 +14,15 @@ class HomepageController extends Controller
         $repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         $notifications = $em->getRepository('VolunteerManagementSystemNotificationBundle:Notification');
         
-        $result = array('name'=>'Exmo Exhibition','details'=>'Due date changed on tomorrow');
         $user = $repository->findOneBy(array('id' => $id));
         if($user){
             
 
             $query = $notifications->createQueryBuilder('p')
                     ->where('p.userid = :id')
-                    ->setParameter('id', $id)
+                    ->setParameter('id', $id)                    
                     ->setMaxResults(10)
-                    ->orderBy('p.id','ASC')
+                    ->orderBy('p.id','DESC')
                     ->getQuery();
 
             $notify = $query->getResult();
