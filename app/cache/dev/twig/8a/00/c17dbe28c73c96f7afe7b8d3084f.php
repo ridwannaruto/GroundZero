@@ -44,9 +44,12 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
         // line 7
         echo "
 <div class=\"inner\">
-     <p align=\"center\">
-    <img src=\"file:///C|/wamp/www/volmaa/mm_product_lg.gif\" width=\"193\" height=\"189\" alt=\"ff\" /></th>
-   </p>
+     <div class=\"propic\" >
+   <img src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/me.jpg"), "html", null, true);
+        echo "\" width=\"200\" height=\"200\"></h2>
+             </div>  
  <table width=\"93%\">
   <tr>
     <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
@@ -92,7 +95,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 35
         echo $this->env->getExtension('routing')->getPath("edit_Password");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -104,7 +107,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 41
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -116,7 +119,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 47
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -128,7 +131,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 53
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
@@ -140,7 +143,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 59
         echo $this->env->getExtension('routing')->getPath("edit_NIC");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
@@ -153,7 +156,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 66
         echo $this->env->getExtension('routing')->getPath("edit_Gender");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
@@ -166,7 +169,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 73
         echo $this->env->getExtension('routing')->getPath("edit_DOB");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -179,7 +182,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 80
         echo $this->env->getExtension('routing')->getPath("edit_Email");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -192,7 +195,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 87
         echo $this->env->getExtension('routing')->getPath("edit_MobileNumb");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -205,7 +208,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 94
         echo $this->env->getExtension('routing')->getPath("edit_ContactNumb");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -218,7 +221,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 101
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -231,7 +234,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 108
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
@@ -244,7 +247,7 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
     <td><a href=\"";
         // line 115
         echo $this->env->getExtension('routing')->getPath("edit_Address");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
 </table>
 ";
@@ -262,6 +265,6 @@ class __TwigTemplate_8a00c17dbe28c73c96f7afe7b8d3084f extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  246 => 115,  242 => 114,  233 => 108,  229 => 107,  220 => 101,  216 => 100,  207 => 94,  203 => 93,  194 => 87,  190 => 86,  181 => 80,  177 => 79,  168 => 73,  164 => 72,  155 => 66,  151 => 65,  142 => 59,  138 => 58,  130 => 53,  126 => 52,  118 => 47,  114 => 46,  106 => 41,  102 => 40,  94 => 35,  90 => 34,  79 => 28,  75 => 27,  68 => 25,  63 => 23,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
+        return array (  249 => 115,  245 => 114,  236 => 108,  232 => 107,  223 => 101,  219 => 100,  210 => 94,  206 => 93,  197 => 87,  193 => 86,  184 => 80,  180 => 79,  171 => 73,  167 => 72,  158 => 66,  154 => 65,  145 => 59,  141 => 58,  133 => 53,  129 => 52,  121 => 47,  117 => 46,  109 => 41,  105 => 40,  97 => 35,  93 => 34,  82 => 28,  78 => 27,  71 => 25,  66 => 23,  50 => 10,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
     }
 }
