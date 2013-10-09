@@ -45,7 +45,7 @@ class EventType extends AbstractType
             ->add('starttime','time',array(
                 'input' => 'datetime',
                 'widget' => 'single_text',
-            'label' =>'Start Date',
+            'label' =>'Start Time',
                 'attr'=>array(
                     'placeholder'=>'project start date'
                     )
@@ -53,7 +53,7 @@ class EventType extends AbstractType
              ->add('deadline','date',array(
                 'input' => 'datetime',
                 'widget' => 'single_text',
-            'label' =>'Start Date',
+            'label' =>'Dead line',
                 'attr'=>array(
                     'placeholder'=>'project start date'
                     )
@@ -61,7 +61,7 @@ class EventType extends AbstractType
             ->add('deadlinetime','time',array(
                 'input' => 'datetime',
                 'widget' => 'single_text',
-            'label' =>'Start Date',
+            'label' =>'',
                 'attr'=>array(
                     'placeholder'=>'project start date'
                     )
