@@ -133,17 +133,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/hello')) {
-            // volunteer_management_system_stat_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
+        // volunteer_management_system_stat_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/project')) {
+            // projectcreation
+            if ($pathinfo === '/projectcreation') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectCreationController::projectcreationAction',  '_route' => 'projectcreation',);
             }
 
-            // volunteer_management_system_event_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_event_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\DefaultController::indexAction',));
+            // projectsubmission
+            if ($pathinfo === '/projectsubmission') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectSubmissionController::projectsubmissionAction',  '_route' => 'projectsubmission',);
             }
 
+            // projectconfirmation
+            if ($pathinfo === '/projectconfirmation') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\ProjectBundle\\Controller\\ProjectConfirmationController::projectconfirmationAction',  '_route' => 'projectconfirmation',);
+            }
+
+        }
+
+        // volunteer_management_system_event_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_event_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\DefaultController::indexAction',));
         }
 
         // create_event

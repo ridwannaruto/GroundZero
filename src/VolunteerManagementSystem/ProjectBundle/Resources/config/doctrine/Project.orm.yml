@@ -1,26 +1,30 @@
 VolunteerManagementSystem\ProjectBundle\Entity\Project:
     type: entity
-    table: project
+    table: null
+    repositoryClass: VolunteerManagementSystem\ProjectBundle\Entity\ProjectRepository
     fields:
         id:
             type: integer
             id: true
             generator:
-            strategy: 'IDENTITY'
+                strategy: AUTO
         name:
             type: string
             length: '30'
+        startdate:
+            type: date
+        enddate:
+            type: date
+        projectmanager:
+            type: integer
+        events:
+            type: array
+        volunteers:
+            type: array
         description:
             type: string
             length: 255
         objectives:
             type: string
             length: 255
-        startdate:
-            type: date
-        enddate:
-            type: date
-        projectmanager:
-            type: string
-            length: '30'
     lifecycleCallbacks: {  }
