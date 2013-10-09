@@ -20,6 +20,9 @@ VolunteerManagementSystem\ReportGenerationBundle\Entity\TrackReport:
         totalWeight:
             type: integer
             column: TotalWeight
+        projectHistory:
+            type: array
+            column: ProjectHistory    
         eventHistory:
             type: array
             column: EventHistory
