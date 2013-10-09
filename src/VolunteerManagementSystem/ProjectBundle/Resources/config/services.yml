@@ -1,7 +1,7 @@
 parameters:
-#    project.example.class: VolunteerManagementSystem\ProjectBundle\Example
+#    volunteer_management_system_project.example.class: VolunteerManagementSystem\ProjectBundle\Example
 
 services:
-#    project.example:
-#        class: %project.example.class%
+#    volunteer_management_system_project.example:
+#        class: %volunteer_management_system_project.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

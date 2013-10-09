@@ -39,16 +39,16 @@ class ProjectType extends AbstractType
                     )
             ));
        
-       $builder->add('projectmanager', 'entity', array(
+     
+        $builder->add('projectmanager', 'entity', array(
             'label' =>'Project Manager  ',
             'class' => 'VolunteerManagementSystemRegistrationBundle:User',
             'property' => 'username',
             ));
-      
+        
+       
         $builder 
             ->add('startdate','date',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
             'label' =>'Start Date',
                 'attr'=>array(
                     'placeholder'=>'project start date'
@@ -56,8 +56,6 @@ class ProjectType extends AbstractType
             ));
         $builder 
             ->add('enddate','date',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
             'label' =>'End Date',
                 'attr'=>array(
                     'placeholder'=>'project end date'
