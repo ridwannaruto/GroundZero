@@ -9,3 +9,6 @@ _track_record:
 _track_record_initialize:
     pattern: /TrackRecordInitialize
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:TrackRecord:InitializeTrackRecord }
+_project_report:
+    pattern: /ProjectReport
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport }
