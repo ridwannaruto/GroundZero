@@ -48,15 +48,57 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
         echo "<section class=\"container\">
     <div class=\"notify\">
         <h1> Event</h1>
-        <table>
-            <h1>Members</h1>
+        <tr>
+            <td><strong>Event Name</strong></td><td>";
+        // line 13
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "name"), "html", null, true);
+        echo "</td>
+            </tr>
+         <br>
+            <tr>
+         <td><strong>Team Leader</strong></td><td>";
+        // line 17
+        echo twig_escape_filter($this->env, (isset($context["teamleader"]) ? $context["teamleader"] : $this->getContext($context, "teamleader")), "html", null, true);
+        echo "</td>
+            </tr>
+            <br>
+            <tr>
+         <td><strong>Event Description</strong></td><td>";
+        // line 21
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
+        echo "</td>
+            </tr>
+            <br>
+            <tr>
+          <td><strong>Event goals</strong></td><td>";
+        // line 25
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
+        echo "</td>
+            </tr>
+            <br>
+            <tr>
+         <td><strong>Start date</strong></td><td>";
+        // line 29
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "startdate"), "m/d/Y"), "html", null, true);
+        echo "</td>
+            </tr>
+            <br>
+            <tr>
+         <td><strong>end date</strong></td><td>";
+        // line 33
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "enddate"), "m/d/Y"), "html", null, true);
+        echo "</td>
+            </tr>
+            <br>
+       
+         <h1>Members</h1>
        <ul>
     ";
-        // line 15
+        // line 39
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["users"]) ? $context["users"] : $this->getContext($context, "users")));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 16
+            // line 40
             echo "        <li>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username"));
             echo "</li>
@@ -65,52 +107,8 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
+        // line 42
         echo "</ul>
-            <tr>
-            <td><strong>Event Name</strong></td><td>";
-        // line 20
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "name"), "html", null, true);
-        echo "</td>
-            </tr>
-         <br>
-            <tr>
-         <td><strong>Team Leader</strong></td><td>";
-        // line 24
-        echo twig_escape_filter($this->env, (isset($context["teamleader"]) ? $context["teamleader"] : $this->getContext($context, "teamleader")), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Event Description</strong></td><td>";
-        // line 28
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-          <td><strong>Event goals</strong></td><td>";
-        // line 32
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Start date</strong></td><td>";
-        // line 36
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "startdate"), "m/d/Y"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>end date</strong></td><td>";
-        // line 40
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "enddate"), "m/d/Y"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-        </table>
-        
     
     </div>
 ";
@@ -133,6 +131,6 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 7,  108 => 40,  101 => 36,  94 => 32,  87 => 28,  80 => 24,  73 => 20,  69 => 18,  60 => 16,  56 => 15,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  118 => 7,  111 => 42,  102 => 40,  98 => 39,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }

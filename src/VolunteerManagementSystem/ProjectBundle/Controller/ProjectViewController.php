@@ -18,7 +18,7 @@ class ProjectViewController extends Controller
         $events= $em->getRepository('VolunteerManagementSystemEventBundle:Event');
         
         $user = $repository->findOneBy(array('id' => $id));
-        $e = $events->findOneBy(array('id' => $id));
+        $ef = $events->findOneBy(array('id' => $id));
         if ($user) {
             $project = $projects->findOneBy(array('id' => $pid));
             $project->setEvents(array(1,2));
@@ -30,7 +30,7 @@ class ProjectViewController extends Controller
             $eventid = array();
             foreach ($eventlist as $event){
                 $eventid[] = $event;
-                
+                $eventname[]= $ef->getName();
             }
             
             
