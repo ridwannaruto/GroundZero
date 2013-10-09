@@ -24,6 +24,7 @@
       <parameter key="VolunteerManagementSystemNewsBundle">VolunteerManagementSystem\NewsBundle\VolunteerManagementSystemNewsBundle</parameter>
       <parameter key="VolunteerManagementSystemEventBundle">VolunteerManagementSystem\EventBundle\VolunteerManagementSystemEventBundle</parameter>
       <parameter key="VolunteerManagementSystemStatBundle">VolunteerManagementSystem\StatBundle\VolunteerManagementSystemStatBundle</parameter>
+      <parameter key="VolunteerManagementSystemProjectBundle">VolunteerManagementSystem\ProjectBundle\VolunteerManagementSystemProjectBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -405,7 +406,7 @@
     <parameter key="assetic.read_from">C:/xampp/htdocs/GroundZero/app/../web</parameter>
     <parameter key="assetic.write_to">C:/xampp/htdocs/GroundZero/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
-    <parameter key="assetic.java.bin">C:\Windows\system32\java.EXE</parameter>
+    <parameter key="assetic.java.bin">C:\Program Files\Java\jdk1.7.0_25\bin\java.EXE</parameter>
     <parameter key="assetic.node.bin">/usr/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
@@ -2227,6 +2228,7 @@
               <argument key="VolunteerManagementSystemNotificationBundle">VolunteerManagementSystem\NotificationBundle\Entity</argument>
               <argument key="VolunteerManagementSystemNewsBundle">VolunteerManagementSystem\NewsBundle\Entity</argument>
               <argument key="VolunteerManagementSystemEventBundle">VolunteerManagementSystem\EventBundle\Entity</argument>
+              <argument key="VolunteerManagementSystemProjectBundle">VolunteerManagementSystem\ProjectBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2279,6 +2281,7 @@
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\EventBundle\Resources\config\doctrine">VolunteerManagementSystem\EventBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProjectBundle\Resources\config\doctrine">VolunteerManagementSystem\ProjectBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2294,6 +2297,7 @@
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\EventBundle\Resources\config\doctrine">VolunteerManagementSystem\EventBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProjectBundle\Resources\config\doctrine">VolunteerManagementSystem\ProjectBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2309,6 +2313,7 @@
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
                         <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\EventBundle\Resources\config\doctrine">VolunteerManagementSystem\EventBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProjectBundle\Resources\config\doctrine">VolunteerManagementSystem\ProjectBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2316,6 +2321,22 @@
                     </service>
                   </argument>
                   <argument>VolunteerManagementSystem\EventBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ReportGenerationBundle\Resources\config\doctrine">VolunteerManagementSystem\ReportGenerationBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\NotificationBundle\Resources\config\doctrine">VolunteerManagementSystem\NotificationBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\EventBundle\Resources\config\doctrine">VolunteerManagementSystem\EventBundle\Entity</argument>
+                        <argument key="C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProjectBundle\Resources\config\doctrine">VolunteerManagementSystem\ProjectBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>VolunteerManagementSystem\ProjectBundle\Entity</argument>
                 </call>
                 <call method="addDriver">
                   <argument type="service">
@@ -2748,6 +2769,10 @@
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\StatBundle/Resources/views</argument>
         <argument>VolunteerManagementSystemStat</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\GroundZero\src\VolunteerManagementSystem\ProjectBundle/Resources/views</argument>
+        <argument>VolunteerManagementSystemProject</argument>
       </call>
       <call method="addPath">
         <argument>C:\xampp\htdocs\GroundZero\src\Acme\DemoBundle/Resources/views</argument>
