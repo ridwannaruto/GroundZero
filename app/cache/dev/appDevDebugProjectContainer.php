@@ -557,17 +557,18 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity'));
         $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\NotificationBundle\\Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\EventBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\EventBundle\\Entity'));
         $e->setGlobalBasename('mapping');
 
         $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
         $f->addDriver($d, 'VolunteerManagementSystem\\RegistrationBundle\\Entity');
         $f->addDriver($e, 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity');
         $f->addDriver($e, 'VolunteerManagementSystem\\NotificationBundle\\Entity');
+        $f->addDriver($e, 'VolunteerManagementSystem\\EventBundle\\Entity');
         $f->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NewsBundle\\Entity')), 'VolunteerManagementSystem\\NewsBundle\\Entity');
 
         $g = new \Doctrine\ORM\Configuration();
-        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'VolunteerManagementSystemNewsBundle' => 'VolunteerManagementSystem\\NewsBundle\\Entity'));
+        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'VolunteerManagementSystemNewsBundle' => 'VolunteerManagementSystem\\NewsBundle\\Entity', 'VolunteerManagementSystemEventBundle' => 'VolunteerManagementSystem\\EventBundle\\Entity'));
         $g->setMetadataCacheImpl($a);
         $g->setQueryCacheImpl($b);
         $g->setResultCacheImpl($c);
