@@ -4,9 +4,9 @@ projectcreation:
     defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectCreation:projectcreation }
 
 projectsubmission:
-    pattern: /projectcreation/projectsubmission
-    defaults: { _controller: VolunteerManagementSystemProjectBundle:submission:projectsubmission }
+    pattern: /projectsubmission
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectSubmission:projectsubmission }
 
-confirmproject_creation:
-    pattern: /projectsuccess
-    defaults: { _controller: VolunteerManagementSystemProjectBundle:Confirm:confirmprojectCreation }
+projectconfirmation:
+    pattern: /projectconfirmation
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectConfirmation:projectconfirmation }

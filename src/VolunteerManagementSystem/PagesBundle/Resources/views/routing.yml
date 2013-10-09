@@ -86,3 +86,15 @@ login:
 logout:
    pattern:  /loginout
    defaults: { _controller: VolunteerManagementSystemRegistrationBundle:Login:logout }
+   
+projectcreation:
+    pattern: /projectcreation
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectCreation:projectcreation }
+
+projectsubmission:
+    pattern: /projectsubmission
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectSubmission:projectsubmission }
+
+projectconfirmation:
+    pattern: /projectconfirmation
+    defaults: { _controller: VolunteerManagementSystemProjectBundle:ProjectConfirmation:projectconfirmation }
