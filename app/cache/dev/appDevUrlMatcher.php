@@ -187,6 +187,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // _project_report
+        if ($pathinfo === '/ProjectReport') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);

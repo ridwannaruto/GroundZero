@@ -44,6 +44,9 @@ class __TwigTemplate_8650649ad128efed2de97fb484954950 extends Twig_Template
         // line 7
         echo "
 <div class=\"inner\">
+     <p align=\"center\">
+    <img src=\"file:///C|/wamp/www/volmaa/mm_product_lg.gif\" width=\"193\" height=\"189\" alt=\"ff\" /></th>
+   </p>
  <table width=\"93%\">
   <tr>
     <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
@@ -53,163 +56,195 @@ class __TwigTemplate_8650649ad128efed2de97fb484954950 extends Twig_Template
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th width=\"18%\" rowspan=\"6\" scope=\"row\"><img src=\"file:///C|/wamp/www/volmaa/mm_product_lg.gif\" width=\"193\" height=\"189\" alt=\"ff\" /></th>
+    <th width=\"18%\" rowspan=\"6\" scope=\"row\">
     <td width=\"3%\" height=\"35\">&nbsp;</td>
-    <td width=\"18%\">User Name </td>
-    <td width=\"55%\">";
-        // line 21
+    <td height=\"34\"><strong>User Name</strong></td>
+    <td>";
+        // line 24
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username"), "html", null, true);
         echo "</td>
-    <td width=\"7%\"><a href=\"";
-        // line 22
+        <td width=\"7%\"><a href=\"";
+        // line 25
         echo $this->env->getExtension('routing')->getPath("edit_UserName");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
-    <td>Password </td>
+    <td><strong>Password </strong></td>
     <td>";
-        // line 27
+        // line 30
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "password"), "html", null, true);
         echo "</td>
     <td><a href=\"";
-        // line 28
+        // line 31
         echo $this->env->getExtension('routing')->getPath("edit_Password");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
-    <td>Name with Initials</td>
+    <td><strong>Name with Initials</strong></td>
     <td>";
-        // line 33
+        // line 36
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "namewithinitials"), "html", null, true);
         echo "</td>
     <td><a href=\"";
-        // line 34
+        // line 37
         echo $this->env->getExtension('routing')->getPath("edit_Name");
-        echo "\">edit</a></td>
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
-    <td>First Name </td>
+    <td><strong>First Name</strong> </td>
     <td>";
-        // line 39
+        // line 42
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "firstname"), "html", null, true);
         echo "</td>
-    <td></td>
+    <td><a href=\"";
+        // line 43
+        echo $this->env->getExtension('routing')->getPath("edit_Name");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
-    <td>Last Name </td>
+    <td><strong>Last Name </strong></td>
     <td>";
-        // line 45
+        // line 48
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "lastname"), "html", null, true);
         echo "</td>
-    <td></td>
+    <td><a href=\"";
+        // line 49
+        echo $this->env->getExtension('routing')->getPath("edit_Name");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
-    <td>Nic</td>
+    <td><strong>NIC</strong></td>
     <td>";
-        // line 51
+        // line 54
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nic"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 55
+        echo $this->env->getExtension('routing')->getPath("edit_NIC");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
-    <td height=\"34\">&nbsp;</td>
+    <td height=\"34\"></td>
     <td>";
-        // line 57
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
-        echo "<p> </p>
-    
-        ";
-        // line 59
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
-        echo "
-        ";
         // line 60
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender"), 'row');
-        echo "<p align=\"center\">
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
+        echo "
+        
         ";
-        // line 61
+        // line 62
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
+        echo "<strong>";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender"), 'label');
+        echo "</strong></td><td>
+
+        ";
+        // line 64
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender"), 'widget');
+        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        // line 65
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "submit"), 'widget');
-        echo " </p>";
+        echo " ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "</td>
     <td></td>
-    <td></td>
   </tr>
-  <tr>
+ <tr>
     <th width=\"18%\" scope=\"row\">&nbsp;</th>
     <td height=\"34\">&nbsp;</td>
-    <td>Date of Borth </td>
+    <td><strong>Date of Birth </strong></td>
     <td>";
-        // line 69
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "firstname"), "html", null, true);
+        // line 72
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "dateOfBirth"), "m/d/Y"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 73
+        echo $this->env->getExtension('routing')->getPath("edit_DOB");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>Email</td>
+    <td><strong>Email</strong></td>
     <td>";
-        // line 76
+        // line 79
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 80
+        echo $this->env->getExtension('routing')->getPath("edit_Email");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>Mobile Number </td>
+    <td><strong>Mobile Number</strong> </td>
     <td>";
-        // line 83
+        // line 86
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "mobilenumber"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 87
+        echo $this->env->getExtension('routing')->getPath("edit_MobileNumb");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>Contact Number </td>
+    <td><strong>Contact Number </strong></td>
     <td>";
-        // line 90
+        // line 93
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "phonenumber"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 94
+        echo $this->env->getExtension('routing')->getPath("edit_ContactNumb");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>Adress</td>
+    <td><strong>Address</strong></td>
     <td>";
-        // line 97
+        // line 100
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "address"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 101
+        echo $this->env->getExtension('routing')->getPath("edit_Address");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>City</td>
+    <td><strong>City</strong</td>
     <td>";
-        // line 104
+        // line 107
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "city"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 108
+        echo $this->env->getExtension('routing')->getPath("edit_Address");
+        echo "\"><button>edit</button></a></td>
   </tr>
   <tr>
     <th height=\"34\" scope=\"row\">&nbsp;</th>
     <td>&nbsp;</td>
-    <td>Country</td>
+    <td><strong>Country</strong></td>
     <td>";
-        // line 111
+        // line 114
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "country"), "html", null, true);
         echo "</td>
-    <td>edit</td>
+    <td><a href=\"";
+        // line 115
+        echo $this->env->getExtension('routing')->getPath("edit_Address");
+        echo "\"><button>edit</button></a></td>
   </tr>
 </table>
 ";
@@ -227,6 +262,6 @@ class __TwigTemplate_8650649ad128efed2de97fb484954950 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  210 => 111,  200 => 104,  190 => 97,  180 => 90,  170 => 83,  160 => 76,  150 => 69,  137 => 61,  133 => 60,  129 => 59,  124 => 57,  115 => 51,  106 => 45,  97 => 39,  89 => 34,  85 => 33,  77 => 28,  73 => 27,  65 => 22,  61 => 21,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
+        return array (  246 => 115,  242 => 114,  233 => 108,  229 => 107,  220 => 101,  216 => 100,  207 => 94,  203 => 93,  194 => 87,  190 => 86,  181 => 80,  177 => 79,  168 => 73,  164 => 72,  152 => 65,  148 => 64,  141 => 62,  136 => 60,  128 => 55,  124 => 54,  116 => 49,  112 => 48,  104 => 43,  100 => 42,  92 => 37,  88 => 36,  80 => 31,  76 => 30,  68 => 25,  64 => 24,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
     }
 }
