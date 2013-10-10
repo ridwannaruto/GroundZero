@@ -19,21 +19,21 @@ class SubmissionController extends Controller {
         if ($form->isValid()) {
             $registration = $form->getData();
             $em->persist($registration->getUser());
-            
-           
             try {
-            
                 $em->flush();
-                
-               
             } catch (Exception $e) {
                 return $this->render('VolunteerManagementSystemRegistrationBundle:Submission:submission.html.twig', array('form' => $form->createView()));
             }
+            $id =  $registration->getUser()->getId();
+            $em = $this->getDoctrine()->getEntityManager();
+            $Repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
 
-            return $this->redirect($this->generateUrl('confirm')); //go to home page
+            $user = $Repository->findOneBy(array('id' => $id));
+            $idt = $user->getId();
+            return $this->redirect($this->generateUrl('_track_record_initialize',array('id' => $idt))); //go to home page
         }
         
-           return $this->render('VolunteerManagementSystemRegistrationBundle:Error:error.html.twig', array('form' => $form->createView()));
+            return $this->render('VolunteerManagementSystemRegistrationBundle:Error:error.html.twig', array('form' => $form->createView()));
            
     }
 

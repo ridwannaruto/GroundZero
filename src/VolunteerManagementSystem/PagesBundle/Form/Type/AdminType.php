@@ -11,7 +11,7 @@ class AdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(
-            'user',
+            'id',
             'entity',array(
                 'label' => 'Choose Member to be promoted',
                 'class' => 'VolunteerManagementSystemRegistrationBundle:User',

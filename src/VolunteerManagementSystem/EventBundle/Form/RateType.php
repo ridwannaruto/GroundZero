@@ -15,8 +15,13 @@ class RateType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('name','text',array(
+            
+                    'read_only'=>'true',
+            ))
             ->add('rate')
             ->add('comment')
+            
         ;
     }
     
