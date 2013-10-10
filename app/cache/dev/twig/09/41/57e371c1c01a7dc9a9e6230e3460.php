@@ -90,15 +90,14 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
         echo "</td>
             </tr>
             <br>
-       
          <h1>Members</h1>
        <ul>
     ";
-        // line 39
+        // line 38
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["users"]) ? $context["users"] : $this->getContext($context, "users")));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 40
+            // line 39
             echo "        <li>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username"));
             echo "</li>
@@ -107,8 +106,9 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 41
         echo "</ul>
+         
     
     </div>
 ";
@@ -131,6 +131,6 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 7,  111 => 42,  102 => 40,  98 => 39,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  118 => 7,  110 => 41,  101 => 39,  97 => 38,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }
