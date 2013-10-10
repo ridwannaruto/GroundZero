@@ -1,3 +1,7 @@
+volunteer_management_system_workshop:
+    resource: "@VolunteerManagementSystemWorkshopBundle/Resources/config/routing.yml"
+    prefix:   /
+
 volunteer_management_system_stat:
     resource: "@VolunteerManagementSystemStatBundle/Resources/config/routing.yml"
     prefix:   /
