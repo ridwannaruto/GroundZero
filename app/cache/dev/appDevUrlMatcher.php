@@ -367,17 +367,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // admin_management
         if ($pathinfo === '/adminManagement') {
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:AdminManagement:selection',  '_route' => 'admin_management',);
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\AdminManagementController::selectionAction',  '_route' => 'admin_management',);
         }
 
         // promote_to_admin
         if ($pathinfo === '/promotetoAdmin') {
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:PromoteAdmin:promotetoadmin',  '_route' => 'promote_to_admin',);
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
         }
 
         // demote_to_volunteer
         if ($pathinfo === '/demotetoVolunteer') {
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:DemoteVolunteer:demotetovolunteer',  '_route' => 'demote_to_volunteer',);
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\DemoteVolunteerController::demotetovolunteerAction',  '_route' => 'demote_to_volunteer',);
         }
 
         // volunteer_management_system_styles_homepage
