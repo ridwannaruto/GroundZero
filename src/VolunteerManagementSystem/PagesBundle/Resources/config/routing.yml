@@ -90,6 +90,7 @@ logout:
 search_result:
   pattern: /result
   defaults: { _controller: VolunteerManagementSystemPagesBundle:Search:search}
+
   
 admin_management:
   pattern: /adminManagement

@@ -31,12 +31,12 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
     {
         // line 3
         echo "
-<form action=\"";
+<form action=\"adminManagement?id=";
         // line 4
-        echo $this->env->getExtension('routing')->getPath("just");
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\" method=\"post\" >
 <p align=\"right\">
-            <button type=\"submit\">Promote Administrator</button>
+            <button type=\"submit\">Admin Management</button>
  </p>
 </form>
 ";
