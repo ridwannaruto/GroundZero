@@ -35,6 +35,7 @@ VolunteerManagementSystem\EventBundle\Entity\Event:
             type: time
         enddate:
             type: date
+            nullable: TRUE
         endtime:
             type: time
     lifecycleCallbacks: {  }
