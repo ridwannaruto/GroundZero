@@ -35,68 +35,81 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "<h1>Project Report: ";
+        echo "
+<section class=\"container\">
+<div class=\"notify\">
+<h2 class=\"price\">Project Report</h2>  <br><br>
+
+    <table width=\"90%\">
+        <tr>
+    <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+        <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Project Name</strong></td>
+    <td>";
+        // line 22
         echo twig_escape_filter($this->env, (isset($context["projectname"]) ? $context["projectname"] : $this->getContext($context, "projectname")), "html", null, true);
-        echo "</h1>
-
-
-
-<div class=\"inner\">
-    <table width=\"398\" border=\"0\" align=\"center\" cellpadding=\"0\">
-        <tr>
-            <td height=\"26\" colspan=\"2\">Project Report
-            </td>
-            
-        </tr>
-        <tr>
-            
-            <td valign=\"top\"><div align=\"left\">Project Name:";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["projectname"]) ? $context["projectname"] : $this->getContext($context, "projectname")), "html", null, true);
-        echo "</div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">Status:";
-        // line 23
+        echo "</td>
+    
+  </tr>
+         <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Status</strong></td>
+    <td>";
+        // line 28
         echo twig_escape_filter($this->env, (isset($context["status"]) ? $context["status"] : $this->getContext($context, "status")), "html", null, true);
-        echo " </div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">Description:";
-        // line 27
+        echo "</td>
+    
+  </tr>
+         <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Description</strong></td>
+    <td>";
+        // line 34
         echo twig_escape_filter($this->env, (isset($context["description"]) ? $context["description"] : $this->getContext($context, "description")), "html", null, true);
-        echo "</div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">Objectives:";
-        // line 31
+        echo "</td>
+    
+  </tr>
+        
+         <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Objectives</strong></td>
+    <td>";
+        // line 41
         echo twig_escape_filter($this->env, (isset($context["objectives"]) ? $context["objectives"] : $this->getContext($context, "objectives")), "html", null, true);
-        echo "</div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">Start Date :";
-        // line 35
+        echo "</td>
+     <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Started Date</strong></td>
+    <td>";
+        // line 45
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["startdate"]) ? $context["startdate"] : $this->getContext($context, "startdate")), "m/d/Y"), "html", null, true);
-        echo "</div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">End Date : </div></td>
-
-        </tr>
-        <tr>
-            <td valign=\"top\"><div align=\"left\">Project Manager:";
-        // line 43
+        echo "</td>
+    
+  </tr>
+     <tr>
+    <td height=\"34\">&nbsp;</td>
+    <td><strong>Project Manager</strong></td>
+    <td>";
+        // line 51
         echo twig_escape_filter($this->env, (isset($context["projectmanager"]) ? $context["projectmanager"] : $this->getContext($context, "projectmanager")), "html", null, true);
-        echo " </div></td>
-
-        </tr>
+        echo " </td>
+    
+  </tr>   
+ 
+        
+        
+      
+        
 
     </table>
+        </div>
+        </section>
 ";
     }
 
@@ -112,6 +125,6 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  94 => 43,  83 => 35,  76 => 31,  69 => 27,  62 => 23,  55 => 19,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  100 => 51,  91 => 45,  84 => 41,  74 => 34,  65 => 28,  56 => 22,  38 => 6,  35 => 5,  29 => 3,);
     }
 }

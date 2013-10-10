@@ -4,11 +4,13 @@
 
 {% block body %}
 
+
+<section class="container">
+<div class="notify">
+<h2 class="price">User Personal Details</h2>  <br><br>
 <div class="propic" >
    <img src="{{asset('bundles/volunteermanagementsystemstyles/images/me.jpg')}}" width="200" height="200"></h2>
              </div> 
-
-<h1>User Personal Details</h1>  
 <table width="93%">
   <tr>
     <th width="18%" height="33" scope="row">&nbsp;</th>
@@ -102,8 +104,10 @@
   
   
 </table> 
-
-<h1>User Track Record</h1>  
+</div></sesction>
+        <section class="container">
+<div class="notify">
+<h2 class="price">User Track Record</h2>  
 
 <table width="93%">
   <tr>
@@ -150,5 +154,5 @@
     
   </tr>
 </table>
-
+</div></section>
 {% endblock %}

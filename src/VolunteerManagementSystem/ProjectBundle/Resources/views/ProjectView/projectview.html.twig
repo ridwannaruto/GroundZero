@@ -4,10 +4,12 @@
 Volma - Projects
 {% endblock %}
 {% block body %}
-<h1 class="price" align = "center">{{project.getName()}}</h1>
-<section class="container">
-    <div class="notify">
-<h1>Project Information</h1>
+<div class="notify">
+    
+<h2 class="price">{{project.getName()}}</h2>
+
+    <br><br>
+
 <p align="left">
 <strong>Description</strong>
 <br>{{project.getDescription()}}<br><br>
@@ -19,24 +21,35 @@ Volma - Projects
 <br>{{project.getStartdate|date('Y-m-d')}}<br><br><br>
 <strong>Scheduled end date</strong>
 <br>{{project.getEnddate|date('Y-m-d')}}<br><br><br>
-<h1>Events</h1>
+</div>
+<br><br><br>
+<div class="notify">
+<h2 class="price" >Events</h2>
 <p>
-{% block createevent %}
-        {% endblock %}
+
 </p>
     
 <p align = "center"><table width = 90% align = "center">
 {% for event in events%}
         <tr>
-            <td width=70%><p><strong>{{event[1]}}</strong></p></td>
-            <td><p><a href="view_event?eid={{event[0]}}&id={{id}}&pname={{project.getName()}}"><button>view details</button></a></p></td>
+            <td width=50%><p><strong>{{event[1]}}</strong></p></td>
+            <td>
+                <p>
+                    <a href="view_event?eid={{event[0]}}&id={{id}}&pname={{project.getName()}}">
+                        <button>
+                            view details
+                        </button>
+                        </a>
+                    </p>
+                </td>
         </tr>
         
         
-{% endfor %}
+{% endfor %}{% block createevent %}
+        {% endblock %}
     </table>
 </p>
 
 
-</div></section>
+</div>
 {% endblock %}

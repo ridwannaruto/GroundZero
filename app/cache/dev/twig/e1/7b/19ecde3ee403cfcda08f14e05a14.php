@@ -109,7 +109,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         // line 50
         $this->displayBlock('adminpromotion', $context, $blocks);
         // line 52
-        echo "<h1 class=\"price\">Notifications</h1>
+        echo "<h2 class=\"price\">Notifications</h2>
 <p align =\"justify\">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
 <p> <div class=\"inner\">
  <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
@@ -154,7 +154,7 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         // line 71
         $this->displayBlock('adminevent', $context, $blocks);
         // line 73
-        echo "<h1 class=\"price\">Calendar</h1>
+        echo "<h2 class=\"price\">Calendar</h2>
 <p align =\"justify\">Following calendar displays up to date project scheduled events and organized workshops that are open for every volunteer. It also indicate special days which are deadlines or progress dates for events your registered to.</p>
 <div id='calendar'></div>
 
