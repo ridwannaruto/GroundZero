@@ -15,13 +15,28 @@ Volma - Projects
 <br>{{project.getObjectives()}}<br><br>
 <strong>Project Manager</strong>
 <br>{{pm.getFirstname()}}<br><br><br>
-
-
+<strong>Initiated on</strong>
+<br>{{project.getStartdate|date('Y-m-d')}}<br><br><br>
+<strong>Scheduled end date</strong>
+<br>{{project.getEnddate|date('Y-m-d')}}<br><br><br>
 <h1>Events</h1>
-
-
-
-<h1>Volunteers</h1>
+<p>
+{% block createevent %}
+        {% endblock %}
 </p>
+    
+<p align = "center"><table width = 90% align = "center">
+{% for event in events%}
+        <tr>
+            <td width=70%><p><strong>{{event[1]}}</strong></p></td>
+            <td><p><a href="view_event?eid={{event[0]}}&id={{id}}"><button>view details</button></a></p></td>
+        </tr>
+        
+        
+{% endfor %}
+    </table>
+</p>
+
+
 </div></section>
 {% endblock %}

@@ -18,18 +18,19 @@ class ProjectViewController extends Controller
         $events= $em->getRepository('VolunteerManagementSystemEventBundle:Event');
         
         $user = $repository->findOneBy(array('id' => $id));
-        $e = $events->findOneBy(array('id' => $id));
+        $eve =$events->findOneBy(array('id' => $id));
         if ($user) {
             $project = $projects->findOneBy(array('id' => $pid));
-            $project->setEvents(array(1,2));
-            $em->persist($project);
-            $em->flush();
+            
             $pm = $repository->findOneBy(array('id' => $project->getProjectmanager()));
             $eventlist = $project->getEvents();
-            $eventname = array();
-            $eventid = array();
+            $proevents = array();
+            
             foreach ($eventlist as $event){
-                $eventid[] = $event;
+                $eventid = $event;
+                $eventname = $events->findOneBy(array('id'=>$event))->getName(); 
+                $proevents[] = array($eventid,$eventname);
+                
                 
             }
             
@@ -38,10 +39,10 @@ class ProjectViewController extends Controller
             if ($user->getAccessLevel() == 'Admin' || $user==$pm) {
                 
 
-                return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectview.html.twig', array('id' => $id,'pm'=>$pm, 'project' => $project));
+                return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectviewadmin.html.twig', array('pid'=>$pid,'id' => $id,'pm'=>$pm, 'project' => $project,'events'=>$proevents));
             }
             
-            return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectview.html.twig', array('id' => $id, 'project' => $project));
+            return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectview.html.twig', array('pid'=>$pid,'id' => $id, 'project' => $project,'events'=>$proevents));
             
         }
         else {

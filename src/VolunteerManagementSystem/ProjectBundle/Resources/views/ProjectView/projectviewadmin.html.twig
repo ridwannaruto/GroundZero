@@ -1,13 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends 'VolunteerManagementSystemProjectBundle:Projectview:projectview.html.twig' %}
 
-{% block title %}
-Volma - Confirm Project Creation
-{% endblock %}
-
-{% block body %}
-<h1 align = "center"> Confirm Project Creation</h1>
-<p align="center">
-Project has been created successfully!<br>
-We have informed <strong>{{name}}</strong> about his appointment
+{% block createevent %}
+<p align="right">
+    <a href="create_evet?id={{id}}&projectId={{pid}}"><button>Create Event</button></a>
 </p>
-{% endblock %}
+ {% endblock %}
