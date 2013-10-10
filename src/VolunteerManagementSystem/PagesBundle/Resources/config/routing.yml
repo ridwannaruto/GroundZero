@@ -103,3 +103,7 @@ promote_to_admin:
 demote_to_volunteer:
   pattern: /demotetoVolunteer
   defaults: { _controller: VolunteerManagementSystemPagesBundle:DemoteVolunteer:demotetovolunteer}
+
+_project_report:
+    pattern: /ProjectReport
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport }
