@@ -152,10 +152,6 @@ class __TwigTemplate_da09ff0cd12ba09a04b897db65c53606 extends Twig_Template
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "user"), "submit"), 'widget');
         echo "
          </p>
-        ";
-        // line 54
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-        echo "
         
         
  
@@ -184,6 +180,6 @@ class __TwigTemplate_da09ff0cd12ba09a04b897db65c53606 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  157 => 54,  152 => 52,  146 => 49,  142 => 48,  136 => 45,  131 => 43,  126 => 41,  120 => 38,  115 => 36,  110 => 34,  104 => 31,  100 => 30,  95 => 28,  91 => 27,  85 => 24,  80 => 22,  75 => 20,  70 => 18,  64 => 15,  59 => 13,  55 => 12,  51 => 11,  44 => 6,  41 => 5,  36 => 3,  30 => 2,);
+        return array (  152 => 52,  146 => 49,  142 => 48,  136 => 45,  131 => 43,  126 => 41,  120 => 38,  115 => 36,  110 => 34,  104 => 31,  100 => 30,  95 => 28,  91 => 27,  85 => 24,  80 => 22,  75 => 20,  70 => 18,  64 => 15,  59 => 13,  55 => 12,  51 => 11,  44 => 6,  41 => 5,  36 => 3,  30 => 2,);
     }
 }

@@ -10,3 +10,9 @@ view_event:
 register_event:
     pattern:  /register_event
     defaults: { _controller: VolunteerManagementSystemEventBundle:RegisterEvent:register }
+close_event:
+    pattern:  /close_event
+    defaults: { _controller: VolunteerManagementSystemEventBundle:CloseEvent:close }
+finished_event:
+    pattern:  /finished_event
+    defaults: { _controller: VolunteerManagementSystemEventBundle:CloseEvent:finished }

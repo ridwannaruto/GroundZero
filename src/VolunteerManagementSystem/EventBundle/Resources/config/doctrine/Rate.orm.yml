@@ -1,0 +1,17 @@
+VolunteerManagementSystem\EventBundle\Entity\Rate:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '50'
+        rate:
+            type: integer
+        comment:
+            type: text
+    lifecycleCallbacks: {  }

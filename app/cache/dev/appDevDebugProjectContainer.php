@@ -557,7 +557,7 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\RegistrationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity'));
         $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\EventBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\EventBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ProjectBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ProjectBundle\\Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ReportGenerationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NotificationBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\EventBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\EventBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ProjectBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\ProjectBundle\\Entity', 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\WorkshopBundle\\Resources\\config\\doctrine' => 'VolunteerManagementSystem\\WorkshopBundle\\Entity'));
         $e->setGlobalBasename('mapping');
 
         $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
@@ -566,10 +566,11 @@ class appDevDebugProjectContainer extends Container
         $f->addDriver($e, 'VolunteerManagementSystem\\NotificationBundle\\Entity');
         $f->addDriver($e, 'VolunteerManagementSystem\\EventBundle\\Entity');
         $f->addDriver($e, 'VolunteerManagementSystem\\ProjectBundle\\Entity');
+        $f->addDriver($e, 'VolunteerManagementSystem\\WorkshopBundle\\Entity');
         $f->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => 'C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\NewsBundle\\Entity')), 'VolunteerManagementSystem\\NewsBundle\\Entity');
 
         $g = new \Doctrine\ORM\Configuration();
-        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'VolunteerManagementSystemNewsBundle' => 'VolunteerManagementSystem\\NewsBundle\\Entity', 'VolunteerManagementSystemEventBundle' => 'VolunteerManagementSystem\\EventBundle\\Entity', 'VolunteerManagementSystemProjectBundle' => 'VolunteerManagementSystem\\ProjectBundle\\Entity'));
+        $g->setEntityNamespaces(array('VolunteerManagementSystemRegistrationBundle' => 'VolunteerManagementSystem\\RegistrationBundle\\Entity', 'VolunteerManagementSystemReportGenerationBundle' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Entity', 'VolunteerManagementSystemNotificationBundle' => 'VolunteerManagementSystem\\NotificationBundle\\Entity', 'VolunteerManagementSystemNewsBundle' => 'VolunteerManagementSystem\\NewsBundle\\Entity', 'VolunteerManagementSystemEventBundle' => 'VolunteerManagementSystem\\EventBundle\\Entity', 'VolunteerManagementSystemProjectBundle' => 'VolunteerManagementSystem\\ProjectBundle\\Entity', 'VolunteerManagementSystemWorkshopBundle' => 'VolunteerManagementSystem\\WorkshopBundle\\Entity'));
         $g->setMetadataCacheImpl($a);
         $g->setQueryCacheImpl($b);
         $g->setResultCacheImpl($c);
@@ -2884,6 +2885,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\EventBundle/Resources/views', 'VolunteerManagementSystemEvent');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\StatBundle/Resources/views', 'VolunteerManagementSystemStat');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\ProjectBundle/Resources/views', 'VolunteerManagementSystemProject');
+        $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\VolunteerManagementSystem\\WorkshopBundle/Resources/views', 'VolunteerManagementSystemWorkshop');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\xampp\\htdocs\\GroundZero\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3343,6 +3345,7 @@ class appDevDebugProjectContainer extends Container
                 'VolunteerManagementSystemEventBundle' => 'VolunteerManagementSystem\\EventBundle\\VolunteerManagementSystemEventBundle',
                 'VolunteerManagementSystemStatBundle' => 'VolunteerManagementSystem\\StatBundle\\VolunteerManagementSystemStatBundle',
                 'VolunteerManagementSystemProjectBundle' => 'VolunteerManagementSystem\\ProjectBundle\\VolunteerManagementSystemProjectBundle',
+                'VolunteerManagementSystemWorkshopBundle' => 'VolunteerManagementSystem\\WorkshopBundle\\VolunteerManagementSystemWorkshopBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3738,7 +3741,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.variables' => array(
 
             ),
-            'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
+            'assetic.java.bin' => 'C:\\Program Files\\Java\\jdk1.7.0_25\\bin\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',
