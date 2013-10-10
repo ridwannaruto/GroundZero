@@ -30,7 +30,7 @@ class TrackRecordController extends Controller {
     }
 
     public function InitializeTrackRecordAction(Request $request) {
-        $userId = $request->get('userId');
+        $userId = $request->get('id');
         $em1 = $this->getDoctrine()->getEntityManager();
         $em2 = $this->getDoctrine()->getEntityManager();
 
@@ -39,7 +39,7 @@ class TrackRecordController extends Controller {
 
         $user = $UserRepository->findOneBy(array('id' => $userId));
         $trackRecord = $TrackRepository->findOneBy(array('userId' => $userId));
-
+        
         if ($trackRecord) {
             return new Response('Already Initialized!!!');
         } else {
@@ -62,7 +62,7 @@ class TrackRecordController extends Controller {
                 $em->persist($TrackRecord);
                 $em->flush();
 
-                return new Response('Track Record Initialization Done!!! ');
+                return $this->redirect($this->generateUrl('confirm'));
             } else {
                 return new Response('User Not Found!!!');
             }
