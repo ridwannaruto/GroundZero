@@ -91,10 +91,14 @@ search_result:
   pattern: /result
   defaults: { _controller: VolunteerManagementSystemPagesBundle:Search:search}
   
-promote:
-  pattern: /promote
-  defaults: { _controller: VolunteerManagementSystemPagesBundle:VolunteertoAdmin:volunteertoadminselection}
+admin_management:
+  pattern: /adminManagement
+  defaults: { _controller: VolunteerManagementSystemPagesBundle:AdminManagement:selection}
   
 promote_to_admin:
   pattern: /promotetoAdmin
   defaults: { _controller: VolunteerManagementSystemPagesBundle:PromoteAdmin:promotetoadmin}
+
+demote_to_volunteer:
+  pattern: /demotetoVolunteer
+  defaults: { _controller: VolunteerManagementSystemPagesBundle:DemoteVolunteer:demotetovolunteer}
