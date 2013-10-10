@@ -11,8 +11,9 @@ class ViewEventController extends Controller
 {
     public function viewEventAction(Request $request)
     {   
-        $eid=10;
-        $id=46;
+        $eid=$request->get('eid');
+        $id=$request->get('id');
+        $pname=$request->get('pname');
         $em =$this->getDoctrine()->getEntityManager();
         $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
@@ -32,7 +33,7 @@ class ViewEventController extends Controller
             }
                  return $this->render(
             'VolunteerManagementSystemEventBundle:Event:eventregistered.html.twig',
-            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users)
+            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users,'pname'=>$pname)
         ); 
             }
             if (!in_array($id, $array)){
@@ -46,7 +47,7 @@ class ViewEventController extends Controller
            
           return $this->render(
             'VolunteerManagementSystemEventBundle:Event:event.html.twig',
-            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid)
+            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'pname'=>$pname)
         );  
         }
         return $this->render(

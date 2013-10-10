@@ -8,17 +8,23 @@
 {% endblock %}
 <section class="container">
     <div class="notify">
+         <h1>Rate Volunteers</h1>
         {{ form_start(form) }}
+           
     {# render the task's only field: description #}
-    {{ form_row(form.description) }}
+    
 
-    <h3>Tags</h3>
+    
     <ul class="tags">
         {# iterate over each existing tag and render its only field: name #}
         {% for tag in form.rates %}
-            <li>{{ form_row(tag.rate) }}</li>
+            <li>{{ form_widget(tag.name) }}{{ form_label(tag.rate) }}{{ form_widget(tag.rate) }}</li><li>{{ form_label(tag.comment) }}{{ form_widget(tag.comment) }}</li>
         {% endfor %}
     </ul>
+         {{ form_row(form.description) }}
+    {{form_widget(form.submit)}}
 {{ form_end(form) }}
+            
+            </b>
     </div>
 {% endblock %}

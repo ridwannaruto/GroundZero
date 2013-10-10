@@ -47,39 +47,54 @@ class __TwigTemplate_397335926bf5daa75e9b72c746d606e9 extends Twig_Template
         // line 9
         echo "<section class=\"container\">
     <div class=\"notify\">
+         <h1>Rate Volunteers</h1>
         ";
-        // line 11
+        // line 12
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
+           
     ";
-        // line 13
-        echo "    ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description"), 'row');
-        echo "
+        // line 15
+        echo "    
 
-    <h3>Tags</h3>
+    
     <ul class=\"tags\">
         ";
-        // line 18
+        // line 20
         echo "        ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "rates"));
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-            // line 19
+            // line 21
             echo "            <li>";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "rate"), 'row');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "name"), 'widget');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "rate"), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "rate"), 'widget');
+            echo "</li><li>";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "comment"), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["tag"]) ? $context["tag"] : $this->getContext($context, "tag")), "comment"), 'widget');
             echo "</li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 23
         echo "    </ul>
+         ";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description"), 'row');
+        echo "
+    ";
+        // line 25
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "submit"), 'widget');
+        echo "
 ";
-        // line 22
+        // line 26
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
+            
+            </b>
     </div>
 ";
     }
@@ -101,6 +116,6 @@ class __TwigTemplate_397335926bf5daa75e9b72c746d606e9 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 7,  81 => 22,  78 => 21,  69 => 19,  64 => 18,  56 => 13,  52 => 11,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  103 => 7,  94 => 26,  90 => 25,  86 => 24,  83 => 23,  69 => 21,  64 => 20,  58 => 15,  53 => 12,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }

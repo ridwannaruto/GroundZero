@@ -41,7 +41,7 @@ class CloseEventController extends Controller
         
 
         return $this->render('VolunteerManagementSystemEventBundle:Task:new.html.twig', array(
-            'form' => $form->createView(),'id'=>3
+            'form' => $form->createView(),'eid'=>$eid,'id'=>$id,
         ));
     
     } 
@@ -54,15 +54,27 @@ class CloseEventController extends Controller
         $repositoryE =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repositoryU =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         $TrackRepository = $em2->getRepository('VolunteerManagementSystemReportGenerationBundle:TrackReport');
-        
-        $task = new Task();
-       
-        $form = $this->createForm(new TaskType(), $task);
-        $form->handleRequest($request);
         $event = $repositoryE->findOneBy(array('id'=>$eid));
         $projectId=$event->getProject();
         $eventWeight=$event->getWeight();
+        $volunteers= $event->getVolunteerslist();
+        
+         $task = new Task();
+
+        foreach ($volunteers as $in){
+                $us=$repositoryU->findOneBy(array('id'=>$in));
+                $name=$us->getUsername();
+                $rate = new Rate();
+                $rate->setName($name);
+                $task->getRates()->add($rate);
+            }
+        $form = $this->createForm(new TaskType(), $task);
+        $form->handleRequest($request);
+        
+        
         if ($form->isValid()) {
+            $task=$form->getData();
+            
             foreach ($task->getRates() as $rate) {  
                 $user=$repositoryU->findOneBy(array('username'=>$rate->getName()));
                 $trackRecord = $TrackRepository->findOneBy(array('userId' => $user->getId()));
@@ -73,18 +85,10 @@ class CloseEventController extends Controller
             
             
         }          
-       // end dummy code
-     /*   foreach ($volunteers as $in){
-                $us=$repositoryU->findOneBy(array('id'=>$in));
-                $users[]=$us;
-                $name=$us->getUsername();
-                $rate = new Rate();
-                $rate->setName($name);
-                $task->getRates()->add($rate);
-            }*/
+      
 
        
-         return $this->generateUrl('projectview',$paramters =array('pid'=>$projectId,'id'=>$id));
+         return $this->redirect('projectview',$paramters =array('pid'=>$projectId,'id'=>$id));
     } 
      
 }

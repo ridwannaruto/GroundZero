@@ -109,7 +109,14 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
         // line 41
         echo "</ul>
          
-    
+    <p align=\"right\">
+            <a href=\"close_event?eid=";
+        // line 44
+        echo twig_escape_filter($this->env, (isset($context["eid"]) ? $context["eid"] : $this->getContext($context, "eid")), "html", null, true);
+        echo "&id=";
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"><button>close Event</button></a>
+            </p>
     </div>
 ";
     }
@@ -131,6 +138,6 @@ class __TwigTemplate_094157e371c1c01a7dc9a9e6230e3460 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 7,  110 => 41,  101 => 39,  97 => 38,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  125 => 7,  115 => 44,  110 => 41,  101 => 39,  97 => 38,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }
