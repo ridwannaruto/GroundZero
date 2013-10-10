@@ -11,8 +11,8 @@ class ViewEventController extends Controller
 {
     public function viewEventAction(Request $request)
     {   
-        $eid=6;
-        $id=36;
+        $eid=1;
+        $id=1;
         $em =$this->getDoctrine()->getEntityManager();
         $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
