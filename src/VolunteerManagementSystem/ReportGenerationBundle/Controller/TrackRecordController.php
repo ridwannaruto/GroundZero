@@ -52,7 +52,7 @@ class TrackRecordController extends Controller {
                 $TrackRecord->setOverallRating(0);
                 $TrackRecord->setTotalWeight(0);
                 $TrackRecord->setUserId($userId);
-                $initialArray = array("END");
+                $initialArray = array("-");
                 $TrackRecord->setComments($initialArray);
                 $TrackRecord->setEventHistory($initialArray);
                 $TrackRecord->setWorkshopsAttended($initialArray);

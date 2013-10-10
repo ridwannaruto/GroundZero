@@ -45,7 +45,7 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
         // line 7
         $this->displayBlock('admin', $context, $blocks);
         // line 9
-        echo "List of projects<br><br>
+        echo "<h2 class=\"price\">List of projects</h2><br><br>
  ";
         // line 10
         $context['_parent'] = (array) $context;
@@ -53,14 +53,17 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
         foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
             echo " 
         <div class=\"notify\" >
-        <p align=\"left\"><a href=\"project_view?id=";
-            // line 12
+            <style type=\"text/css\">
+.none a:link { text-decoration: none }
+</style>
+        <h2 class=\"none\"><a href=\"project_view?id=";
+            // line 15
             echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
             echo "&pid=";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getId", array(), "method"), "html", null, true);
             echo "\"<strong>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getName", array(), "method"), "html", null, true);
-            echo "</strong></a></p>
+            echo "</strong></a></h2>
         </div>
         </p>
     ";
@@ -87,6 +90,6 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  74 => 7,  58 => 12,  51 => 10,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  77 => 7,  61 => 15,  51 => 10,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }

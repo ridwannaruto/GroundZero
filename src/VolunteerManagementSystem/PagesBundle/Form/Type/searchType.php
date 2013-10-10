@@ -32,7 +32,7 @@ class SearchType extends AbstractType
            $builder
                 
             ->add('submit','submit', array(
-                'label' => 'Find',
+                'label' => 'View',
                 'attr' => array(
                     'class' => 'button'
                 )

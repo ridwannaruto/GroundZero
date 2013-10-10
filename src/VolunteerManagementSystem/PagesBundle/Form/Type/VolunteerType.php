@@ -13,7 +13,7 @@ class VolunteerType extends AbstractType
         $builder->add(
             'id',
             'entity',array(
-                'label' => 'Choose Member to be demoted',
+                'label' => 'choose administrator to demote',
                 'class' => 'VolunteerManagementSystemRegistrationBundle:User',
                 'property' => 'namewithinitials',
                 'query_builder' => function(EntityRepository $er) {
@@ -22,7 +22,8 @@ class VolunteerType extends AbstractType
                                               ->setParameter('accesslevel', 'Admin');
                                    }
             )    );
-        $builder->add('submit', 'submit')
+        $builder->add('submit', 'submit', array(
+            'label' => 'Demote'))
         ;
     }
 

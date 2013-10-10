@@ -133,17 +133,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/hello')) {
-            // volunteer_management_system_workshop_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_workshop_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\DefaultController::indexAction',));
+        if (0 === strpos($pathinfo, '/workshop')) {
+            // workshop_create
+            if ($pathinfo === '/workshopCreate') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopCreationController::createworkshopAction',  '_route' => 'workshop_create',);
             }
 
-            // volunteer_management_system_stat_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
+            // workshop_submission
+            if ($pathinfo === '/workshopSubmission') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopSubmissionController::submitworkshopAction',  '_route' => 'workshop_submission',);
             }
 
+        }
+
+        // volunteer_management_system_stat_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
         }
 
         if (0 === strpos($pathinfo, '/project')) {
@@ -189,6 +194,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\RegisterEventController::registerAction',  '_route' => 'register_event',);
         }
 
+        // close_event
+        if ($pathinfo === '/close_event') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CloseEventController::closeAction',  '_route' => 'close_event',);
+        }
+
+        // finished_event
+        if ($pathinfo === '/finished_event') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CloseEventController::finishedAction',  '_route' => 'finished_event',);
+        }
+
         if (0 === strpos($pathinfo, '/createNews')) {
             // news_create_confirm
             if ($pathinfo === '/createNewsConfirmation') {
@@ -210,11 +225,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // just
         if ($pathinfo === '/just') {
             return array (  '_controller' => 'VolunteerManagementSystem\\NotificationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'just',);
-        }
-
-        // volunteer_management_system_report_generation_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_report_generation_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\DefaultController::indexAction',));
         }
 
         if (0 === strpos($pathinfo, '/TrackRecord')) {

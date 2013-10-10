@@ -13,7 +13,7 @@ class ProjectNameType extends AbstractType
         $builder->add(
             'name',
             'entity',array(
-                'label' => 'View project details',
+                'label' => 'Project Name',
                 'class' => 'VolunteerManagementSystemProjectBundle:Project',
                 'property' => 'name',
                 'query_builder' => function(EntityRepository $er) {
@@ -21,7 +21,7 @@ class ProjectNameType extends AbstractType
                                    }
             )    );
         $builder->add('submit', 'submit', array(
-            'label' => 'View'
+            'label' => 'View Report'
         ))
         ;
     }

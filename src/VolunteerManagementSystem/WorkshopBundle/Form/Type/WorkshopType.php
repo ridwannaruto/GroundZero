@@ -6,9 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-use VolunteerManagementSystem\WorkshopBundle\Entity\Workshop;
-
-class UserType extends AbstractType
+class WorkshopType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -41,12 +39,14 @@ class UserType extends AbstractType
             'label'  => 'Registered List',
             'attr'   =>  array(
                 'class'   => 'login',
+                'data' => 'null'
                 )
             ))
             ->add('selectedlist','hidden', array( 
             'label'  => 'Selected List',
             'attr'   =>  array(
                 'class'   => 'login',
+                'data' => 'null'
                 )
             ))
             ->add('capacity','integer', array( 
@@ -83,7 +83,7 @@ class UserType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'VolunteerManagementSystem\RegistrationBundle\Entity\User'
+            'data_class' => 'VolunteerManagementSystem\WorkshopBundle\Entity\Workshop'
         ));
     }
 
@@ -92,7 +92,7 @@ class UserType extends AbstractType
      */
     public function getName()
     {
-        return 'volunteermanagementsystem_registrationbundle_user';
+        return 'volunteermanagementsystem_workshopbundle_workshop';
     }
 }
 

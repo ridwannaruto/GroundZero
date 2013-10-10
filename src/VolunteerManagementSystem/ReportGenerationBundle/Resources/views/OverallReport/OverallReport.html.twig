@@ -3,6 +3,38 @@
 {% block title %}Volma - System Summery{% endblock %}
 
 {% block body %}
-<h1></h1>
+<h2 class="price">Summery</h2>  <br><br>
+
+<div class="notify">
+    <h1 class="price">Volunteers</h1>  <br><br>
+    <table width="93%">
+        <tr>
+            <th width="18%" height="33" scope="row">&nbsp;</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td height="34">&nbsp;</td>
+            <td><strong>Number of Registered Volunteers</strong></td>
+            <td>{{noofusers}}</td>
+
+        </tr>
+        <tr>
+            <td height="34">&nbsp;</td>
+            <td><strong>Male Percentage</strong> </td>
+            <td>{{noofmales}}/{{noofusers}}*100</td>
+
+        </tr>
+        <tr>
+            <td height="34">&nbsp;</td>
+            <td><strong>Last Name </strong></td>
+            <td></td>
+
+        </tr>
+    </table>
+</div>
 
 {% endblock %}

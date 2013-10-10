@@ -33,9 +33,32 @@
                       {{ form_end(form2) }}
         </p>
     </div></section>
+<section class="container">
+    <div class="notify">
+        <h1>Project Report</h1>
+ {{ form_start(form3) }}
+        {{ form_errors(form3) }}
+        <p align="center">
 
-{{form(form3)}}
+{{form_label(form3.name)}}<br>
+{{form_widget(form3.name)}}
+            <br><br>
+                {{form_widget(form3.submit)}}
+                      {{ form_end(form3) }}
+        </p>
+    </div></section>
+<section class="container">
+    <div class="notify">
+        <h1>Volunteer Report</h1>
+ {{ form_start(form4) }}
+        {{ form_errors(form4) }}
+        <p align="center">
 
-{{form(form4)}}
-
+{{form_label(form4.id)}}<br>
+{{form_widget(form4.id)}}
+            <br><br>
+                {{form_widget(form4.submit)}}
+                      {{ form_end(form4) }}
+        </p>
+    </div></section>
 {% endblock %}
