@@ -1,3 +1,7 @@
-volunteer_management_system_workshop_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:Default:index }
+workshop_create:
+    pattern:  /workshopCreate
+    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopCreation:createworkshop }
+
+workshop_submission:
+    pattern:  /workshopSubmission
+    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopSubmission:submitworkshop }

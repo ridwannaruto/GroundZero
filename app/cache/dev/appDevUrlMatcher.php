@@ -133,6 +133,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/workshop')) {
+            // workshop_create
+            if ($pathinfo === '/workshopCreate') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopCreationController::createworkshopAction',  '_route' => 'workshop_create',);
+            }
+
+            // workshop_submission
+            if ($pathinfo === '/workshopSubmission') {
+                return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopSubmissionController::submitworkshopAction',  '_route' => 'workshop_submission',);
+            }
+
+        }
+
         // volunteer_management_system_stat_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_stat_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\StatBundle\\Controller\\DefaultController::indexAction',));
