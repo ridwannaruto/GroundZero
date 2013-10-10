@@ -58,6 +58,7 @@ class CreateEventController extends Controller
         return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
        }
 
+
         return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
     
     }
