@@ -6,90 +6,90 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class EventType extends AbstractType
-{
-        /**
+class EventType extends AbstractType {
+
+    /**
      * @param FormBuilderInterface $builder
      * @param array $options
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
+    public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('name', 'text', array( 
-            'label'  => 'Event Name',
-            'attr'  => array(
-               'placeholder' =>'type your Event name' 
-            )
-            ))
-            ->add('weight')
-            ->add('description','textarea',array(
-                'label' =>'description',
-                'attr'=>array(
-                    'placeholder'=>'Give description about event'
+                ->add('name', 'text', array(
+                    'label' => 'Event Name',
+                    'attr' => array(
+                        'placeholder' => 'type your Event name'
                     )
-            ))
-            ->add('goals','textarea',array(
-                'label' =>'Objectives',
-                'attr'=>array(
-                    'placeholder'=>'Give objectives'
+                ))
+                ->add('weight')
+                ->add('description', 'textarea', array(
+                    'label' => 'description',
+                    'attr' => array(
+                        'rows' => 10,
+                        'cols' => 50,
+                        'placeholder' => 'Give description about event'
                     )
-            ))
-            ->add('startdate','date',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
-            'label' =>'Start Date',
-                'attr'=>array(
-                    'placeholder'=>'project start date'
+                ))
+                ->add('goals', 'textarea', array(
+                    'label' => 'Objectives',
+                    'attr' => array(
+                        'rows' => 10,
+                        'cols' => 50,
+                        'placeholder' => 'Give objectives'
                     )
-            ))
-            ->add('starttime','time',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
-            'label' =>'Time',
-                'attr'=>array(
-                    'placeholder'=>'project start date'
+                ))
+                ->add('startdate', 'date', array(
+                    'input' => 'datetime',
+                    'widget' => 'single_text',
+                    'label' => 'Start Date',
+                    'attr' => array(
+                        'placeholder' => 'project start date'
                     )
-            ))
-             ->add('deadline','date',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
-            'label' =>'Dead line',
-                'attr'=>array(
-                    'placeholder'=>'project start date'
+                ))
+                ->add('starttime', 'time', array(
+                    'input' => 'datetime',
+                    'widget' => 'single_text',
+                    'label' => 'Start Time',
+                    'attr' => array(
+                        'placeholder' => 'project start date'
                     )
-            ))
-            ->add('deadlinetime','time',array(
-                'input' => 'datetime',
-                'widget' => 'single_text',
-            'label' =>'Time',
-                'attr'=>array(
-                    'placeholder'=>'project start date'
+                ))
+                ->add('deadline', 'date', array(
+                    'input' => 'datetime',
+                    'widget' => 'single_text',
+                    'label' => 'End Date',
+                    'attr' => array(
+                        'placeholder' => 'project start date'
                     )
-            ))
-          
-         
+                ))
+                ->add('deadlinetime', 'time', array(
+                    'input' => 'datetime',
+                    'widget' => 'single_text',
+                    'label' => 'End Time',
+                    'attr' => array(
+                        'placeholder' => 'project start date'
+                    )
+                ))
+
+
         ;
         $builder->add('teamleader', 'entity', array(
-            'label' =>'Team Leader  ',
+            'label' => 'Team Leader  ',
             'class' => 'VolunteerManagementSystemRegistrationBundle:User',
             'property' => 'username',
-            ));
+        ));
         $builder
-                
-            ->add('submit','submit', array(
-                'label' => 'Create',
-                'attr' => array(
-                    'class' => 'button'
-                )
-                
-            ));
+                ->add('submit', 'submit', array(
+                    'label' => 'Create Event',
+                    'attr' => array(
+                        'class' => 'button'
+                    )
+        ));
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
-    {
+    public function setDefaultOptions(OptionsResolverInterface $resolver) {
         $resolver->setDefaults(array(
             'data_class' => 'VolunteerManagementSystem\EventBundle\Entity\Event'
         ));
@@ -98,8 +98,8 @@ class EventType extends AbstractType
     /**
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return 'volunteermanagementsystem_eventbundle_event';
     }
+
 }
