@@ -13,7 +13,7 @@ class userDetailsType extends AbstractType
         $builder->add(
             'id',
             'entity',array(
-                'label' => 'Choose Member to be promoted',
+                'label' => 'Choose Member',
                 'class' => 'VolunteerManagementSystemRegistrationBundle:User',
                 'property' => 'namewithinitials',
                 'query_builder' => function(EntityRepository $er) {

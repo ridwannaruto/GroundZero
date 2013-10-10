@@ -107,3 +107,7 @@ demote_to_volunteer:
 _project_report:
     pattern: /ProjectReport
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport }
+
+_display:
+    pattern: /display
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:display:display }
