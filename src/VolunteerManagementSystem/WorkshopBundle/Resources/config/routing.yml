@@ -1,0 +1,3 @@
+volunteer_management_system_workshop_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:Default:index }
