@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use VolunteerManagementSystem\PagesBundle\Form\Type\AdminType;
+use VolunteerManagementSystem\NotificationBundle\Entity\Notification;
 
 class PromoteAdminController extends Controller{
    
@@ -24,6 +25,18 @@ class PromoteAdminController extends Controller{
             $this->getDoctrine()->getEntityManager()
                                 ->getConnection()
                                 ->update('user', array('accesslevel' => 'Admin'), array('id' => $id));
+            
+            $notification = new Notification;
+            $notification->setName('Promoted to Admin');
+            $notification->setDetails('You have been promoted to an admin');
+            $notification->setDate(new \DateTime());
+            $notification->setUserId($id);
+            $notification->setProject('-');
+            $em = $this->getDoctrine()->getEntityManager();
+            $em->persist($notification);
+            $em->flush();
+            
+            
             
            return $this->render('VolunteerManagementSystemPagesBundle:Promote:success.html.twig',array('id' => $idu, 'name' => $name));
         }
