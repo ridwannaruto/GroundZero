@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+{% block title %}Volma - Admin Management{% endblock %}
+
+{% block body %}
+
+<section class="container">
+    <div class="notify">
+        <h1>Promote Volunteers</h1>
+         {{ form_start(form1) }}
+        {{ form_errors(form1) }}
+        <p align="center">
+
+{{form_label(form1.id)}}<br>
+{{form_widget(form1.id)}}
+
+            <br><br>
+                {{form_widget(form1.submit)}}
+                  {{ form_end(form1) }}
+        </p>
+    </div></section>
+
+<section class="container">
+    <div class="notify">
+        <h1>Demote Administrators</h1>
+             {{ form_start(form2) }}
+        {{ form_errors(form2) }}
+        <p align="center">
+
+{{form_label(form2.id)}}<br>
+{{form_widget(form2.id)}}
+            <br><br>
+                {{form_widget(form2.submit)}}
+                      {{ form_end(form2) }}
+        </p>
+    </div></section>
+
+{% endblock %}
