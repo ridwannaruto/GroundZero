@@ -46,20 +46,22 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
     public function block_adminevent($context, array $blocks = array())
     {
         // line 11
-        echo "<form action=\"";
-        echo $this->env->getExtension('routing')->getPath("just");
-        echo "\" method=\"post\" >
+        echo "
         <p align=\"right\">
-            <button type=\"submit\">Manage Events</button>
+            <a href=\"manage_event?id=";
+        // line 13
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"<strong><button type=\"submit\">Manage Events</button></strong></a>
+            
        </p>
-</form>
+
 ";
     }
 
-    // line 17
+    // line 18
     public function block_adminreport($context, array $blocks = array())
     {
-        // line 18
+        // line 19
         echo "
 ";
     }
@@ -76,6 +78,6 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  63 => 18,  60 => 17,  49 => 11,  46 => 10,  36 => 4,  33 => 3,  30 => 2,);
+        return array (  65 => 19,  62 => 18,  53 => 13,  49 => 11,  46 => 10,  36 => 4,  33 => 3,  30 => 2,);
     }
 }

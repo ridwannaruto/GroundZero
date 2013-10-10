@@ -16,3 +16,6 @@ close_event:
 finished_event:
     pattern:  /finished_event
     defaults: { _controller: VolunteerManagementSystemEventBundle:CloseEvent:finished }
+manage_event:
+    pattern:  /manage_event
+    defaults: { _controller: VolunteerManagementSystemEventBundle:ManageEvents:manage }
