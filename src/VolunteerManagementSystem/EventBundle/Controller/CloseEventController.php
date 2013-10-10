@@ -66,26 +66,19 @@ class CloseEventController extends Controller
         $task = new Task();
        
         $form = $this->createForm(new TaskType(), $task);
-         $form->handleRequest($request);
-         $event = $repositoryE->findOneBy(array('id'=>$eid));
+        $form->handleRequest($request);
+        $event = $repositoryE->findOneBy(array('id'=>$eid));
+        $projectId=$event->getProject();
+        $eventWeight=$event->getWeight();
         if ($form->isValid()) {
+            foreach ($task->getRates() as $rate) {  
+                $user=$repositoryU->findOneBy(array('username'=>$rate->getName()));
+                $trackRecord = $TrackRepository->findOneBy(array('userId' => $user->getId()));
+                $trackRecord->UpdateRating($projectId,$eid,$eventWeight,$rate->getRate());
+            }
             
             
-        }
-        $trackRecord = $TrackRepository->findOneBy(array('userId' => $userId));
-        
-        
-       
-       
-            $teamleaderid=$event->getTeamleader();
-            $teamleader=$repositoryU->findOneBy(array('id'=>$teamleaderid));
-            $volunteers= $event->getVolunteerslist();
-        
-         $task = new Task();
-
-        // dummy code - this is here just so that the Task has some tags
-        // otherwise, this isn't an interesting example
-        
+        }          
        // end dummy code
         foreach ($volunteers as $in){
                 $us=$repositoryU->findOneBy(array('id'=>$in));
@@ -95,10 +88,6 @@ class CloseEventController extends Controller
                 $rate->setName($name);
                 $task->getRates()->add($rate);
             }
-
-        $form = $this->createForm(new TaskType(), $task,array('action' => $this->generateUrl('account_create')));
-
-        
 
         return $this->render('VolunteerManagementSystemEventBundle:Task:new.html.twig', array(
             'form' => $form->createView(),'id'=>3
