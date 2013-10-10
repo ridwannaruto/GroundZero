@@ -1,7 +1,3 @@
-volunteer_management_system_report_generation_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:Default:index }
-
 _track_record:
     pattern: /TrackRecord
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:TrackRecord:TrackRecord }
@@ -21,3 +17,7 @@ _userDetails_display:
 _display:
     pattern: /display
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:display:display }
+    
+_overall_report:
+    pattern: /OverallReport
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:OverallReport:OverallReport }

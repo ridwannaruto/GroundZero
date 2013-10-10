@@ -11,35 +11,35 @@
         <h1> Event</h1>
         <table>
             <tr><a href="register_event?eid={{eid}}&id={{id}}"><button>Register</button></a>
-            
+
             <td><strong>Event Name</strong></td><td>{{event.name}}</td>
             </tr>
-         <br>
-         <tr>
-         <td><strong>Project</strong></td><td>{{pname}}</td>
+            <br>
+            <tr>
+                <td><strong>Project</strong></td><td>{{pname}}</td>
             </tr>
             <tr>
-         <td><strong>Team Leader</strong></td><td>{{teamleader}}</td>
+                <td><strong>Team Leader</strong></td><td>{{teamleader}}</td>
             </tr>
             <br>
             <tr>
-         <td><strong>Event Description</strong></td><td>{{event.description}}</td>
+                <td><strong>Event Description</strong></td><td>{{event.description}}</td>
             </tr>
             <br>
             <tr>
-          <td><strong>Event goals</strong></td><td>{{event.description}}</td>
+                <td><strong>Event goals</strong></td><td>{{event.description}}</td>
             </tr>
             <br>
             <tr>
-         <td><strong>Start date</strong></td><td>{{event.startdate|date("m/d/Y") }}</td>
+                <td><strong>Start date</strong></td><td>{{event.startdate|date("m/d/Y") }}</td>
             </tr>
             <br>
             <tr>
-         <td><strong>end date</strong></td><td>{{event.enddate|date("m/d/Y") }}</td>
+                <td><strong>end date</strong></td><td>{{event.enddate|date("m/d/Y") }}</td>
             </tr>
             <br>
         </table>
-        
-    
+
+
     </div>
 {% endblock %}

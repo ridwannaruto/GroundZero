@@ -43,7 +43,7 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
         echo "</h1>
 <section class=\"container\">
     <div class=\"notify\">
-<h1>Basic Information</h1>
+<h1>Project Information</h1>
 <p align=\"left\">
 <strong>Description</strong>
 <br>";
@@ -95,6 +95,8 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), 0, array(), "array"), "html", null, true);
             echo "&id=";
             echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+            echo "&pname=";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getName", array(), "method"), "html", null, true);
             echo "\"><button>view details</button></a></p></td>
         </tr>
         
@@ -132,6 +134,6 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 25,  117 => 24,  108 => 37,  95 => 32,  91 => 31,  88 => 30,  84 => 29,  79 => 26,  77 => 24,  71 => 21,  66 => 19,  61 => 17,  56 => 15,  51 => 13,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
+        return array (  122 => 25,  119 => 24,  110 => 37,  95 => 32,  91 => 31,  88 => 30,  84 => 29,  79 => 26,  77 => 24,  71 => 21,  66 => 19,  61 => 17,  56 => 15,  51 => 13,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
     }
 }

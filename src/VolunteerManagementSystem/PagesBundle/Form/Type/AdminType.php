@@ -13,7 +13,7 @@ class AdminType extends AbstractType
         $builder->add(
             'id',
             'entity',array(
-                'label' => 'Choose Member to be promoted',
+                'label' => 'choose member to be promoted',
                 'class' => 'VolunteerManagementSystemRegistrationBundle:User',
                 'property' => 'namewithinitials',
                 'query_builder' => function(EntityRepository $er) {
@@ -22,7 +22,8 @@ class AdminType extends AbstractType
                                               ->setParameter('accesslevel', 'Volunteer');
                                    }
             )    );
-        $builder->add('submit', 'submit')
+        $builder->add('submit', 'submit', array(
+            'label' => 'Promote'))
         ;
     }
 

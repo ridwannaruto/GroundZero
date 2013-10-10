@@ -39,14 +39,16 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     {
         // line 6
         echo "
+
+<section class=\"container\">
+<div class=\"notify\">
+<h2 class=\"price\">User Personal Details</h2>  <br><br>
 <div class=\"propic\" >
    <img src=\"";
-        // line 8
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/me.jpg"), "html", null, true);
         echo "\" width=\"200\" height=\"200\"></h2>
              </div> 
-
-<h1>User Personal Details</h1>  
 <table width=\"93%\">
   <tr>
     <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
@@ -60,7 +62,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Name with Initials</strong></td>
     <td>";
-        // line 24
+        // line 26
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "namewithinitials"), "html", null, true);
         echo "</td>
     
@@ -69,7 +71,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>First Name</strong> </td>
     <td>";
-        // line 30
+        // line 32
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "firstname"), "html", null, true);
         echo "</td>
     
@@ -78,7 +80,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Last Name </strong></td>
     <td>";
-        // line 36
+        // line 38
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "lastname"), "html", null, true);
         echo "</td>
     
@@ -87,7 +89,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>NIC</strong></td>
     <td>";
-        // line 42
+        // line 44
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "nic"), "html", null, true);
         echo "</td>
     
@@ -97,7 +99,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Gender</strong></td>
     <td>";
-        // line 49
+        // line 51
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "gender"), "html", null, true);
         echo "</td>
     
@@ -107,7 +109,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Date of Birth </strong></td>
     <td>";
-        // line 56
+        // line 58
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "dateOfBirth"), "m/d/Y"), "html", null, true);
         echo "</td>
     
@@ -117,7 +119,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Email</strong></td>
     <td>";
-        // line 63
+        // line 65
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email"), "html", null, true);
         echo "</td>
     
@@ -127,7 +129,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Mobile Number</strong> </td>
     <td>";
-        // line 70
+        // line 72
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "mobilenumber"), "html", null, true);
         echo "</td>
     
@@ -137,7 +139,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Contact Number </strong></td>
     <td>";
-        // line 77
+        // line 79
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "phonenumber"), "html", null, true);
         echo "</td>
     
@@ -147,7 +149,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Address</strong></td>
     <td>";
-        // line 84
+        // line 86
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "address"), "html", null, true);
         echo "</td>
     
@@ -157,7 +159,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>City</strong</td>
     <td>";
-        // line 91
+        // line 93
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "city"), "html", null, true);
         echo "</td>
     
@@ -167,7 +169,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Country</strong></td>
     <td>";
-        // line 98
+        // line 100
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "country"), "html", null, true);
         echo "</td>
   </tr>
@@ -176,8 +178,10 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
   
   
 </table> 
-
-<h1>User Track Record</h1>  
+</div></sesction>
+        <section class=\"container\">
+<div class=\"notify\">
+<h2 class=\"price\">User Track Record</h2>  
 
 <table width=\"93%\">
   <tr>
@@ -191,7 +195,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Joined date</strong></td>
     <td>";
-        // line 119
+        // line 123
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "joinedDate"), "m/d/Y"), "html", null, true);
         echo "</td>
     
@@ -200,7 +204,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Overall Rating</strong></td>
     <td>";
-        // line 125
+        // line 129
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "overallRating"), "html", null, true);
         echo "</td>
     
@@ -209,7 +213,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Projects Participated</strong></td>
     <td>";
-        // line 131
+        // line 135
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "projectHistory"), "html", null, true);
         echo "</td>
     
@@ -218,7 +222,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Events Participated</strong></td>
     <td>";
-        // line 137
+        // line 141
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "eventHistory"), "html", null, true);
         echo "</td>
     
@@ -227,7 +231,7 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Comments by team leaders</strong></td>
     <td>";
-        // line 143
+        // line 147
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "comments"), "html", null, true);
         echo "</td>
     
@@ -236,13 +240,13 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
     <td height=\"34\">&nbsp;</td>
     <td><strong>Workshops Participated</strong></td>
     <td>";
-        // line 149
+        // line 153
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "workshopsAttended"), "html", null, true);
         echo "</td>
     
   </tr>
 </table>
-
+</div></section>
 ";
     }
 
@@ -258,6 +262,6 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  240 => 149,  231 => 143,  222 => 137,  213 => 131,  204 => 125,  195 => 119,  171 => 98,  161 => 91,  151 => 84,  141 => 77,  131 => 70,  121 => 63,  111 => 56,  101 => 49,  91 => 42,  82 => 36,  73 => 30,  64 => 24,  45 => 8,  41 => 6,  38 => 5,  29 => 3,);
+        return array (  244 => 153,  235 => 147,  226 => 141,  217 => 135,  208 => 129,  199 => 123,  173 => 100,  163 => 93,  153 => 86,  143 => 79,  133 => 72,  123 => 65,  113 => 58,  103 => 51,  93 => 44,  84 => 38,  75 => 32,  66 => 26,  49 => 12,  41 => 6,  38 => 5,  29 => 3,);
     }
 }
