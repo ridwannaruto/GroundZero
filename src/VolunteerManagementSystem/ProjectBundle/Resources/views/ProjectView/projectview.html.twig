@@ -7,7 +7,7 @@ Volma - Projects
 <h1 class="price" align = "center">{{project.getName()}}</h1>
 <section class="container">
     <div class="notify">
-<h1>Basic Information</h1>
+<h1>Project Information</h1>
 <p align="left">
 <strong>Description</strong>
 <br>{{project.getDescription()}}<br><br>
@@ -29,7 +29,7 @@ Volma - Projects
 {% for event in events%}
         <tr>
             <td width=70%><p><strong>{{event[1]}}</strong></p></td>
-            <td><p><a href="view_event?eid={{event[0]}}&id={{id}}"><button>view details</button></a></p></td>
+            <td><p><a href="view_event?eid={{event[0]}}&id={{id}}&pname={{project.getName()}}"><button>view details</button></a></p></td>
         </tr>
         
         

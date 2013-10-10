@@ -34,6 +34,8 @@ class __TwigTemplate_86202aaa36e37fbd2c427274275f8205 extends Twig_Template
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "&projectId=";
         echo twig_escape_filter($this->env, (isset($context["pid"]) ? $context["pid"] : $this->getContext($context, "pid")), "html", null, true);
+        echo "&pname=";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getName", array(), "method"), "html", null, true);
         echo "\"><button>Create Event</button></a>
 </p>
  ";

@@ -8,76 +8,93 @@
 {% block admin %}
 {% endblock %}
 
- <section class="container">
+<section class="container">
     <div class="notify">
-      <h1>Create New Event</h1>
-      <table width="74%" height="387">
-  <tr>
-    <th scope="row">{{ form_start(form) }}
-        {{ form_errors(form) }}<strong>{{form_label(form.name)}}</strong></th>
-    <td>&nbsp;{{form_widget(form.name)}} </td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row"><strong>{{form_label(form.teamleader)}}</strong></th>
-    <td>&nbsp;{{form_widget(form.teamleader)}}</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row"><strong>{{form_label(form.weight)}}</strong></th>
-    <td>&nbsp;{{form_widget(form.weight)}}</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row"><strong>{{form_label(form.description)}} </strong></th>
-    <td>&nbsp;{{form_widget(form.description)}} </td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row"><strong>{{form_label(form.goals)}} </strong></th>
-    <td>&nbsp;{{form_widget(form.goals)}} </td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row"><strong >{{form_label(form.startdate)}}</strong></th>
-    <td>&nbsp;{{form_widget(form.startdate)}} </td>
-    <td><strong {{form_label(form.starttime)}}</strong>   </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form_widget(form.starttime)}} </td>
-  </tr>
-  <tr>
-    <th scope="row"><strong >{{form_label(form.deadline)}}</strong></th>
-    <td>&nbsp;{{form_widget(form.deadline)}}</td>
-    <td><strong >{{form_label(form.deadlinetime)}}</strong ></td>
-    <td>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form_widget(form.deadlinetime)}}</td>
-  </tr>
-  <tr>
-    <th scope="row"></th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <th scope="row">&nbsp;</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;{{form_widget(form.submit)}}{{ form_end(form) }}</td>
-  </tr>
-</table>
-      
-           
-      
- 
-        
- 
-    </div>
-        
+        <h1>Create New Event</h1>
+        <table height="387" width="95%">
+            <tr>
+                <th scope="row" width=30%"><p align="left"><strong>Project</strong></p></th>
+                <td>{{pname}}</td>
+                <td >&nbsp;</td>
+                    <td >&nbsp;</td>
+            </tr>
+            {{ form_start(form) }}
+        {{ form_errors(form) }}
+            <tr>
+                <th scope="row"><p align="left"><strong>{{form_label(form.name)}}</strong></p></th>
+                    <td colspan="2">{{form_widget(form.name)}}</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
 
-  </section>
+                <tr>
+                    <th scope="row"><p align="left"><strong>{{form_label(form.teamleader)}}</strong></p></th>
+                    <td>&nbsp;{{form_widget(form.teamleader)}}</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row"><p align="left"><strong>{{form_label(form.weight)}}</strong></p></th>
+                    <td>&nbsp;{{form_widget(form.weight)}}</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row"><p align="left"><strong>Description </strong></p></th>
+                   <td colspan="3">{{form_widget(form.description)}}</td> 
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><p align="left"><strong>{{form_label(form.goals)}} </strong></p></th>
+                    <td colspan="3">&nbsp;{{form_widget(form.goals)}} </td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><p align="left"><strong >{{form_label(form.startdate)}}</strong></p></th>
+                    <td>{{form_widget(form.startdate)}} </td>
+                   
+                </tr>
+                <tr>
+                    <th scope="row"><p align="left"><strong>{{form_label(form.starttime)}}</strong></p></th>
+                    <td>{{form_widget(form.starttime)}} </td>
+                    
+                </tr>
+                
+                
+                 <tr>
+                    <th scope="row"><p align="left"><strong> {{form_label(form.deadline)}}</strong></p></th>                    
+                    <td>{{form_widget(form.deadline)}}</td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <th scope="row"><p align="left"><strong >{{form_label(form.deadlinetime)}}</strong ></p></th>
+                    <td>{{form_widget(form.deadlinetime)}}</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td>&nbsp;</td>
+                    
+                    <td colspan="2"><p align="right">{{form_widget(form.submit)}}{{ form_end(form) }}</p></td>
+                </tr>
+            </table>
+
+
+
+
+
+
+        </div>
+
+
+    </section>
 
 
 {% endblock %}
