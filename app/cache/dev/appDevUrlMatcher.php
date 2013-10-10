@@ -372,20 +372,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // promote_to_admin
         if ($pathinfo === '/promotetoAdmin') {
-<<<<<<< HEAD
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
-=======
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:PromoteAdmin:promotetoadmin',  '_route' => 'promote_to_admin',);
->>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
         }
 
         // demote_to_volunteer
         if ($pathinfo === '/demotetoVolunteer') {
-<<<<<<< HEAD
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\DemoteVolunteerController::demotetovolunteerAction',  '_route' => 'demote_to_volunteer',);
-=======
-            return array (  '_controller' => 'VolunteerManagementSystemPagesBundle:DemoteVolunteer:demotetovolunteer',  '_route' => 'demote_to_volunteer',);
->>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
         }
 
         // volunteer_management_system_styles_homepage
