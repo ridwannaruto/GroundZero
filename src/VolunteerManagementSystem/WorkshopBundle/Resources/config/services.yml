@@ -1,0 +1,7 @@
+parameters:
+#    volunteer_management_system_workshop.example.class: VolunteerManagementSystem\WorkshopBundle\Example
+
+services:
+#    volunteer_management_system_workshop.example:
+#        class: %volunteer_management_system_workshop.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

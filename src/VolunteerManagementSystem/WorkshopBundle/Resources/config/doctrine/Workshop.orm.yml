@@ -1,0 +1,26 @@
+VolunteerManagementSystem\WorkshopBundle\Entity\Workshop:
+    type: entity
+    table: null
+    repositoryClass: VolunteerManagementSystem\WorkshopBundle\Entity\WorkshopRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        workshopname:
+            type: string
+            length: '50'
+        description:
+            type: text
+        date:
+            type: datetime
+        registrationdeadline:
+            type: datetime
+        capacity:
+            type: integer
+        registeredlist:
+            type: array
+        selectedlist:
+            type: array
+    lifecycleCallbacks: {  }
