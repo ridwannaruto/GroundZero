@@ -227,11 +227,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // _project_report
-        if ($pathinfo === '/ProjectReport') {
-            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
-        }
-
         // _userDetails_display
         if ($pathinfo === '/userDetailsDisplay') {
             return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\userDetailsDisplayController::formdisplayAction',  '_route' => '_userDetails_display',);
@@ -388,6 +383,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // demote_to_volunteer
         if ($pathinfo === '/demotetoVolunteer') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\DemoteVolunteerController::demotetovolunteerAction',  '_route' => 'demote_to_volunteer',);
+        }
+
+        // _project_report
+        if ($pathinfo === '/ProjectReport') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
         }
 
         // volunteer_management_system_styles_homepage
