@@ -232,6 +232,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
         }
 
+        // _userDetails_display
+        if ($pathinfo === '/userDetailsDisplay') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\userDetailsDisplayController::formdisplayAction',  '_route' => '_userDetails_display',);
+        }
+
+        // _display
+        if ($pathinfo === '/display') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\displayController::displayAction',  '_route' => '_display',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);

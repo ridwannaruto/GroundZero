@@ -13,3 +13,11 @@ _track_record_initialize:
 _project_report:
     pattern: /ProjectReport
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:ProjectReport:ProjectReport }
+    
+_userDetails_display:
+    pattern: /userDetailsDisplay
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:userDetailsDisplay:formdisplay }
+    
+_display:
+    pattern: /display
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:display:display }
