@@ -15,25 +15,17 @@ class CloseEventController extends Controller
 {
     public function closeAction(Request $request)
     {   
-        $eid=10;
+        $eid=$request->get('eid');
         $id=$request->get('id');
         $em =$this->getDoctrine()->getEntityManager();
         $repositoryE =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repositoryU =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         
         $event = $repositoryE->findOneBy(array('id'=>$eid));
-       
-       
-            $teamleaderid=$event->getTeamleader();
-            $teamleader=$repositoryU->findOneBy(array('id'=>$teamleaderid));
-            $volunteers= $event->getVolunteerslist();
+        $volunteers= $event->getVolunteerslist();
         
          $task = new Task();
 
-        // dummy code - this is here just so that the Task has some tags
-        // otherwise, this isn't an interesting example
-        
-       // end dummy code
         foreach ($volunteers as $in){
                 $us=$repositoryU->findOneBy(array('id'=>$in));
                 $users[]=$us;
@@ -44,7 +36,7 @@ class CloseEventController extends Controller
             }
 
         $form = $this->createForm(new TaskType(), $task,array(
-            'action' => $this->generateUrl('account_create',$paramters =array('eid'=>$eid,'id'=>$id))));
+            'action' => $this->generateUrl('finished_event',$paramters =array('eid'=>$eid,'id'=>$id))));
 
         
 
@@ -75,24 +67,24 @@ class CloseEventController extends Controller
                 $user=$repositoryU->findOneBy(array('username'=>$rate->getName()));
                 $trackRecord = $TrackRepository->findOneBy(array('userId' => $user->getId()));
                 $trackRecord->UpdateRating($projectId,$eid,$eventWeight,$rate->getRate());
+                $em2->persist($trackRecord);
+                $em2->flush();
             }
             
             
         }          
        // end dummy code
-        foreach ($volunteers as $in){
+     /*   foreach ($volunteers as $in){
                 $us=$repositoryU->findOneBy(array('id'=>$in));
                 $users[]=$us;
                 $name=$us->getUsername();
                 $rate = new Rate();
                 $rate->setName($name);
                 $task->getRates()->add($rate);
-            }
+            }*/
 
-        return $this->render('VolunteerManagementSystemEventBundle:Task:new.html.twig', array(
-            'form' => $form->createView(),'id'=>3
-        ));
-    
+       
+         return $this->generateUrl('projectview',$paramters =array('pid'=>$projectId,'id'=>$id));
     } 
      
 }
