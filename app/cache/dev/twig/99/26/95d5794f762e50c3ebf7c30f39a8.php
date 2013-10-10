@@ -36,39 +36,44 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         
-       
         <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/Forms.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"screen\"> 
+        
+        <link rel=\"stylesheet\" href=\"";
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/reset.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\">
         <link rel=\"stylesheet\" href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/style.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\">
         <link rel=\"stylesheet\" href=\"";
-        // line 11
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/CSS/grid.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\"> 
+        
         <script src=\"";
-        // line 12
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery-1.6.2.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
         <script src=\"";
-        // line 13
+        // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery.galleriffic.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
         <script src=\"";
-        // line 14
+        // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/jquery.opacityrollover.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>      
 \t
     ";
-        // line 16
+        // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 19
+        // line 21
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 20
+        // line 22
         echo "      
     </head>
     <body>
@@ -80,7 +85,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
             \t<div class=\"container_12\">
                 \t<div class=\"grid_9\"><br>
                     \t<h2 align=\"center\"><img src=\"";
-        // line 30
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/volma.png"), "html", null, true);
         echo "\" width=\"245\" height=\"100\"></h2>
                     \t<h2 align=\"center\"><span class=\"price\">Volunteer Management System</span></h2>
@@ -94,9 +99,9 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
        \t  <div class=\"main\">
             \t<div class=\"container_12\" >
                 \t";
-        // line 41
+        // line 43
         $this->displayBlock('menu', $context, $blocks);
-        // line 60
+        // line 62
         echo "                </div>
              
             </div>
@@ -114,16 +119,16 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                               
                                 <p>
                                     ";
-        // line 76
+        // line 78
         $this->displayBlock('body', $context, $blocks);
-        // line 77
+        // line 79
         echo "                                        
                                     </p>
                                 
                                 
                                 <p align=\"center\">Developed by<br>
                           <img src=\"";
-        // line 82
+        // line 84
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/Footer.png"), "html", null, true);
         echo "\" width=\"190\" height=\"67\"></p></div></div>
                             <div class=\"container_12\"></div>
@@ -146,55 +151,55 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
         echo "Volma";
     }
 
-    // line 16
+    // line 18
     public function block_stylesheets($context, array $blocks = array())
     {
-        // line 17
+        // line 19
         echo "
     ";
     }
 
-    // line 19
+    // line 21
     public function block_javascripts($context, array $blocks = array())
     {
     }
 
-    // line 41
+    // line 43
     public function block_menu($context, array $blocks = array())
     {
-        // line 42
+        // line 44
         echo "                \t<div class=\"grid_12\" >
                             
                     \t<nav>
                             <ul class=\"menu\">
                            
                                 <li><a href=\"home?id=";
-        // line 47
+        // line 49
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\"";
         $this->displayBlock('selecthome', $context, $blocks);
         echo ">Home</a></li>
                                 <li><a href=\"profile?id=";
-        // line 48
+        // line 50
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo " \"";
         $this->displayBlock('selectprofile', $context, $blocks);
         echo ">Profile</a></li>
                                        <li><a href=\"news?id=";
-        // line 49
+        // line 51
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\" ";
         $this->displayBlock('selectnews', $context, $blocks);
         echo ">News Feed</a></li>
                                 <li><a href=\"projects?id=";
-        // line 50
+        // line 52
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\"";
         $this->displayBlock('selectprojects', $context, $blocks);
         echo ">Projects</a></li>
                              
                               <li><a href=\"contact?id=";
-        // line 52
+        // line 54
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\"";
         $this->displayBlock('selectcontacts', $context, $blocks);
@@ -208,32 +213,32 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                        ";
     }
 
-    // line 47
+    // line 49
     public function block_selecthome($context, array $blocks = array())
     {
     }
 
-    // line 48
+    // line 50
     public function block_selectprofile($context, array $blocks = array())
     {
     }
 
-    // line 49
+    // line 51
     public function block_selectnews($context, array $blocks = array())
     {
     }
 
-    // line 50
+    // line 52
     public function block_selectprojects($context, array $blocks = array())
     {
     }
 
-    // line 52
+    // line 54
     public function block_selectcontacts($context, array $blocks = array())
     {
     }
 
-    // line 76
+    // line 78
     public function block_body($context, array $blocks = array())
     {
     }
@@ -250,6 +255,6 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  237 => 76,  232 => 52,  227 => 50,  222 => 49,  217 => 48,  212 => 47,  198 => 52,  191 => 50,  185 => 49,  179 => 48,  173 => 47,  166 => 42,  163 => 41,  158 => 19,  153 => 17,  150 => 16,  144 => 6,  127 => 82,  120 => 77,  118 => 76,  100 => 60,  98 => 41,  84 => 30,  72 => 20,  69 => 19,  67 => 16,  62 => 14,  58 => 13,  54 => 12,  50 => 11,  46 => 10,  42 => 9,  36 => 6,  29 => 1,);
+        return array (  242 => 78,  237 => 54,  232 => 52,  227 => 51,  222 => 50,  217 => 49,  203 => 54,  196 => 52,  190 => 51,  184 => 50,  178 => 49,  171 => 44,  168 => 43,  163 => 21,  158 => 19,  155 => 18,  149 => 6,  132 => 84,  125 => 79,  123 => 78,  105 => 62,  103 => 43,  89 => 32,  77 => 22,  74 => 21,  72 => 18,  67 => 16,  63 => 15,  59 => 14,  54 => 12,  50 => 11,  46 => 10,  41 => 8,  36 => 6,  29 => 1,);
     }
 }

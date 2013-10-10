@@ -45,7 +45,7 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
         // line 7
         $this->displayBlock('admin', $context, $blocks);
         // line 9
-        echo "<h1 class=\"price\">News Feed</h1>
+        echo "<h2 class=\"price\">News Feed</h2>
 ";
         // line 10
         $context['_parent'] = (array) $context;

@@ -3,46 +3,61 @@
 {% block title %}Volma-Project Report{% endblock %}
 
 {% block body %}
-<h1>Project Report: {{projectname}}</h1>
 
+<section class="container">
+<div class="notify">
+<h2 class="price">Project Report</h2>  <br><br>
 
-
-<div class="inner">
-    <table width="398" border="0" align="center" cellpadding="0">
+    <table width="90%">
         <tr>
-            <td height="26" colspan="2">Project Report
-            </td>
-            
-        </tr>
+    <th width="18%" height="33" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
         <tr>
-            
-            <td valign="top"><div align="left">Project Name:{{projectname}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Status:{{status}} </div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Description:{{description}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Objectives:{{objectives}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Start Date :{{startdate|date("m/d/Y")}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">End Date : </div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Project Manager:{{projectmanager}} </div></td>
-
-        </tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Project Name</strong></td>
+    <td>{{projectname}}</td>
+    
+  </tr>
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Status</strong></td>
+    <td>{{status}}</td>
+    
+  </tr>
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Description</strong></td>
+    <td>{{description}}</td>
+    
+  </tr>
+        
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Objectives</strong></td>
+    <td>{{objectives}}</td>
+     <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Started Date</strong></td>
+    <td>{{startdate|date("m/d/Y")}}</td>
+    
+  </tr>
+     <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Project Manager</strong></td>
+    <td>{{projectmanager}} </td>
+    
+  </tr>   
+ 
+        
+        
+      
+        
 
     </table>
+        </div>
+        </section>
 {% endblock %}
