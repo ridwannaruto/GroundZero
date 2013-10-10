@@ -44,9 +44,12 @@ class __TwigTemplate_9b01c9e0a505e9e9ef695212bc1453a3 extends Twig_Template
         // line 7
         echo "
 <div class=\"inner\">
-     <p align=\"center\">
-    <img src=\"file:///C|/wamp/www/volmaa/mm_product_lg.gif\" width=\"193\" height=\"189\" alt=\"ff\" /></th>
-   </p>
+    <div class=\"propic\" >
+   <img src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/me.jpg"), "html", null, true);
+        echo "\" width=\"200\" height=\"200\"></h2>
+             </div> 
  <table width=\"93%\">
   <tr>
     <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
@@ -262,6 +265,6 @@ class __TwigTemplate_9b01c9e0a505e9e9ef695212bc1453a3 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  246 => 115,  242 => 114,  233 => 108,  229 => 107,  220 => 101,  216 => 100,  207 => 94,  203 => 93,  194 => 87,  190 => 86,  181 => 80,  177 => 79,  165 => 72,  161 => 71,  154 => 69,  149 => 67,  141 => 62,  137 => 61,  128 => 55,  124 => 54,  116 => 49,  112 => 48,  104 => 43,  100 => 42,  92 => 37,  88 => 36,  80 => 31,  76 => 30,  68 => 25,  64 => 24,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
+        return array (  249 => 115,  245 => 114,  236 => 108,  232 => 107,  223 => 101,  219 => 100,  210 => 94,  206 => 93,  197 => 87,  193 => 86,  184 => 80,  180 => 79,  168 => 72,  164 => 71,  157 => 69,  152 => 67,  144 => 62,  140 => 61,  131 => 55,  127 => 54,  119 => 49,  115 => 48,  107 => 43,  103 => 42,  95 => 37,  91 => 36,  83 => 31,  79 => 30,  71 => 25,  67 => 24,  50 => 10,  45 => 7,  42 => 6,  36 => 4,  30 => 3,);
     }
 }
