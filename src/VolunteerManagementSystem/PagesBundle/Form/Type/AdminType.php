@@ -11,9 +11,9 @@ class AdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(
-            'user',
+            'id',
             'entity',array(
-                'label' => 'Choose Member to be promoted',
+                'label' => 'Choose member',
                 'class' => 'VolunteerManagementSystemRegistrationBundle:User',
                 'property' => 'namewithinitials',
                 'query_builder' => function(EntityRepository $er) {

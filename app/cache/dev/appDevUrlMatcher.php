@@ -365,17 +365,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\SearchController::searchAction',  '_route' => 'search_result',);
         }
 
-        if (0 === strpos($pathinfo, '/promote')) {
-            // promote
-            if ($pathinfo === '/promote') {
-                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\VolunteertoAdminController::volunteertoadminselectionAction',  '_route' => 'promote',);
-            }
+        // admin_management
+        if ($pathinfo === '/adminManagement') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\AdminManagementController::selectionAction',  '_route' => 'admin_management',);
+        }
 
-            // promote_to_admin
-            if ($pathinfo === '/promotetoAdmin') {
-                return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
-            }
+        // promote_to_admin
+        if ($pathinfo === '/promotetoAdmin') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\PromoteAdminController::promotetoadminAction',  '_route' => 'promote_to_admin',);
+        }
 
+        // demote_to_volunteer
+        if ($pathinfo === '/demotetoVolunteer') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\DemoteVolunteerController::demotetovolunteerAction',  '_route' => 'demote_to_volunteer',);
         }
 
         // volunteer_management_system_styles_homepage

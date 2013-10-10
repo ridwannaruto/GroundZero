@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Error{% endblock %}
+
+{% block body %}
+     <h1 align="center">ERROR</h1><p align="center">   
+         
+         <br>
+         Your request was not successful
+         <br>
+         <br>
+          {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <p align="center">
+
+{{form_label(form.id)}}<br>
+{{form_widget(form.id)}}
+            <br><br>
+                {{form_widget(form.submit)}}
+                      {{ form_end(form) }}
+        </p>
+     </p>
+
+{% endblock %}
+
