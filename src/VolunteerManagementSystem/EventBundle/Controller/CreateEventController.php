@@ -14,6 +14,7 @@ class CreateEventController extends Controller {
         $pid = $request->get('projectId');
 
         $em = $this->getDoctrine()->getEntityManager();
+
         $repository = $em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         $projects = $em->getRepository('VolunteerManagementSystemProjectBundle:Project');
 
@@ -40,6 +41,7 @@ class CreateEventController extends Controller {
         $em = $this->getDoctrine()->getEntityManager();
         $id = $request->get('id');
         $pid = $request->get('pid');
+
         $event = new Event();
         $event->setProject($pid);
         $array = array();
@@ -76,6 +78,7 @@ class CreateEventController extends Controller {
      }
 
         
+
 
 }
 

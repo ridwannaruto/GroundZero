@@ -9,14 +9,7 @@
 <section class="container">
     <div class="notify">
         <h1> Event</h1>
-        <table>
-            <h1>Members</h1>
-       <ul>
-    {% for user in users %}
-        <li>{{ user.username|e }}</li>
-    {% endfor %}
-</ul>
-            <tr>
+        <tr>
             <td><strong>Event Name</strong></td><td>{{event.name}}</td>
             </tr>
          <br>
@@ -40,8 +33,15 @@
          <td><strong>end date</strong></td><td>{{event.enddate|date("m/d/Y") }}</td>
             </tr>
             <br>
-        </table>
-        
-    
+         <h1>Members</h1>
+       <ul>
+    {% for user in users %}
+        <li>{{ user.username|e }}</li>
+    {% endfor %}
+</ul>
+         
+    <p align="right">
+            <a href="close_event?eid={{eid}}&id={{id}}"><button>close Event</button></a>
+            </p>
     </div>
 {% endblock %}

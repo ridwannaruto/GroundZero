@@ -29,7 +29,7 @@ class __TwigTemplate_86202aaa36e37fbd2c427274275f8205 extends Twig_Template
     {
         // line 4
         echo "<p align=\"right\">
-    <a href=\"create_evet?id=";
+    <a href=\"create_event?id=";
         // line 5
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "&projectId=";
