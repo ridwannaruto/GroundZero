@@ -25,6 +25,7 @@ class UserType extends AbstractType
                 'placeholder' => "enter a unique user name",
                 'newline' => 'true',
                 'widget' => 'text',
+                
             
             )));
                 
@@ -99,6 +100,7 @@ class UserType extends AbstractType
             'label'  => 'City',
             'attr'   =>  array(
                 'class'   => 'login',
+                
                 'placeholder' => "enter your city"
                 )
             ))

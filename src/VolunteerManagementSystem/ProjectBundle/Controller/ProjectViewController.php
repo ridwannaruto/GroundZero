@@ -18,14 +18,13 @@ class ProjectViewController extends Controller
         $events= $em->getRepository('VolunteerManagementSystemEventBundle:Event');
         
         $user = $repository->findOneBy(array('id' => $id));
-        $eve =$events->findOneBy(array('id' => $id));
         if ($user) {
             $project = $projects->findOneBy(array('id' => $pid));
             
             $pm = $repository->findOneBy(array('id' => $project->getProjectmanager()));
             $eventlist = $project->getEvents();
             $proevents = array();
-            
+            if ($eventlist != null){
             foreach ($eventlist as $event){
                 $eventid = $event;
                 $eventname = $events->findOneBy(array('id'=>$event))->getName(); 
@@ -33,7 +32,7 @@ class ProjectViewController extends Controller
                 
                 
             }
-            
+            }
             
             
             if ($user->getAccessLevel() == 'Admin' || $user==$pm) {

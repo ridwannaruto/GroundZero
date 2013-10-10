@@ -161,18 +161,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // volunteer_management_system_event_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'volunteer_management_system_event_homepage')), array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\DefaultController::indexAction',));
-        }
-
         // create_event
-        if ($pathinfo === '/create_evet') {
+        if ($pathinfo === '/create_event') {
             return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CreateEventController::createEventAction',  '_route' => 'create_event',);
         }
 
         // save_event
-        if ($pathinfo === '/save_evet') {
+        if ($pathinfo === '/save_event') {
             return array (  '_controller' => 'VolunteerManagementSystem\\EventBundle\\Controller\\CreateEventController::eventSaveAction',  '_route' => 'save_event',);
         }
 
@@ -235,19 +230,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // _project_report
-        if ($pathinfo === '/ProjectReport') {
-            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
-        }
-
         // _userDetails_display
         if ($pathinfo === '/userDetailsDisplay') {
             return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\userDetailsDisplayController::formdisplayAction',  '_route' => '_userDetails_display',);
-        }
-
-        // _display
-        if ($pathinfo === '/display') {
-            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\displayController::displayAction',  '_route' => '_display',);
         }
 
         // news
@@ -396,6 +381,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // demote_to_volunteer
         if ($pathinfo === '/demotetoVolunteer') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\DemoteVolunteerController::demotetovolunteerAction',  '_route' => 'demote_to_volunteer',);
+        }
+
+        // _project_report
+        if ($pathinfo === '/ProjectReport') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\ProjectReportController::ProjectReportAction',  '_route' => '_project_report',);
+        }
+
+        // _display
+        if ($pathinfo === '/display') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\displayController::displayAction',  '_route' => '_display',);
         }
 
         // volunteer_management_system_styles_homepage
