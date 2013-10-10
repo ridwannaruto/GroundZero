@@ -88,7 +88,7 @@ class CloseEventController extends Controller
       
 
        
-         return $this->redirect('projectview',$paramters =array('pid'=>$projectId,'id'=>$id));
+         return $this->redirect($this->generateUrl('projectview',$paramters =array('pid'=>$projectId,'id'=>$id)));
     } 
      
 }
