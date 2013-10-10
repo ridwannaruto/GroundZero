@@ -9,10 +9,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 class CreateEventController extends Controller
 {
-    public function createEventAction()
+    public function createEventAction(Request $request )
     {   $event = new Event();
-        $id=45;
-        $projectId= 3;
+        $id=$request->get('id');
+        $projectId=$request->get('projectId');
         $form = $this->createForm(new EventType(), $event, array(
             'action' => $this->generateUrl('save_event',array('id'=>$id,'projectId'=>$projectId)),
         ));
@@ -24,9 +24,9 @@ class CreateEventController extends Controller
         
      public function eventSaveAction(Request $request)
     {
-       $projectid = $request->get('projectId');
+       $projectid = 1;
         $em = $this->getDoctrine()->getEntityManager();
-      $id = $request->get('id');
+      $id = 45;
         $event = new Event();
         $event->setProject($projectid);
         $array=array();
@@ -52,10 +52,10 @@ class CreateEventController extends Controller
             $em->flush();
         }
         catch(\Exception $e){
-            return $this->render('ProjectBundle:Submission:projectsubmission.html.twig', array('id' => $id,'form' => $form->createView()));
+            
         }
 
-        return $this->redirect($this->generateUrl('create_event',array('id'=>$id)));
+        return $this->redirect($this->generateUrl('projectview',array('id'=>$id,'pid'=>$projectid)));
        }
 
 

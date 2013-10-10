@@ -17,7 +17,6 @@ class Rate
     /**
      * @var string
      */
-    private $name;
 
     /**
      * @var integer
@@ -46,22 +45,14 @@ class Rate
      * @param string $name
      * @return Rate
      */
-    public function setName($name)
-    {
-        $this->name = $name;
-    
-        return $this;
-    }
+   
 
     /**
      * Get name
      *
      * @return string 
      */
-    public function getName()
-    {
-        return $this->name;
-    }
+   
 
     /**
      * Set rate
