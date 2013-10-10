@@ -6,10 +6,13 @@
 {% block body %}
 {% block admin %}
 {% endblock %}
-List of projects<br><br>
+<h2 class="price">List of projects</h2><br><br>
  {% for r in result %} 
         <div class="notify" >
-        <p align="left"><a href="project_view?id={{id}}&pid={{r.getId()}}"<strong>{{r.getName()}}</strong></a></p>
+            <style type="text/css">
+.none a:link { text-decoration: none }
+</style>
+        <h2 class="none"><a href="project_view?id={{id}}&pid={{r.getId()}}"<strong>{{r.getName()}}</strong></a></h2>
         </div>
         </p>
     {% endfor %}
