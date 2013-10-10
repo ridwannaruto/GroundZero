@@ -8,11 +8,12 @@
 </form>
 {% endblock %}
 {% block adminevent %}
-<form action="{{ path('just') }}" method="post" >
+
         <p align="right">
-            <button type="submit">Manage Events</button>
+            <a href="manage_event?id={{id}}"<strong><button type="submit">Manage Events</button></strong></a>
+            
        </p>
-</form>
+
 {% endblock %}
 {% block adminreport %}
 

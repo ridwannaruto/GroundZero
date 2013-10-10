@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Projects{% endblock %}
+{% block selectprojects %} class="active" {%endblock%}
+
+{% block body %}
+{% block admin %}
+{% endblock %}
+<div class="notify" >
+    <h1>List of Events</h1>
+
+<table width="100%" height="33">
+
+        <tr>
+            <th width="10%" rowspan="6" scope="row"><strong>Event Name</strong><td width="3%" height="35"></td>
+            <td width="25%"><strong>Description</strong></td>
+            <td width="15%"><strong>Strat Date</strong></td>
+            <td width="15%"><strong>End Date</strong></td>
+            <td width="7%"></td>
+        </tr>
+    </table> 
+ </div>
+ {% for r in result %} 
+<div class="notify" >
+    <table width="100%" height="33">
+
+        <tr>
+            <th width="10%" rowspan="6" scope="row"><strong>{{r[0].getName()}}</strong><td width="3%" height="35"></td>
+            <td width="30%">{{r[0].getDescription}} </td>
+            <td width="15%">{{r[0].getStartdate()|date("m/d/Y")}}</td>
+            <td width="15%">{{r[0].getDeadline()|date("m/d/Y")}}</td>
+            <td width="7%"><a href="view_event?eid={{r[0].getId()}}&id={{id}}&pname={{r[1]}}"><button>view details</button></a></td>
+        </tr>
+    </table> 
+</div>
+</p>
+    {% endfor %}
+{% endblock %}
