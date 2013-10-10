@@ -245,6 +245,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\userDetailsDisplayController::formdisplayAction',  '_route' => '_userDetails_display',);
         }
 
+        // _overall_report
+        if ($pathinfo === '/OverallReport') {
+            return array (  '_controller' => 'VolunteerManagementSystem\\ReportGenerationBundle\\Controller\\OverallReportController::OverallReportAction',  '_route' => '_overall_report',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'VolunteerManagementSystem\\PagesBundle\\Controller\\NewspageController::newsAction',  '_route' => 'news',);

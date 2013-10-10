@@ -13,3 +13,11 @@ _project_report:
 _userDetails_display:
     pattern: /userDetailsDisplay
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:userDetailsDisplay:formdisplay }
+    
+_display:
+    pattern: /display
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:display:display }
+    
+_overall_report:
+    pattern: /OverallReport
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:OverallReport:OverallReport }
