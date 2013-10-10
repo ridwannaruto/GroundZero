@@ -21,3 +21,7 @@ _userDetails_display:
 _display:
     pattern: /display
     defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:display:display }
+    
+_overall_report:
+    pattern: /OverallReport
+    defaults: { _controller: VolunteerManagementSystemReportGenerationBundle:OverallReport:OverallReport }
