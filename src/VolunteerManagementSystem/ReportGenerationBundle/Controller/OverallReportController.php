@@ -29,7 +29,7 @@ class OverallReportController extends Controller {
                         WHERE p.enddate is NULL'
                         
                 );
-        $noOfOngoingProjects = count($ongoingProjects->getArrayResult());
+        $noOfOngoingProjects = count($ongoingProjects->getResult());
         
         $ongoingEvents= $em->createQuery(
                         'SELECT e
@@ -38,10 +38,10 @@ class OverallReportController extends Controller {
                         
                 );
         
-        $noOfOngoingEvents= count($ongoingEvents->getArrayResult());
+        $noOfOngoingEvents= count($ongoingEvents->getResult());
+            
 
-
-        return $this->render('VolunteerManagementSystemReportGenerationBundle:OverallReport:OverallReport.html.twig', $parameters=array('id'=>$request-> get('id'),'noofusers'=>$noOfUsers,'noofmales'=>$noOfMaleUsers,'noofprojects'=>$noOfProjects,'ongoingprojects'=>$ongoingProjects,'noofevents'=>$noOfEvents, 'ongoindgevents'=>$ongoingEvents));
+        return $this->render('VolunteerManagementSystemReportGenerationBundle:OverallReport:OverallReport.html.twig', $parameters=array('id'=>$request-> get('id'),'noofusers'=>$noOfUsers,'noofmales'=>$noOfMaleUsers,'noofprojects'=>$noOfProjects,'noofongoingprojects'=>$noOfOngoingProjects,'ongoingprojects'=>$ongoingProjects->getResult(),'noofevents'=>$noOfEvents, 'noofongoingevents'=>$noOfOngoingEvents, 'ongoingevents'=>$ongoingEvents->getResult()));
     }
 
 }
