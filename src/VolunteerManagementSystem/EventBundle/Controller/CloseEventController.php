@@ -12,29 +12,26 @@ class CloseEventController extends Controller
     public function closeAction(Request $request)
     {   
         $eid=$request->get('eid');
-        $id=36;
+        $id=$request->get('id');
         $em =$this->getDoctrine()->getEntityManager();
-        $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
-        $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
+        $repositoryE =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
+        $repositoryU =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
         
-        $event = $repository->findOneBy(array('id'=>$eid));
+        $event = $repositoryE->findOneBy(array('id'=>$eid));
        
        
             $teamleaderid=$event->getTeamleader();
-            $teamleader=$repository2->findOneBy(array('id'=>$teamleaderid));
-            $array = $event->getSubscribers();
+            $teamleader=$repositoryU->findOneBy(array('id'=>$teamleaderid));
             $volunteers= $event->getVolunteerslist();
-            if(in_array($id, $volunteers)){
-               
-            $users=array();
+          
             foreach ($volunteers as $in){
-                $users[]=$repository2->findOneBy(array('id'=>$in));
+                $users[]=$repositoryE->findOneBy(array('id'=>$in));
             }
                  return $this->render(
             'VolunteerManagementSystemEventBundle:Event:eventregistered.html.twig',
             array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users)
         ); 
-            }
+            
             if (!in_array($id, $array)){
                 $array[]=$id;
                 $event->setSubscribers($array);
