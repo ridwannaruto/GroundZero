@@ -16,7 +16,12 @@ class __TwigTemplate_5cbf1973ad115f27fe82f09a1715ab63 extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form1"]) ? $context["form1"] : $this->getContext($context, "form1")), 'form');
+        echo "
+
+";
+        // line 3
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form2"]) ? $context["form2"] : $this->getContext($context, "form2")), 'form');
     }
 
     public function getTemplateName()
@@ -31,6 +36,6 @@ class __TwigTemplate_5cbf1973ad115f27fe82f09a1715ab63 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  24 => 3,  19 => 1,);
     }
 }
