@@ -101,7 +101,7 @@ class __TwigTemplate_36510a777ffd510384ea5fbe3a401c44 extends Twig_Template
                                               <br> <br>
                                                     <input class =\"button\" type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
         // line 44
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("submit"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Sign in"), "html", null, true);
         echo "\" />
                                                          
                                                      </p>
