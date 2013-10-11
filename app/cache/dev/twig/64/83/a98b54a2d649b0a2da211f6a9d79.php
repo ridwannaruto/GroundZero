@@ -46,71 +46,83 @@ class __TwigTemplate_6483a98b54a2d649b0a2da211f6a9d79 extends Twig_Template
         $this->displayBlock('admin', $context, $blocks);
         // line 9
         echo "<section class=\"container\">
+     
     <div class=\"notify\">
-        <h1> Event</h1>
-        <tr>
-            <td><strong>Event Name</strong></td><td>";
-        // line 13
+        <h2 class=\"price\"> Event</h2>
+        <br><br>
+           <strong>Event Name</strong><br>";
+        // line 14
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "name"), "html", null, true);
-        echo "</td>
-            </tr>
-         <br>
-            <tr>
-         <td><strong>Team Leader</strong></td><td>";
+        echo "
+            <br><br>
+         
+         <strong>Project</strong><br>";
         // line 17
+        echo twig_escape_filter($this->env, (isset($context["pname"]) ? $context["pname"] : $this->getContext($context, "pname")), "html", null, true);
+        echo "
+            <br><br>
+        <strong>Team Leader</strong><br>";
+        // line 19
         echo twig_escape_filter($this->env, (isset($context["teamleader"]) ? $context["teamleader"] : $this->getContext($context, "teamleader")), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Event Description</strong></td><td>";
-        // line 21
+        echo "
+           <br><br>
+            
+           
+        <strong>Event Description</strong><br>";
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-          <td><strong>Event goals</strong></td><td>";
+        echo "
+           <br><br>
+          <strong>Event Goals</strong><br>";
         // line 25
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Start date</strong></td><td>";
-        // line 29
+        echo "
+            <br><br>
+         <strong>Start Date</strong><br>";
+        // line 27
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "startdate"), "m/d/Y"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>end date</strong></td><td>";
-        // line 33
+        echo "
+            <br><br>
+           
+           
+         <strong>End Date</strong><br>";
+        // line 31
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "enddate"), "m/d/Y"), "html", null, true);
-        echo "</td>
-            </tr>
-            <br>
-         <h1>Members</h1>
+        echo "
+            
+       <br><br>
+        
+    
+    </div>
+        </section>
+
+<section class=\"container\">
+    <div class=\"notify\">
+ 
+         <h2 class=\"price\">Volunteers</h2>
+         <br><br>
        <ul>
     ";
-        // line 38
+        // line 45
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["users"]) ? $context["users"] : $this->getContext($context, "users")));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 39
+            // line 46
             echo "        <li>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username"));
             echo "</li>
+        <br>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 49
         echo "</ul>
          
-    
+  
     </div>
+        </section>
 ";
     }
 
@@ -131,6 +143,6 @@ class __TwigTemplate_6483a98b54a2d649b0a2da211f6a9d79 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 7,  110 => 41,  101 => 39,  97 => 38,  89 => 33,  82 => 29,  75 => 25,  68 => 21,  61 => 17,  54 => 13,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
+        return array (  130 => 7,  121 => 49,  111 => 46,  107 => 45,  90 => 31,  83 => 27,  78 => 25,  73 => 23,  66 => 19,  61 => 17,  55 => 14,  48 => 9,  46 => 7,  43 => 6,  37 => 4,  31 => 3,);
     }
 }

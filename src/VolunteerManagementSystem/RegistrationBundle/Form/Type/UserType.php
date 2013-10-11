@@ -91,6 +91,7 @@ class UserType extends AbstractType
             ))
                    ->add('address','text', array( 
             'label'  => 'Address',
+            
             'attr'   =>  array(
                 'class'   => 'login',
                 'placeholder' => "enter your address"
