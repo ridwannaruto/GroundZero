@@ -1,11 +1,14 @@
 {% extends 'VolunteerManagementSystemPagesBundle:Homepage:homepage.html.twig' %}
 {% block adminpromotion %}
-
-<form action="adminManagement?id={{id}}" method="post" >
 <p align="right">
-            <button type="submit">Admin Management</button>
+<a href="adminManagement?id={{id}}">
+
+            <button>Admin Management</button></a>
+        <a href="OverallReport?id={{id}}">
+
+            <button type="submit">Statistics</button></a>
  </p>
-</form>
+
 {% endblock %}
 {% block adminevent %}
 <form action="{{ path('just') }}" method="post" >

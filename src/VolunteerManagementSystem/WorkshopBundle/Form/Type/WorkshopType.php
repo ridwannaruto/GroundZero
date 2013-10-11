@@ -67,7 +67,7 @@ class WorkshopType extends AbstractType
            $builder
                 
             ->add('submit','submit', array(
-                'label' => 'Create',
+                'label' => 'Create Workshop',
                 'attr' => array(
                     'class' => 'button'
                 )

@@ -30,22 +30,28 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
     public function block_adminpromotion($context, array $blocks = array())
     {
         // line 3
-        echo "
-<form action=\"adminManagement?id=";
+        echo "<p align=\"right\">
+<a href=\"adminManagement?id=";
         // line 4
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
-        echo "\" method=\"post\" >
-<p align=\"right\">
-            <button type=\"submit\">Admin Management</button>
+        echo "\">
+
+            <button>Admin Management</button></a>
+        <a href=\"OverallReport?id=";
+        // line 7
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\">
+
+            <button type=\"submit\">Statistics</button></a>
  </p>
-</form>
+
 ";
     }
 
-    // line 10
+    // line 13
     public function block_adminevent($context, array $blocks = array())
     {
-        // line 11
+        // line 14
         echo "<form action=\"";
         echo $this->env->getExtension('routing')->getPath("just");
         echo "\" method=\"post\" >
@@ -56,10 +62,10 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 ";
     }
 
-    // line 17
+    // line 20
     public function block_adminreport($context, array $blocks = array())
     {
-        // line 18
+        // line 21
         echo "
 ";
     }
@@ -76,6 +82,6 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  63 => 18,  60 => 17,  49 => 11,  46 => 10,  36 => 4,  33 => 3,  30 => 2,);
+        return array (  69 => 21,  66 => 20,  55 => 14,  52 => 13,  42 => 7,  36 => 4,  33 => 3,  30 => 2,);
     }
 }

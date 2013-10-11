@@ -28,13 +28,19 @@ class __TwigTemplate_460e22b904766892ee2d71067f958769 extends Twig_Template
     public function block_admin($context, array $blocks = array())
     {
         // line 4
-        echo "<form action=\"createNews?id=";
+        echo "<p align=\"right\">
+    <a href=\"createNews?id=";
+        // line 5
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
-        echo "\" method=\"post\" >
-<p align=\"right\">
-            <button type=\"submit\">Create News</button>
- </p>
-</form>
+        echo "\">
+        <button>Create News</button></a>
+    <a href=\"workshopCreate?id=";
+        // line 7
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\">
+        <button>Create Workshop</button></a>
+</p>
+
 ";
     }
 
@@ -50,6 +56,6 @@ class __TwigTemplate_460e22b904766892ee2d71067f958769 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,);
+        return array (  39 => 7,  34 => 5,  31 => 4,  28 => 3,);
     }
 }

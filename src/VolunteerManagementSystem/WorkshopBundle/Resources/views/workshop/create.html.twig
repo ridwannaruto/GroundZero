@@ -1,1 +1,42 @@
-{{form(form)}}
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Workshop Creation{% endblock %}
+
+{% block body %}
+ <section class="container">
+    <div class="notify">
+      <h1>Enter Workshop Information</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+      <strong>Workshop Name</strong><br>
+        {{form_widget(form.workshopname)}}        
+        <br><br>
+        <strong>Work Description</strong><br>        
+        {{form_widget(form.description)}}        
+        <br><br>
+        <strong>Capacity Limit</strong><br>   
+        {{form_widget(form.capacity)}}        
+        <br><br>
+       
+        <strong>Date</strong><br>   
+        {{form_widget(form.date)}}        
+        <br><br>
+        <strong>Registration Closed On</strong><br>   
+        {{form_widget(form.registrationdeadline)}}        
+        <br><br>
+        <p align="right">
+        {{form_widget(form.submit)}}
+        {{ form_end(form) }}
+                </p>
+    </div>
+        
+
+  </section>
+
+
+{% endblock %}
+
+
+
+
+
