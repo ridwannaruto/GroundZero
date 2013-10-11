@@ -7,41 +7,50 @@
 {% block admin %}
 {% endblock %}
 <section class="container">
+     <p align="right">
+            <a href="close_event?eid={{eid}}&id={{id}}"><button>Close Event</button></a>
+            </p>
     <div class="notify">
-        <h1> Event</h1>
-        <tr>
-            <td><strong>Event Name</strong></td><td>{{event.name}}</td>
-            </tr>
-         <br>
-            <tr>
-         <td><strong>Team Leader</strong></td><td>{{teamleader}}</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Event Description</strong></td><td>{{event.description}}</td>
-            </tr>
-            <br>
-            <tr>
-          <td><strong>Event goals</strong></td><td>{{event.description}}</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>Start date</strong></td><td>{{event.startdate|date("m/d/Y") }}</td>
-            </tr>
-            <br>
-            <tr>
-         <td><strong>end date</strong></td><td>{{event.enddate|date("m/d/Y") }}</td>
-            </tr>
-            <br>
-         <h1>Members</h1>
+        <h2 class="price"> Event</h2>
+        <br><br>
+           <strong>Event Name</strong><br>{{event.name}}
+            <br><br>
+         
+         <strong>Project</strong><br>{{pname}}
+            <br><br>
+        <strong>Team Leader</strong><br>{{teamleader}}
+           <br><br>
+            
+           
+        <strong>Event Description</strong><br>{{event.description}}
+           <br><br>
+          <strong>Event Goals</strong><br>{{event.description}}
+            <br><br>
+         <strong>Start Date</strong><br>{{event.startdate|date("m/d/Y") }}
+            <br><br>
+           
+           
+         <strong>End Date</strong><br>{{event.enddate|date("m/d/Y") }}
+            
+       <br><br>
+        
+    
+    </div>
+        </section>
+
+<section class="container">
+    <div class="notify">
+ 
+         <h2 class="price">Volunteers</h2>
+         <br><br>
        <ul>
     {% for user in users %}
         <li>{{ user.username|e }}</li>
+        <br>
     {% endfor %}
 </ul>
          
-    <p align="right">
-            <a href="close_event?eid={{eid}}&id={{id}}"><button>close Event</button></a>
-            </p>
+  
     </div>
+        </section>
 {% endblock %}

@@ -17,24 +17,30 @@ class ViewEventController extends Controller
         $em =$this->getDoctrine()->getEntityManager();
         $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
-        
+        $user=$repository2->findOneBy(array('id'=>$id));
         $event = $repository->findOneBy(array('id'=>$eid));
        
         if($event){
+            
             $teamleaderid=$event->getTeamleader();
             $teamleader=$repository2->findOneBy(array('id'=>$teamleaderid));
             $array = $event->getSubscribers();
             $volunteers= $event->getVolunteerslist();
-            if(in_array($id, $volunteers)){
-               
             $users=array();
             foreach ($volunteers as $in){
                 $users[]=$repository2->findOneBy(array('id'=>$in));
             }
-                 return $this->render(
-            'VolunteerManagementSystemEventBundle:Event:eventregistered.html.twig',
-            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users,'pname'=>$pname)
-        ); 
+            if($id==$teamleaderid||($user->getAccesslevel()=='Admin')){
+                 return $this->render('VolunteerManagementSystemEventBundle:Event:eventregistered.html.twig',
+                         array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users,'pname'=>$pname));
+                
+            }
+            if(in_array($id, $volunteers)){
+               return $this->render('VolunteerManagementSystemEventBundle:Event:eventuser.html.twig',
+                         array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users,'pname'=>$pname));
+                
+                
+        
             }
             if (!in_array($id, $array)){
                 $array[]=$id;
@@ -50,10 +56,8 @@ class ViewEventController extends Controller
             array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'pname'=>$pname)
         );  
         }
-        return $this->render(
-            'VolunteerManagementSystemEventBundle:Default:createevent.html.twig',
-            array('id'=>$id)
-        );}
         
-     
+        
+        }
+         
 }

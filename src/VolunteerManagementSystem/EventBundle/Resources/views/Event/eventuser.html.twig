@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Volma - Projects{% endblock %}
+{% block selectprojects %} class="active" {%endblock%}
+
+{% block body %}
+{% block admin %}
+{% endblock %}
+<section class="container">
+     
+    <div class="notify">
+        <h2 class="price"> Event</h2>
+        <br><br>
+           <strong>Event Name</strong><br>{{event.name}}
+            <br><br>
+         
+         <strong>Project</strong><br>{{pname}}
+            <br><br>
+        <strong>Team Leader</strong><br>{{teamleader}}
+           <br><br>
+            
+           
+        <strong>Event Description</strong><br>{{event.description}}
+           <br><br>
+          <strong>Event Goals</strong><br>{{event.description}}
+            <br><br>
+         <strong>Start Date</strong><br>{{event.startdate|date("m/d/Y") }}
+            <br><br>
+           
+           
+         <strong>End Date</strong><br>{{event.enddate|date("m/d/Y") }}
+            
+       <br><br>
+        
+    
+    </div>
+        </section>
+
+<section class="container">
+    <div class="notify">
+ 
+         <h2 class="price">Volunteers</h2>
+         <br><br>
+       <ul>
+    {% for user in users %}
+        <li>{{ user.username|e }}</li>
+        <br>
+    {% endfor %}
+</ul>
+         
+  
+    </div>
+        </section>
+{% endblock %}

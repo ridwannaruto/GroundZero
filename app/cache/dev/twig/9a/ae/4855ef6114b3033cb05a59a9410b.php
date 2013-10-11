@@ -72,19 +72,19 @@ class __TwigTemplate_9aae4855ef6114b3033cb05a59a9410b extends Twig_Template
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
         echo "
            <br><br>
-          <strong>Event goals</strong><br>";
+          <strong>Event Goals</strong><br>";
         // line 24
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
         echo "
             <br><br>
-         <strong>Start date</strong><br>";
+         <strong>Start Date</strong><br>";
         // line 26
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "startdate"), "m/d/Y"), "html", null, true);
         echo "
             <br><br>
            
            
-         <strong>end date</strong><br>";
+         <strong>End Date</strong><br>";
         // line 30
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "enddate"), "m/d/Y"), "html", null, true);
         echo "

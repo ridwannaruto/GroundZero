@@ -16,7 +16,7 @@
     <field name="nic" type="string" column="nic" length="15" nullable="false"/>
     <field name="mobilenumber" type="string" column="mobilenumber" length="15" nullable="false"/>
     <field name="accesslevel" type="string" column="accesslevel" length="15" nullable="false"/>
-    <field name="address" type="string" column="address" length="15" nullable="false"/>
+    <field name="address" type="text" column="address" length="15" nullable="false"/>
     <field name="city" type="string" column="city" length="15" nullable="false"/>
     <field name="country" type="string" column="country" length="15" nullable="false"/>
   </entity>
