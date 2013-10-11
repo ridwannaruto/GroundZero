@@ -41,7 +41,7 @@ class ProjectViewController extends Controller
                 return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectviewadmin.html.twig', array('pid'=>$pid,'id' => $id,'pm'=>$pm, 'project' => $project,'events'=>$proevents));
             }
             
-            return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectview.html.twig', array('pid'=>$pid,'id' => $id, 'project' => $project,'events'=>$proevents));
+            return $this->render('VolunteerManagementSystemProjectBundle:ProjectView:projectview.html.twig', array('pid'=>$pid,'id' => $id, 'pm'=>$pm,'project' => $project,'events'=>$proevents));
             
         }
         else {
