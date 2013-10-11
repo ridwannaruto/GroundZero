@@ -6,3 +6,10 @@ workshop_submission:
     pattern:  /workshopSubmission
     defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopSubmission:submitworkshop }
 
+workshop_newly_register:
+    pattern:  /workshopRegistered
+    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopNewlyregistered:newlyRegistered }
+    
+workshop_register:
+    pattern:  /workshopRegister
+    defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopRegister:workshopregister }
