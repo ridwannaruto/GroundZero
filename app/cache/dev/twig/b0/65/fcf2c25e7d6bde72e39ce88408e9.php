@@ -51,21 +51,31 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
     // line 13
     public function block_adminevent($context, array $blocks = array())
     {
-        // line 14
-        echo "<form action=\"";
-        echo $this->env->getExtension('routing')->getPath("just");
-        echo "\" method=\"post\" >
+        // line 11
+        echo "
         <p align=\"right\">
-            <button type=\"submit\">Manage Events</button>
+            <a href=\"manage_event?id=";
+        // line 13
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"<strong><button type=\"submit\">Manage Events</button></strong></a>
+            
        </p>
-</form>
+
 ";
     }
 
+<<<<<<< HEAD
     // line 20
+=======
+    // line 18
+>>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
     public function block_adminreport($context, array $blocks = array())
     {
+<<<<<<< HEAD
         // line 21
+=======
+        // line 19
+>>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
         echo "
 ";
     }
@@ -82,6 +92,10 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  69 => 21,  66 => 20,  55 => 14,  52 => 13,  42 => 7,  36 => 4,  33 => 3,  30 => 2,);
+=======
+        return array (  65 => 19,  62 => 18,  53 => 13,  49 => 11,  46 => 10,  36 => 4,  33 => 3,  30 => 2,);
+>>>>>>> branch 'master' of https://github.com/ridwannaruto/GroundZero.git
     }
 }
