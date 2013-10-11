@@ -163,7 +163,7 @@ class __TwigTemplate_13a8db608961c6d50d6e9fb67c7215af extends Twig_Template
         // line 97
         echo "</div>
 </div>
-<div></div>
+
 <div class=\"notify\">
     <h1 class=\"price\">Events</h1>  <br><br>
     <table width=\"93%\">

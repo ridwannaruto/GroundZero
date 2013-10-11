@@ -97,7 +97,9 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
                 <td><strong>Project Manager</strong></td>
                 <td>";
         // line 51
-        echo twig_escape_filter($this->env, (isset($context["projectmanager"]) ? $context["projectmanager"] : $this->getContext($context, "projectmanager")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["pm"]) ? $context["pm"] : $this->getContext($context, "pm")), "firstname"), "html", null, true);
+        echo " ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["pm"]) ? $context["pm"] : $this->getContext($context, "pm")), "lastname"), "html", null, true);
         echo " </td>
 
             </tr>   
