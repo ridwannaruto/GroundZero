@@ -212,39 +212,79 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
   <tr>
     <td height=\"34\">&nbsp;</td>
     <td><strong>Projects Participated</strong></td>
-    <td>";
+    ";
         // line 135
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "projectHistory"), "html", null, true);
-        echo "</td>
-    
-  </tr>
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "projectHistory"));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 136
+            echo "    <td>";
+            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+            echo "</td>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 138
+        echo "  </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
     <td><strong>Events Participated</strong></td>
-    <td>";
-        // line 141
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "eventHistory"), "html", null, true);
-        echo "</td>
-    
-  </tr>
+    ";
+        // line 142
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "eventHistory"));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 143
+            echo "    <td>";
+            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+            echo "</td>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 145
+        echo "  </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
     <td><strong>Comments by team leaders</strong></td>
-    <td>";
-        // line 147
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "comments"), "html", null, true);
-        echo "</td>
-    
-  </tr>
+    ";
+        // line 149
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "comments"));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 150
+            echo "    <td>";
+            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+            echo "</td>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 152
+        echo "  </tr>
   <tr>
     <td height=\"34\">&nbsp;</td>
     <td><strong>Workshops Participated</strong></td>
-    <td>";
-        // line 153
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "workshopsAttended"), "html", null, true);
-        echo "</td>
-    
-  </tr>
+    ";
+        // line 156
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["trackrecord"]) ? $context["trackrecord"] : $this->getContext($context, "trackrecord")), "workshopsAttended"));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 157
+            echo "    <td>";
+            echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : $this->getContext($context, "i")), "html", null, true);
+            echo "</td>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 159
+        echo "  </tr>
 </table>
 </div></section>
 ";
@@ -262,6 +302,6 @@ class __TwigTemplate_6b2df3385ccfd86604cabe66f3a2561e extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  244 => 153,  235 => 147,  226 => 141,  217 => 135,  208 => 129,  199 => 123,  173 => 100,  163 => 93,  153 => 86,  143 => 79,  133 => 72,  123 => 65,  113 => 58,  103 => 51,  93 => 44,  84 => 38,  75 => 32,  66 => 26,  49 => 12,  41 => 6,  38 => 5,  29 => 3,);
+        return array (  287 => 159,  278 => 157,  274 => 156,  268 => 152,  259 => 150,  255 => 149,  249 => 145,  240 => 143,  236 => 142,  230 => 138,  221 => 136,  217 => 135,  208 => 129,  199 => 123,  173 => 100,  163 => 93,  153 => 86,  143 => 79,  133 => 72,  123 => 65,  113 => 58,  103 => 51,  93 => 44,  84 => 38,  75 => 32,  66 => 26,  49 => 12,  41 => 6,  38 => 5,  29 => 3,);
     }
 }

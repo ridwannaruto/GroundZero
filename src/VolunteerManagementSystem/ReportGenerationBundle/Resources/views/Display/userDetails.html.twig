@@ -132,26 +132,30 @@
   <tr>
     <td height="34">&nbsp;</td>
     <td><strong>Projects Participated</strong></td>
-    <td>{{trackrecord.projectHistory}}</td>
-    
+    {%for i in trackrecord.projectHistory%}
+    <td>{{i}}</td>
+    {%endfor%}
   </tr>
   <tr>
     <td height="34">&nbsp;</td>
     <td><strong>Events Participated</strong></td>
-    <td>{{trackrecord.eventHistory}}</td>
-    
+    {%for i in trackrecord.eventHistory%}
+    <td>{{i}}</td>
+    {%endfor%}
   </tr>
   <tr>
     <td height="34">&nbsp;</td>
     <td><strong>Comments by team leaders</strong></td>
-    <td>{{trackrecord.comments}}</td>
-    
+    {%for i in trackrecord.comments%}
+    <td>{{i}}</td>
+    {%endfor%}
   </tr>
   <tr>
     <td height="34">&nbsp;</td>
     <td><strong>Workshops Participated</strong></td>
-    <td>{{trackrecord.workshopsAttended}}</td>
-    
+    {%for i in trackrecord.workshopsAttended%}
+    <td>{{i}}</td>
+    {%endfor%}
   </tr>
 </table>
 </div></section>

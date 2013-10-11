@@ -22,6 +22,7 @@ class LoginController extends Controller {
             $user = $repository->findOneBy(array('username' => $username, 'password' => $password));
 
             if ($user) {
+                
                 $session->set('id', $user->getId());
                 if ($remember == 'on') {
 
