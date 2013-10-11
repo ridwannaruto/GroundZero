@@ -11,7 +11,6 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
         $this->blocks = array(
             'adminpromotion' => array($this, 'block_adminpromotion'),
-            'adminevent' => array($this, 'block_adminevent'),
             'adminreport' => array($this, 'block_adminreport'),
         );
     }
@@ -48,34 +47,10 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 ";
     }
 
-    // line 13
-    public function block_adminevent($context, array $blocks = array())
-    {
-        // line 11
-        echo "
-        <p align=\"right\">
-            <a href=\"manage_event?id=";
-        // line 13
-        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
-        echo "\"<strong><button type=\"submit\">Manage Events</button></strong></a>
-            
-       </p>
-
-";
-    }
-
-
-    // line 20
-
-    // line 18
-
+    // line 14
     public function block_adminreport($context, array $blocks = array())
     {
-
-        // line 21
-
-        // line 19
-
+        // line 15
         echo "
 ";
     }
@@ -92,10 +67,6 @@ class __TwigTemplate_b065fcf2c25e7d6bde72e39ce88408e9 extends Twig_Template
 
     public function getDebugInfo()
     {
-
-        return array (  69 => 21,  66 => 20,  55 => 14,  52 => 13,  42 => 7,  36 => 4,  33 => 3,  30 => 2,);
-
-       
-
+        return array (  54 => 15,  51 => 14,  41 => 7,  35 => 4,  32 => 3,  29 => 2,);
     }
 }

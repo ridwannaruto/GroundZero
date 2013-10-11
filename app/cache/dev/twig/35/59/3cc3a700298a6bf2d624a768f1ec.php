@@ -129,17 +129,14 @@ class __TwigTemplate_35593cc3a700298a6bf2d624a768f1ec extends Twig_Template
             echo "        <p>
         
         <div class=\"notify\" >
-        <p align=\"center\"><strong>\"";
-            // line 71
-            echo twig_escape_filter($this->env, (isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "html", null, true);
-            echo "\"</strong></p><p>
+        <p align=\"center\"><strong></strong></p><p>
        <strong>Project Name: </strong>";
             // line 72
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
             echo "<br>
        <strong>Details: </strong>";
             // line 73
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDiscription", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDescription", array(), "method"), "html", null, true);
             echo "<br>
         
         </div>
@@ -172,6 +169,6 @@ class __TwigTemplate_35593cc3a700298a6bf2d624a768f1ec extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  153 => 78,  142 => 73,  138 => 72,  134 => 71,  129 => 68,  125 => 67,  115 => 59,  103 => 53,  98 => 50,  94 => 49,  78 => 36,  69 => 30,  58 => 24,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  150 => 78,  139 => 73,  135 => 72,  129 => 68,  125 => 67,  115 => 59,  103 => 53,  98 => 50,  94 => 49,  78 => 36,  69 => 30,  58 => 24,  38 => 6,  35 => 5,  29 => 3,);
     }
 }

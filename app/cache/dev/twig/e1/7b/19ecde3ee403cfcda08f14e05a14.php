@@ -65,77 +65,82 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/JS/fullcalendar.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
-<script>\$(document).ready(function() {
+<script>
+    \$(document).ready(function() {
 
     // page is now ready, initialize the calendar...
-    \$('#calendar').fullCalendar('next');
-    \$('#calendar').fullCalendar({
-    dayClick: function() {
-        alert('a day has been clicked!');
-        
-    },
+
+   \$('#calendar').fullCalendar({
+
+    eventSources: [
+
+        // your event source
+        {
+            events: [ // put the array in the `events` property
+                {
+                    title  : 'Coordinate Morning Session',
+                    start  : '2013-10-01'
+                },
+                {
+                    title  : 'Write Article',
+                    start  : '2013-10-05',
+                    end    : '2013-10-07'
+                },
+                {
+                    title  : 'Reply to Web Forum',
+                    start  : '2013-10-09 12:30:00',
+                }
+            ],
+            color: 'black',     // an option!
+            textColor: 'yellow' // an option!
+        }
+
+        // any other event sources...
+
+    ],
     
-    events: function(start, end, callback) {
-        \$.ajax({
-            url: 'myxmlfeed.php',
-            dataType: 'xml',
-            data: {
-                // our hypothetical feed requires UNIX timestamps
-                start: Math.round(start.getTime() / 1000),
-                end: Math.round(end.getTime() / 1000)
-            },
-            success: function(doc) {
-                var events = [];
-                \$(doc).find('event').each(function() {
-                    events.push({
-                        title: \$(this).attr('title'),
-                        start: \$(this).attr('start') // will be parsed
-                    });
-                });
-                callback(events);
-            }
-        });
-    }
+
 });
+    
 
 });
 </script>
 ";
     }
 
-    // line 49
+    // line 54
     public function block_body($context, array $blocks = array())
     {
-        // line 50
+        // line 55
         $this->displayBlock('adminpromotion', $context, $blocks);
-        // line 52
+        // line 57
         echo "<h2 class=\"price\">Notifications</h2>
 <p align =\"justify\">Following notifications displays uptodate project & events npotifications that were subscribed by you. It also display special notifications which mainly concerns you.</p>
 <p> <div class=\"inner\">
  <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
    ";
-        // line 56
+        // line 61
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["notify"]) ? $context["notify"] : $this->getContext($context, "notify")));
         foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
-            // line 57
+            // line 62
             echo "        <p>
         
         <div class=\"notify\" >
         <p align=\"right\"><strong>";
-            // line 60
+            // line 65
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
             echo "</strong></p><p>
         <strong>Details: </strong>";
-            // line 61
+            // line 66
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDetails", array(), "method"), "html", null, true);
             echo "<br>
         <strong>Project: </strong>";
-            // line 62
+            // line 67
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getProject", array(), "method"), "html", null, true);
             echo "<br>       
         <strong>Notified Date: </strong>";
-            // line 63
+            // line 68
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDate"), "Y-m-d"), "html", null, true);
             echo "
         </div>
@@ -145,36 +150,45 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 67
+        // line 72
         echo "        
        
 </table></div></p>
 <p> </p>
 ";
-        // line 71
+        // line 76
         $this->displayBlock('adminevent', $context, $blocks);
-        // line 73
+        // line 82
         echo "<h2 class=\"price\">Calendar</h2>
 <p align =\"justify\">Following calendar displays up to date project scheduled events and organized workshops that are open for every volunteer. It also indicate special days which are deadlines or progress dates for events your registered to.</p>
 <div id='calendar'></div>
 
 <p></p>
 ";
-        // line 78
+        // line 87
         $this->displayBlock('adminreport', $context, $blocks);
     }
 
-    // line 50
+    // line 55
     public function block_adminpromotion($context, array $blocks = array())
     {
     }
 
-    // line 71
+    // line 76
     public function block_adminevent($context, array $blocks = array())
     {
+        // line 77
+        echo "<p align=\"right\">
+            <a href=\"manage_event?id=";
+        // line 78
+        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
+        echo "\"<strong><button type=\"submit\">Manage Events</button></strong></a>
+            
+       </p>
+";
     }
 
-    // line 78
+    // line 87
     public function block_adminreport($context, array $blocks = array())
     {
     }
@@ -191,6 +205,6 @@ class __TwigTemplate_e17b19ecde3ee403cfcda08f14e05a14 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  178 => 78,  173 => 71,  168 => 50,  164 => 78,  157 => 73,  155 => 71,  149 => 67,  139 => 63,  135 => 62,  131 => 61,  127 => 60,  122 => 57,  118 => 56,  112 => 52,  110 => 50,  107 => 49,  66 => 12,  61 => 11,  58 => 10,  50 => 6,  47 => 5,  41 => 4,  35 => 3,);
+        return array (  192 => 87,  184 => 78,  181 => 77,  178 => 76,  173 => 55,  169 => 87,  162 => 82,  160 => 76,  154 => 72,  144 => 68,  140 => 67,  136 => 66,  132 => 65,  127 => 62,  123 => 61,  117 => 57,  115 => 55,  112 => 54,  66 => 12,  61 => 11,  58 => 10,  50 => 6,  47 => 5,  41 => 4,  35 => 3,);
     }
 }

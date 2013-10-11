@@ -38,7 +38,7 @@ class __TwigTemplate_6e82cb87ca38ca1ec12d6e1ea025ec60 extends Twig_Template
         echo "     <h1 align=\"center\">ERROR</h1><p align=\"center\">   
          
          <br>
-         You do not have privilege to access this page
+         You do not have access privilege to  this page
      </p>
 
 ";
