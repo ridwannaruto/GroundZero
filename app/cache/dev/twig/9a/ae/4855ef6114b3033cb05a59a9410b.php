@@ -55,57 +55,57 @@ class __TwigTemplate_9aae4855ef6114b3033cb05a59a9410b extends Twig_Template
         echo "&id=";
         echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
         echo "\"><button>Register</button></a>
-            
+
             <td><strong>Event Name</strong></td><td>";
         // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "name"), "html", null, true);
         echo "</td>
             </tr>
-         <br>
-         <tr>
-         <td><strong>Project</strong></td><td>";
+            <br>
+            <tr>
+                <td><strong>Project</strong></td><td>";
         // line 19
         echo twig_escape_filter($this->env, (isset($context["pname"]) ? $context["pname"] : $this->getContext($context, "pname")), "html", null, true);
         echo "</td>
             </tr>
             <tr>
-         <td><strong>Team Leader</strong></td><td>";
+                <td><strong>Team Leader</strong></td><td>";
         // line 22
         echo twig_escape_filter($this->env, (isset($context["teamleader"]) ? $context["teamleader"] : $this->getContext($context, "teamleader")), "html", null, true);
         echo "</td>
             </tr>
             <br>
             <tr>
-         <td><strong>Event Description</strong></td><td>";
+                <td><strong>Event Description</strong></td><td>";
         // line 26
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
         echo "</td>
             </tr>
             <br>
             <tr>
-          <td><strong>Event goals</strong></td><td>";
+                <td><strong>Event goals</strong></td><td>";
         // line 30
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "description"), "html", null, true);
         echo "</td>
             </tr>
             <br>
             <tr>
-         <td><strong>Start date</strong></td><td>";
+                <td><strong>Start date</strong></td><td>";
         // line 34
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "startdate"), "m/d/Y"), "html", null, true);
         echo "</td>
             </tr>
             <br>
             <tr>
-         <td><strong>end date</strong></td><td>";
+                <td><strong>end date</strong></td><td>";
         // line 38
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), "enddate"), "m/d/Y"), "html", null, true);
         echo "</td>
             </tr>
             <br>
         </table>
-        
-    
+
+
     </div>
 ";
     }
