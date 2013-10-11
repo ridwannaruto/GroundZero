@@ -35,204 +35,208 @@ class __TwigTemplate_13a8db608961c6d50d6e9fb67c7215af extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "<h2 class=\"price\">Summery</h2>  <br><br>
+        echo "<h1 class=\"price\">Summary</h1>  <br><br>
+<section class=\"container\">
+    <div class=\"notify\">
+        <h2 class=\"price\">Volunteers</h2>  <br><br>
+        <table width=\"93%\">
+            <tr>
+                <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
 
-<div class=\"notify\">
-    <h1 class=\"price\">Volunteers</h1>  <br><br>
-    <table width=\"93%\">
-        <tr>
-            <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Number of Registered Volunteers</strong></td>
-            <td>";
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Number of Registered Volunteers</strong></td>
+                <td>";
         // line 22
         echo twig_escape_filter($this->env, (isset($context["noofusers"]) ? $context["noofusers"] : $this->getContext($context, "noofusers")), "html", null, true);
         echo "</td>
 
-        </tr>
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Male Percentage</strong> </td>
-            <td><script>
+            </tr>
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Male Percentage</strong> </td>
+                <td><script>
 
-                var num = new Number(";
+                    var num = new Number(";
         // line 30
         echo twig_escape_filter($this->env, (isset($context["noofmales"]) ? $context["noofmales"] : $this->getContext($context, "noofmales")), "html", null, true);
         echo " * 100 /";
         echo twig_escape_filter($this->env, (isset($context["noofusers"]) ? $context["noofusers"] : $this->getContext($context, "noofusers")), "html", null, true);
         echo ");
-                var n = num.toPrecision(2);
-                document.write(n);</script>%
-                        
-             </td>
+                    var n = num.toPrecision(2);
+                    document.write(n);</script>%
 
-                </tr>
-                <tr>
-                    <td height=\"34\">&nbsp;</td>
-                    <td><strong>Female Percentage</strong> </td>
-                    <td><script>
+                        </td>
 
-                        var num = new Number(";
+                    </tr>
+                    <tr>
+                        <td height=\"34\">&nbsp;</td>
+                        <td><strong>Female Percentage</strong> </td>
+                        <td><script>
+
+                            var num = new Number(";
         // line 42
         echo twig_escape_filter($this->env, (isset($context["noofmales"]) ? $context["noofmales"] : $this->getContext($context, "noofmales")), "html", null, true);
         echo " * 100 /";
         echo twig_escape_filter($this->env, (isset($context["noofusers"]) ? $context["noofusers"] : $this->getContext($context, "noofusers")), "html", null, true);
         echo ");
-                        var n = num.toPrecision(2);
-                        document.write((100 - n));
-                                </script>%</td>
+                            var n = num.toPrecision(2);
+                            document.write((100 - n));
+                                    </script>%</td>
 
-                        </tr>
-                        
-                    </table>
-                </div>
+                            </tr>
 
+                        </table>
+                    </div>
 
-<div class=\"notify\">
-    <h1 class=\"price\">Projects</h1>  <br><br>
-    <table width=\"93%\">
-        <tr>
-            <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+                </section>
+                <section class=\"container\">
+                    <div class=\"notify\">
+                        <h2 class=\"price\">Projects</h2>  <br><br>
+                        <table width=\"93%\">
+                            <tr>
+                                <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
 
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Number of Projects</strong></td>
-            <td>";
-        // line 67
+                            <tr>
+                                <td height=\"34\">&nbsp;</td>
+                                <td><strong>Number of Projects</strong></td>
+                                <td>";
+        // line 68
         echo twig_escape_filter($this->env, (isset($context["noofprojects"]) ? $context["noofprojects"] : $this->getContext($context, "noofprojects")), "html", null, true);
         echo "</td>
-            
 
-        </tr>
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Ongoing Projects</strong></td>
-            <td>";
-        // line 74
+
+                            </tr>
+                            <tr>
+                                <td height=\"34\">&nbsp;</td>
+                                <td><strong>Ongoing Projects</strong></td>
+                                <td>";
+        // line 75
         echo twig_escape_filter($this->env, (isset($context["noofongoingprojects"]) ? $context["noofongoingprojects"] : $this->getContext($context, "noofongoingprojects")), "html", null, true);
         echo "</td>
-            <td></td>
-            
+                                <td></td>
 
-        </tr>
-        
 
-    </table>
-    
-<p align =\"justify\"></p>
-<p> <div class=\"inner\">
- <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
-     
+                            </tr>
+
+
+                        </table>
+                        <br>
+                        <h2 class=\"justify\">Current Projects </h2>
+                        <p align =\"justify\"></p>
+                        <p> <div class=\"inner\">
+                            <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
+
    ";
-        // line 87
+        // line 89
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["ongoingprojects"]) ? $context["ongoingprojects"] : $this->getContext($context, "ongoingprojects")));
         foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
-            // line 88
-            echo "        <p>
-        
-        <div class=\"notify\" >
-        <p align=\"left\"><strong>";
-            // line 91
+            // line 90
+            echo "                                <p>
+
+                                <div class=\"notify\" >
+                                    <p align=\"left\"><strong>";
+            // line 93
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
             echo "</strong></p><p>
-        <strong>Details: </strong>";
-            // line 92
+                                        <strong>Details: </strong>";
+            // line 94
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDescription", array(), "method"), "html", null, true);
             echo "<br>
-        
-        </div>
-        </p>
+
+                                </div>
+                                </p>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 97
-        echo "</div>
-</div>
+        // line 99
+        echo "                            </table>
+                   
+                </section>
+<section class=\"container\">
+                    <div class=\"notify\" >
+                        <h2 class=\"price\">Events</h1>  <br><br>
+                        <table width=\"93%\">
+                            <tr>
+                                <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
 
-<div class=\"notify\">
-    <h1 class=\"price\">Events</h1>  <br><br>
-    <table width=\"93%\">
-        <tr>
-            <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Number of Events</strong></td>
-            <td>";
-        // line 114
+                            <tr>
+                                <td height=\"34\">&nbsp;</td>
+                                <td><strong>Number of Events</strong></td>
+                                <td>";
+        // line 117
         echo twig_escape_filter($this->env, (isset($context["noofevents"]) ? $context["noofevents"] : $this->getContext($context, "noofevents")), "html", null, true);
         echo "</td>
-            
 
-        </tr>
-        <tr>
-            <td height=\"34\">&nbsp;</td>
-            <td><strong>Ongoing Events</strong></td>
-            <td>";
-        // line 121
+
+                            </tr>
+                            <tr>
+                                <td height=\"34\">&nbsp;</td>
+                                <td><strong>Ongoing Events</strong></td>
+                                <td>";
+        // line 124
         echo twig_escape_filter($this->env, (isset($context["noofongoingevents"]) ? $context["noofongoingevents"] : $this->getContext($context, "noofongoingevents")), "html", null, true);
         echo "</td>
-            <td></td>
-            
+                                <td></td>
 
-        </tr>
-        
 
-    </table>
-    
-<p align =\"justify\"></p>
-<p> <div class=\"inner\">
- <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
-     
+                            </tr>
+
+
+                        </table>
+
+                        <p align =\"justify\"></p>
+                        <p> <div class=\"inner\">
+                            <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
+
    ";
-        // line 134
+        // line 137
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["ongoingevents"]) ? $context["ongoingevents"] : $this->getContext($context, "ongoingevents")));
         foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
-            // line 135
-            echo "        <p>
-        
-        <div class=\"notify\" >
-        <p align=\"left\"><strong>";
             // line 138
+            echo "                                <p>
+
+                                <div class=\"notify\" >
+                                    <p align=\"left\"><strong>";
+            // line 141
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
             echo "</strong></p><p>
-        <strong>Details: </strong>";
-            // line 139
+                                        <strong>Details: </strong>";
+            // line 142
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDescription", array(), "method"), "html", null, true);
             echo "<br>
-        
-        </div>
-        </p>
+
+                                </div>
+                                </p>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 144
-        echo "</div></p>
-</div>
-
+        // line 147
+        echo "                        </div></table></p>
+                    </div>
+                </section>
+<br><br>
 ";
     }
 
@@ -248,6 +252,6 @@ class __TwigTemplate_13a8db608961c6d50d6e9fb67c7215af extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  233 => 144,  222 => 139,  218 => 138,  213 => 135,  209 => 134,  193 => 121,  183 => 114,  164 => 97,  153 => 92,  149 => 91,  144 => 88,  140 => 87,  124 => 74,  114 => 67,  84 => 42,  67 => 30,  56 => 22,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  236 => 147,  225 => 142,  221 => 141,  216 => 138,  212 => 137,  196 => 124,  186 => 117,  166 => 99,  155 => 94,  151 => 93,  146 => 90,  142 => 89,  125 => 75,  115 => 68,  84 => 42,  67 => 30,  56 => 22,  38 => 6,  35 => 5,  29 => 3,);
     }
 }

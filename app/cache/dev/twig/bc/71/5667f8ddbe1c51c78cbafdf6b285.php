@@ -55,7 +55,7 @@ class __TwigTemplate_bc715667f8ddbe1c51c78cbafdf6b285 extends Twig_Template
             echo " <p>
         
         <div class=\"notify\" >
-        <p align=\"left\"><strong>
+        <p align=\"justify\"><strong>
         ";
             // line 15
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["res"]) ? $context["res"] : $this->getContext($context, "res")), "heading", array(), "array"), "html", null, true);
