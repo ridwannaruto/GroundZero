@@ -29,9 +29,11 @@ class WorkshopType extends AbstractType
                 
            $builder      
             
-            ->add('description','text', array( 
+            ->add('description','textarea', array( 
             'label'  => 'Description',
             'attr'   =>  array(
+                'rows' => 10,
+                'cols' => 50,
                 'class'   => 'login',
                 'placeholder' => "enter description")
             ))
