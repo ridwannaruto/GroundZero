@@ -7,11 +7,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use VolunteerManagementSystem\WorkshopBundle\Form\Type\WorkshopType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use VolunteerManagementSystem\NewsBundle\Entity\News;
 class WorkshopSubmissionController extends Controller{
    
     public function submitworkshopAction(Request $request){
-
+        $id = $request->get('id');
         $em = $this->getDoctrine()->getEntityManager();
         
         $form = $this->createForm(new WorkshopType());
@@ -22,11 +22,20 @@ class WorkshopSubmissionController extends Controller{
             $workshop = $form->getData();
             $em->persist($workshop);
             $em->flush();
-            
-            return new Response("workshop created");
+            $deadline = $workshop->getRegistrationdeadline();
+            $date = $workshop->getDate();
+            $news = new News();
+            $news->setHeading($workshop->getWorkshopname(). " Workshop");
+            $news->setDescription("Hurry up and get registered to the ".$workshop->getWorkshopname(). " workshop before ".$deadline->format('Y-m-d') .".<br>There are only ".$workshop->getCapacity()." vacancies left.<br>Workshop is scheduled to be held on ".$date->format('Y-m-d'));
+            $em->persist($news);
+            $em->flush();
+            return $this->render('VolunteerManagementSystemWorkshopBundle:submit:confirm.html.twig', array('id' => $id));
+           
         }
         
-            return new Response("workshop not created");
+        return $this->render('VolunteerManagementSystemWorkshopBundle:submit:confirm.html.twig', array('id' => $id));
+           
+            
     }
 }
 ?>
