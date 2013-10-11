@@ -38,66 +38,79 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 7
-        echo "<h1 class=\"price\" align = \"center\">";
+        echo "<div class=\"notify\">
+    
+<h2 class=\"price\">";
+        // line 9
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getName", array(), "method"), "html", null, true);
-        echo "</h1>
-<section class=\"container\">
-    <div class=\"notify\">
-<h1>Project Information</h1>
+        echo "</h2>
+
+    <br><br>
+
 <p align=\"left\">
 <strong>Description</strong>
 <br>";
-        // line 13
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getDescription", array(), "method"), "html", null, true);
         echo "<br><br>
 <strong>Objectives</strong>
 <br>";
-        // line 15
+        // line 17
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getObjectives", array(), "method"), "html", null, true);
         echo "<br><br>
 <strong>Project Manager</strong>
 <br>";
-        // line 17
+        // line 19
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["pm"]) ? $context["pm"] : $this->getContext($context, "pm")), "getFirstname", array(), "method"), "html", null, true);
         echo "<br><br><br>
 <strong>Initiated on</strong>
 <br>";
-        // line 19
+        // line 21
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getStartdate"), "Y-m-d"), "html", null, true);
         echo "<br><br><br>
 <strong>Scheduled end date</strong>
 <br>";
-        // line 21
+        // line 23
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getEnddate"), "Y-m-d"), "html", null, true);
         echo "<br><br><br>
-<h1>Events</h1>
+</div>
+<br><br><br>
+<div class=\"notify\">
+<h2 class=\"price\" >Events</h2>
 <p>
-";
-        // line 24
-        $this->displayBlock('createevent', $context, $blocks);
-        // line 26
-        echo "</p>
+
+</p>
     
 <p align = \"center\"><table width = 90% align = \"center\">
 ";
-        // line 29
+        // line 33
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")));
         foreach ($context['_seq'] as $context["_key"] => $context["event"]) {
-            // line 30
+            // line 34
             echo "        <tr>
-            <td width=70%><p><strong>";
-            // line 31
+            <td width=50%><p><strong>";
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), 1, array(), "array"), "html", null, true);
             echo "</strong></p></td>
-            <td><p><a href=\"view_event?eid=";
-            // line 32
+            <td>
+                <p>
+                    <a href=\"view_event?eid=";
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["event"]) ? $context["event"] : $this->getContext($context, "event")), 0, array(), "array"), "html", null, true);
             echo "&id=";
             echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
             echo "&pname=";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getName", array(), "method"), "html", null, true);
-            echo "\"><button>view details</button></a></p></td>
+            echo "\">
+                        <button class=\"a-btn\">
+                <span class=\"a-btn-text\">view</span>
+                <span class=\"a-btn-slide-text\">details</span>
+                <span class=\"a-btn-icon-right\"><span></span></span>
+            </button>
+                        </a>
+                    </p>
+                </td>
         </tr>
         
         
@@ -106,19 +119,21 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['event'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 50
+        $this->displayBlock('createevent', $context, $blocks);
+        // line 52
         echo "    </table>
 </p>
 
 
-</div></section>
+</div>
 ";
     }
 
-    // line 24
+    // line 50
     public function block_createevent($context, array $blocks = array())
     {
-        // line 25
+        // line 51
         echo "        ";
     }
 
@@ -134,6 +149,6 @@ class __TwigTemplate_71d96387c030201fece929c227bf7ddc extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  122 => 25,  119 => 24,  110 => 37,  95 => 32,  91 => 31,  88 => 30,  84 => 29,  79 => 26,  77 => 24,  71 => 21,  66 => 19,  61 => 17,  56 => 15,  51 => 13,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
+        return array (  137 => 51,  134 => 50,  125 => 52,  123 => 50,  100 => 38,  94 => 35,  91 => 34,  87 => 33,  74 => 23,  69 => 21,  64 => 19,  59 => 17,  54 => 15,  45 => 9,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
     }
 }
