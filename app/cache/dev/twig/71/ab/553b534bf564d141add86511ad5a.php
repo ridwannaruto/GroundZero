@@ -37,79 +37,79 @@ class __TwigTemplate_71ab553b534bf564d141add86511ad5a extends Twig_Template
         // line 6
         echo "
 <section class=\"container\">
-<div class=\"notify\">
-<h2 class=\"price\">Project Report</h2>  <br><br>
+    <div class=\"notify\">
+        <h2 class=\"price\">Project Report</h2>  <br><br>
 
-    <table width=\"90%\">
-        <tr>
-    <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-        <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Project Name</strong></td>
-    <td>";
+        <table width=\"90%\">
+            <tr>
+                <th width=\"18%\" height=\"33\" scope=\"row\">&nbsp;</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Project Name</strong></td>
+                <td>";
         // line 22
         echo twig_escape_filter($this->env, (isset($context["projectname"]) ? $context["projectname"] : $this->getContext($context, "projectname")), "html", null, true);
         echo "</td>
-    
-  </tr>
-         <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Status</strong></td>
-    <td>";
+
+            </tr>
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Status</strong></td>
+                <td>";
         // line 28
         echo twig_escape_filter($this->env, (isset($context["status"]) ? $context["status"] : $this->getContext($context, "status")), "html", null, true);
         echo "</td>
-    
-  </tr>
-         <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Description</strong></td>
-    <td>";
+
+            </tr>
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Description</strong></td>
+                <td>";
         // line 34
         echo twig_escape_filter($this->env, (isset($context["description"]) ? $context["description"] : $this->getContext($context, "description")), "html", null, true);
         echo "</td>
-    
-  </tr>
-        
-         <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Objectives</strong></td>
-    <td>";
+
+            </tr>
+
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Objectives</strong></td>
+                <td>";
         // line 41
         echo twig_escape_filter($this->env, (isset($context["objectives"]) ? $context["objectives"] : $this->getContext($context, "objectives")), "html", null, true);
         echo "</td>
-     <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Started Date</strong></td>
-    <td>";
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Started Date</strong></td>
+                <td>";
         // line 45
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["startdate"]) ? $context["startdate"] : $this->getContext($context, "startdate")), "m/d/Y"), "html", null, true);
         echo "</td>
-    
-  </tr>
-     <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Project Manager</strong></td>
-    <td>";
+
+            </tr>
+            <tr>
+                <td height=\"34\">&nbsp;</td>
+                <td><strong>Project Manager</strong></td>
+                <td>";
         // line 51
         echo twig_escape_filter($this->env, (isset($context["projectmanager"]) ? $context["projectmanager"] : $this->getContext($context, "projectmanager")), "html", null, true);
         echo " </td>
-    
-  </tr>   
- 
-        
-        
-      
-        
 
-    </table>
-        </div>
-        </section>
+            </tr>   
+
+
+
+
+
+
+        </table>
+    </div>
+</section>
 ";
     }
 

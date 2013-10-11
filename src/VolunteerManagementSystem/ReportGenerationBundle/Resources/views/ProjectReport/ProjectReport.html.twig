@@ -5,59 +5,59 @@
 {% block body %}
 
 <section class="container">
-<div class="notify">
-<h2 class="price">Project Report</h2>  <br><br>
+    <div class="notify">
+        <h2 class="price">Project Report</h2>  <br><br>
 
-    <table width="90%">
-        <tr>
-    <th width="18%" height="33" scope="row">&nbsp;</th>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-        <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Project Name</strong></td>
-    <td>{{projectname}}</td>
-    
-  </tr>
-         <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Status</strong></td>
-    <td>{{status}}</td>
-    
-  </tr>
-         <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Description</strong></td>
-    <td>{{description}}</td>
-    
-  </tr>
-        
-         <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Objectives</strong></td>
-    <td>{{objectives}}</td>
-     <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Started Date</strong></td>
-    <td>{{startdate|date("m/d/Y")}}</td>
-    
-  </tr>
-     <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Project Manager</strong></td>
-    <td>{{projectmanager}} </td>
-    
-  </tr>   
- 
-        
-        
-      
-        
+        <table width="90%">
+            <tr>
+                <th width="18%" height="33" scope="row">&nbsp;</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Project Name</strong></td>
+                <td>{{projectname}}</td>
 
-    </table>
-        </div>
-        </section>
+            </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Status</strong></td>
+                <td>{{status}}</td>
+
+            </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Description</strong></td>
+                <td>{{description}}</td>
+
+            </tr>
+
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Objectives</strong></td>
+                <td>{{objectives}}</td>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Started Date</strong></td>
+                <td>{{startdate|date("m/d/Y")}}</td>
+
+            </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Project Manager</strong></td>
+                <td>{{projectmanager}} </td>
+
+            </tr>   
+
+
+
+
+
+
+        </table>
+    </div>
+</section>
 {% endblock %}

@@ -52,7 +52,7 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
         $context['_seq'] = twig_ensure_traversable((isset($context["result"]) ? $context["result"] : $this->getContext($context, "result")));
         foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
             echo " 
-        <div class=\"notify\" >
+        
             <style type=\"text/css\">
 .none a:link { text-decoration: none }
 </style>
@@ -61,10 +61,10 @@ class __TwigTemplate_bced438d56cd5114c4833a76177e4286 extends Twig_Template
             echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
             echo "&pid=";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getId", array(), "method"), "html", null, true);
-            echo "\"<strong>";
+            echo "\"><div class=\"notify\" ><strong>";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["r"]) ? $context["r"] : $this->getContext($context, "r")), "getName", array(), "method"), "html", null, true);
-            echo "</strong></a></h2>
-        </div>
+            echo "</strong></div></a></h2>
+        
         </p>
     ";
         }

@@ -1,9 +1,11 @@
 {% extends 'VolunteerManagementSystemPagesBundle:Newspage:newspage.html.twig' %}
 
 {% block admin%}
-<form action="createNews?id={{id}}" method="post" >
 <p align="right">
-            <button type="submit">Create News</button>
- </p>
-</form>
+    <a href="createNews?id={{id}}">
+        <button>Create News</button></a>
+    <a href="workshopCreate?id={{id}}">
+        <button>Create Workshop</button></a>
+</p>
+
 {% endblock %}
