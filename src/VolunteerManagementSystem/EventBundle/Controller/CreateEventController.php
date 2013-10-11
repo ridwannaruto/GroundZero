@@ -39,9 +39,11 @@ class CreateEventController extends Controller {
     public function eventSaveAction(Request $request) {
         
         $em = $this->getDoctrine()->getEntityManager();
+        $em2 = $this->getDoctrine()->getEntityManager();
         $id = $request->get('id');
         $pid = $request->get('pid');
-
+        $repositoryE =$em2->getRepository('VolunteerManagementSystemEventBundle:Event');
+        
         $event = new Event();
         $event->setProject($pid);
         $array = array();
@@ -54,19 +56,25 @@ class CreateEventController extends Controller {
         if ($form->isValid()) {
 
             //   $event = $form->getData();
-            $enddate = $event->getDeadline();
+            $enddate =null;
             $endtime = $event->getDeadlinetime();
             $event->setEnddate($enddate);
             $event->setEndtime($endtime);
+            $ename=$event->getName();
             $Teamleader = $event->getTeamleader();
+            $tn=$Teamleader->getUsername();
             $teamleaderid = $Teamleader->getId();
+            
             $event->setTeamleader($teamleaderid);
 
-            $em->persist($event);
+            $em2->persist($event);
+            $em2->flush();
+            $eve = $repositoryE->findOneBy(array('name' => $ename));
+            $eid=$eve->getId();
             $projects = $em->getRepository('VolunteerManagementSystemProjectBundle:Project');
             $project = $projects->findOneBy(array('id' => $pid));
             $array = $project->getEvents();
-            $array[] = $event->getId();
+            $array[] = $eid;
             $project->setEvents($array);
             $em->persist($project);
             $em->flush();
@@ -74,7 +82,7 @@ class CreateEventController extends Controller {
 
         
 
-        return $this->redirect($this->generateUrl('view_event', array('pid'=>$pid,'id' => $id,'eid'=>$event->getId())));
+        return $this->redirect($this->generateUrl('confirm_event', array('tl' =>$tn,'tlid'=>$teamleaderid,'event'=>$ename,  ' pid'=>$pid,'id' => $id,'eid'=>$event->getId())));
      }
 
         
