@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use VolunteerManagementSystem\WorkshopBundle\Form\Type\WorkshopType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+
 use VolunteerManagementSystem\NewsBundle\Entity\News;
 class WorkshopSubmissionController extends Controller{
    

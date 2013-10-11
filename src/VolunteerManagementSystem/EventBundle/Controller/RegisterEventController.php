@@ -14,6 +14,7 @@ class RegisterEventController extends Controller
     {   
         $eid=$request->get('eid');
         $id=$request->get('id');
+        $pname = $request->get('pname');
         $em =$this->getDoctrine()->getEntityManager();
         $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
@@ -60,7 +61,7 @@ class RegisterEventController extends Controller
                 
                  return $this->render(
             'VolunteerManagementSystemEventBundle:Event:eventuser.html.twig',
-            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users)
+            array('event' => $event,'id'=>$id,'teamleader'=>$teamleader->getFirstName(),'eid'=>$eid,'users'=>$users,'pname'=>$pname)
         );  
         }
         return $this->render(

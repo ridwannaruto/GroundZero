@@ -78,7 +78,7 @@ class CloseEventController extends Controller
             foreach ($task->getRates() as $rate) {  
                 $user=$repositoryU->findOneBy(array('username'=>$rate->getName()));
                 $trackRecord = $TrackRepository->findOneBy(array('userId' => $user->getId()));
-                $trackRecord->UpdateRating($projectId,$eid,$eventWeight,$rate->getRate());
+                $trackRecord->UpdateRating($projectId,$eid,$eventWeight,$rate->getRate(),$rate->getComment());
                 $em2->persist($trackRecord);
                 $em2->flush();
             }
