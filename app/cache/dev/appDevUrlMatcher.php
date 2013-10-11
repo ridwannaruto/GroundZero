@@ -144,6 +144,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopSubmissionController::submitworkshopAction',  '_route' => 'workshop_submission',);
             }
 
+            if (0 === strpos($pathinfo, '/workshopRegister')) {
+                // workshop_newly_register
+                if ($pathinfo === '/workshopRegistered') {
+                    return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopNewlyregisteredController::newlyRegisteredAction',  '_route' => 'workshop_newly_register',);
+                }
+
+                // workshop_register
+                if ($pathinfo === '/workshopRegister') {
+                    return array (  '_controller' => 'VolunteerManagementSystem\\WorkshopBundle\\Controller\\WorkshopRegisterController::workshopregisterAction',  '_route' => 'workshop_register',);
+                }
+
+            }
+
         }
 
         // volunteer_management_system_stat_homepage
