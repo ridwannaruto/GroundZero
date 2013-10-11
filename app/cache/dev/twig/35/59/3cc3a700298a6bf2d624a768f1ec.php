@@ -79,46 +79,84 @@ class __TwigTemplate_35593cc3a700298a6bf2d624a768f1ec extends Twig_Template
         echo "</td>
     
   </tr>
-        
-         <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Events Participated</strong></td>
-    <td>";
-        // line 43
-        echo twig_escape_filter($this->env, (isset($context["events"]) ? $context["events"] : $this->getContext($context, "events")), "html", null, true);
-        echo "</td>
-     <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Comments</strong></td>
-    <td>";
-        // line 47
-        echo twig_escape_filter($this->env, (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")), "html", null, true);
-        echo "</td>
-    
-  </tr>
-     <tr>
-    <td height=\"34\">&nbsp;</td>
-    <td><strong>Workshops Attended </strong></td>
-    <td>";
-        // line 53
-        echo twig_escape_filter($this->env, (isset($context["workshops"]) ? $context["workshops"] : $this->getContext($context, "workshops")), "html", null, true);
-        echo " </td>
-    
-  </tr>   
- 
-        
-        
-      
-        
-
     </table>
-        </div>
+</div>
         </section>
-
         
-      
+    
+    
+<p align =\"justify\"></p>
+<p> <div class=\"inner\">
+    <h2 class=\"price\">Comments</h2>
+ <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
+   ";
+        // line 49
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")));
+        foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
+            // line 50
+            echo "        <p>
+        
+        <div class=\"notify\" >
+        <p align=\"center\"><strong>\"";
+            // line 53
+            echo twig_escape_filter($this->env, (isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "html", null, true);
+            echo "\"</strong></p><p>
+              
+        
+        </div>
+        </p>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 59
+        echo "        
+       
+</table></div></p>
+
+<p align =\"justify\"></p>
+<p> <div class=\"inner\">
+    <h2 class=\"price\">Projects Participated</h2>
+ <table width=\"398\" border=\"10\" align=\"center\" cellpadding=\"0\">
+   ";
+        // line 67
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["projects"]) ? $context["projects"] : $this->getContext($context, "projects")));
+        foreach ($context['_seq'] as $context["_key"] => $context["n"]) {
+            // line 68
+            echo "        <p>
+        
+        <div class=\"notify\" >
+        <p align=\"center\"><strong>\"";
+            // line 71
+            echo twig_escape_filter($this->env, (isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "html", null, true);
+            echo "\"</strong></p><p>
+       <strong>Project Name: </strong>";
+            // line 72
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getName", array(), "method"), "html", null, true);
+            echo "<br>
+       <strong>Details: </strong>";
+            // line 73
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["n"]) ? $context["n"] : $this->getContext($context, "n")), "getDiscription", array(), "method"), "html", null, true);
+            echo "<br>
+        
+        </div>
+        </p>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['n'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 78
+        echo "        
+       
+</table></div></p>
 
 
+<p> </p>
+    
 ";
     }
 
@@ -134,6 +172,6 @@ class __TwigTemplate_35593cc3a700298a6bf2d624a768f1ec extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  104 => 53,  95 => 47,  88 => 43,  78 => 36,  69 => 30,  58 => 24,  38 => 6,  35 => 5,  29 => 3,);
+        return array (  153 => 78,  142 => 73,  138 => 72,  134 => 71,  129 => 68,  125 => 67,  115 => 59,  103 => 53,  98 => 50,  94 => 49,  78 => 36,  69 => 30,  58 => 24,  38 => 6,  35 => 5,  29 => 3,);
     }
 }
