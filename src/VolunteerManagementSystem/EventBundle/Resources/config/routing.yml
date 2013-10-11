@@ -19,3 +19,6 @@ finished_event:
 manage_event:
     pattern:  /manage_event
     defaults: { _controller: VolunteerManagementSystemEventBundle:ManageEvents:manage }
+confirm_event:
+    pattern:  /confirm_event
+    defaults: { _controller: VolunteerManagementSystemEventBundle:EventConfirmation:eventconfirmation }

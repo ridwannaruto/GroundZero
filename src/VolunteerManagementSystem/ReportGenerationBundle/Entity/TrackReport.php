@@ -177,12 +177,7 @@ class TrackReport
      */
     public function getEventHistory()
     {
-       
-       $array=$this->eventHistory;
-       $returnString=  implode(',', $array);        
-       
-        
-        return $returnString;
+           return $this->eventHistory;
     }
 
     /**
@@ -205,15 +200,7 @@ class TrackReport
      */
     public function getComments()
     {
-        
-        
-       
-       $array=$this->comments;
-       $returnString=  implode(',', $array);        
-       
-       
-        
-        return $returnString;
+        return $this->comments;
     }
 
     /**
@@ -235,13 +222,8 @@ class TrackReport
      * @return array 
      */
     public function getWorkshopsAttended()
-    {
-        
-       
-       $array=$this->workshopsAttended;
-       $returnString=  implode(',', $array); 
-        
-        return $returnString;
+    {        
+        return $this->workshopsAttended;
     }
     
     
@@ -266,12 +248,11 @@ class TrackReport
     public function getProjectHistory()
     {
        
-       $array=$this->projectHistory;
-       $returnString=  implode(',', $array);        
+       return $this->projectHistory;
+       
        
         
-        return $returnString;
-    }
+    }   
     /**
      * Update Ratings
      *
@@ -280,7 +261,7 @@ class TrackReport
      * @param float $rating
      * @return TrackReport
      */
-    public function UpdateRating($projectId,$eventId,$eventWeight,$rating) {
+    public function UpdateRating($projectId,$eventId,$eventWeight,$rating,$comment) {
         $currentRating = $this->getOverallRating();
         $currentOverallWeight=$this->getTotalWeight();
         $newRating=($currentRating*$currentOverallWeight+$rating)/($currentOverallWeight+$eventWeight);
@@ -290,6 +271,10 @@ class TrackReport
         
         $this->eventHistory[]=$eventId;
         $this->projectHistory[]=$projectId;
+        if(!(strcmp ($comment , '-' ))==0){
+            $currentCommentArray= $this->getComments();
+            $currentCommentArray[]=$comment;
+        }
         
         
         
