@@ -36,35 +36,50 @@
     <td>{{overallrating}}</td>
     
   </tr>
-        
-         <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Events Participated</strong></td>
-    <td>{{events}}</td>
-     <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Comments</strong></td>
-    <td>{{comments}}</td>
-    
-  </tr>
-     <tr>
-    <td height="34">&nbsp;</td>
-    <td><strong>Workshops Attended </strong></td>
-    <td>{{workshops}} </td>
-    
-  </tr>   
- 
-        
-        
-      
-        
-
     </table>
-        </div>
+</div>
         </section>
-
         
-      
+    
+    
+<p align ="justify"></p>
+<p> <div class="inner">
+    <h2 class="price">Comments</h2>
+ <table width="398" border="10" align="center" cellpadding="0">
+   {% for n in comments %}
+        <p>
+        
+        <div class="notify" >
+        <p align="center"><strong>"{{n}}"</strong></p><p>
+              
+        
+        </div>
+        </p>
+    {% endfor %}
+        
+       
+</table></div></p>
+
+<p align ="justify"></p>
+<p> <div class="inner">
+    <h2 class="price">Projects Participated</h2>
+ <table width="398" border="10" align="center" cellpadding="0">
+   {% for n in projects %}
+        <p>
+        
+        <div class="notify" >
+        <p align="center"><strong>"{{n}}"</strong></p><p>
+       <strong>Project Name: </strong>{{ n.getName() }}<br>
+       <strong>Details: </strong>{{ n.getDiscription() }}<br>
+        
+        </div>
+        </p>
+    {% endfor %}
+        
+       
+</table></div></p>
 
 
+<p> </p>
+    
 {% endblock %}
