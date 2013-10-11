@@ -3,145 +3,149 @@
 {% block title %}Volma - System Summery{% endblock %}
 
 {% block body %}
-<h2 class="price">Summery</h2>  <br><br>
+<h1 class="price">Summary</h1>  <br><br>
+<section class="container">
+    <div class="notify">
+        <h2 class="price">Volunteers</h2>  <br><br>
+        <table width="93%">
+            <tr>
+                <th width="18%" height="33" scope="row">&nbsp;</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
 
-<div class="notify">
-    <h1 class="price">Volunteers</h1>  <br><br>
-    <table width="93%">
-        <tr>
-            <th width="18%" height="33" scope="row">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Number of Registered Volunteers</strong></td>
+                <td>{{noofusers}}</td>
 
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Number of Registered Volunteers</strong></td>
-            <td>{{noofusers}}</td>
+            </tr>
+            <tr>
+                <td height="34">&nbsp;</td>
+                <td><strong>Male Percentage</strong> </td>
+                <td><script>
 
-        </tr>
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Male Percentage</strong> </td>
-            <td><script>
+                    var num = new Number({{noofmales}} * 100 /{{noofusers}});
+                    var n = num.toPrecision(2);
+                    document.write(n);</script>%
 
-                var num = new Number({{noofmales}} * 100 /{{noofusers}});
-                var n = num.toPrecision(2);
-                document.write(n);</script>%
-                        
-             </td>
+                        </td>
 
-                </tr>
-                <tr>
-                    <td height="34">&nbsp;</td>
-                    <td><strong>Female Percentage</strong> </td>
-                    <td><script>
+                    </tr>
+                    <tr>
+                        <td height="34">&nbsp;</td>
+                        <td><strong>Female Percentage</strong> </td>
+                        <td><script>
 
-                        var num = new Number({{noofmales}} * 100 /{{noofusers}});
-                        var n = num.toPrecision(2);
-                        document.write((100 - n));
-                                </script>%</td>
+                            var num = new Number({{noofmales}} * 100 /{{noofusers}});
+                            var n = num.toPrecision(2);
+                            document.write((100 - n));
+                                    </script>%</td>
 
-                        </tr>
-                        
-                    </table>
-                </div>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </section>
+                <section class="container">
+                    <div class="notify">
+                        <h2 class="price">Projects</h2>  <br><br>
+                        <table width="93%">
+                            <tr>
+                                <th width="18%" height="33" scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td height="34">&nbsp;</td>
+                                <td><strong>Number of Projects</strong></td>
+                                <td>{{noofprojects}}</td>
 
 
-<div class="notify">
-    <h1 class="price">Projects</h1>  <br><br>
-    <table width="93%">
-        <tr>
-            <th width="18%" height="33" scope="row">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+                            </tr>
+                            <tr>
+                                <td height="34">&nbsp;</td>
+                                <td><strong>Ongoing Projects</strong></td>
+                                <td>{{noofongoingprojects}}</td>
+                                <td></td>
 
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Number of Projects</strong></td>
-            <td>{{noofprojects}}</td>
-            
 
-        </tr>
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Ongoing Projects</strong></td>
-            <td>{{noofongoingprojects}}</td>
-            <td></td>
-            
+                            </tr>
 
-        </tr>
-        
 
-    </table>
-    
-<p align ="justify"></p>
-<p> <div class="inner">
- <table width="398" border="10" align="center" cellpadding="0">
-     
+                        </table>
+                        <br>
+                        <h2 class="justify">Current Projects </h2>
+                        <p align ="justify"></p>
+                        <p> <div class="inner">
+                            <table width="398" border="10" align="center" cellpadding="0">
+
    {% for n in ongoingprojects %}
-        <p>
-        
-        <div class="notify" >
-        <p align="left"><strong>{{n.getName()}}</strong></p><p>
-        <strong>Details: </strong>{{ n.getDescription() }}<br>
-        
-        </div>
-        </p>
+                                <p>
+
+                                <div class="notify" >
+                                    <p align="left"><strong>{{n.getName()}}</strong></p><p>
+                                        <strong>Details: </strong>{{ n.getDescription() }}<br>
+
+                                </div>
+                                </p>
     {% endfor %}
-</div>
-</div>
+                            </table>
+                   
+                </section>
+<section class="container">
+                    <div class="notify" >
+                        <h2 class="price">Events</h1>  <br><br>
+                        <table width="93%">
+                            <tr>
+                                <th width="18%" height="33" scope="row">&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
 
-<div class="notify">
-    <h1 class="price">Events</h1>  <br><br>
-    <table width="93%">
-        <tr>
-            <th width="18%" height="33" scope="row">&nbsp;</th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+                            <tr>
+                                <td height="34">&nbsp;</td>
+                                <td><strong>Number of Events</strong></td>
+                                <td>{{noofevents}}</td>
 
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Number of Events</strong></td>
-            <td>{{noofevents}}</td>
-            
 
-        </tr>
-        <tr>
-            <td height="34">&nbsp;</td>
-            <td><strong>Ongoing Events</strong></td>
-            <td>{{noofongoingevents}}</td>
-            <td></td>
-            
+                            </tr>
+                            <tr>
+                                <td height="34">&nbsp;</td>
+                                <td><strong>Ongoing Events</strong></td>
+                                <td>{{noofongoingevents}}</td>
+                                <td></td>
 
-        </tr>
-        
 
-    </table>
-    
-<p align ="justify"></p>
-<p> <div class="inner">
- <table width="398" border="10" align="center" cellpadding="0">
-     
+                            </tr>
+
+
+                        </table>
+
+                        <p align ="justify"></p>
+                        <p> <div class="inner">
+                            <table width="398" border="10" align="center" cellpadding="0">
+
    {% for n in ongoingevents %}
-        <p>
-        
-        <div class="notify" >
-        <p align="left"><strong>{{n.getName()}}</strong></p><p>
-        <strong>Details: </strong>{{ n.getDescription() }}<br>
-        
-        </div>
-        </p>
-    {% endfor %}
-</div></p>
-</div>
+                                <p>
 
+                                <div class="notify" >
+                                    <p align="left"><strong>{{n.getName()}}</strong></p><p>
+                                        <strong>Details: </strong>{{ n.getDescription() }}<br>
+
+                                </div>
+                                </p>
+    {% endfor %}
+                        </div></table></p>
+                    </div>
+                </section>
+<br><br>
 {% endblock %}

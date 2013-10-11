@@ -26,7 +26,7 @@ class WorkshopSubmissionController extends Controller{
             $date = $workshop->getDate();
             $news = new News();
             $news->setHeading($workshop->getWorkshopname(). " Workshop");
-            $news->setDescription("Hurry up and get registered to the ".$workshop->getWorkshopname(). " workshop before ".$deadline->format('Y-m-d') .".<br>There are only ".$workshop->getCapacity()." vacancies left.<br>Workshop is scheduled to be held on ".$date->format('Y-m-d'));
+            $news->setDescription("Hurry up and get registered for the ".$workshop->getWorkshopname(). " workshop before ".$deadline->format('Y-m-d') .". There are only ".$workshop->getCapacity()." vacancies left. Workshop is scheduled to be held on ".$date->format('Y-m-d'));
             $em->persist($news);
             $em->flush();
             return $this->render('VolunteerManagementSystemWorkshopBundle:submit:confirm.html.twig', array('id' => $id));
