@@ -126,7 +126,7 @@ class __TwigTemplate_992695d5794f762e50c3ebf7c30f39a8 extends Twig_Template
                                     </p>
                                 
                                 
-                                <p align=\"center\">Developed by<br>
+                                <p align=\"center\">developed by<br>
                           <img src=\"";
         // line 84
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/volunteermanagementsystemstyles/images/Footer.png"), "html", null, true);

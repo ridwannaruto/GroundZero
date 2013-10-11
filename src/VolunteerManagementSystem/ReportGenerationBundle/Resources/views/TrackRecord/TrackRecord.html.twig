@@ -3,44 +3,68 @@
 {% block title %}Volma - Track Record{% endblock %}
 
 {% block body %}
-<h1>Track Record: {{fname}}</h1>
 
 
 
-<div class="inner">
-    <table width="398" border="0" align="center" cellpadding="0">
+<section class="container">
+<div class="notify">
+<h2 class="price">Volunteer Track Record</h2>  <br><br>
+
+    <table width="90%">
         <tr>
-            <td height="26" colspan="2">Volunteer Track Rcord
-            </td>
-            
-        </tr>
+    <th width="18%" height="33" scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
         <tr>
-            
-            <td valign="top"><div align="left">Name:{{fname}} {{lname}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Joined date:{{jdate|date("m/d/Y")}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Overall Rating:{{overallrating}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Events Participated:{{events}}</div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Comments:{{comments}} </div></td>
-
-        </tr>
-        <tr>
-            <td valign="top"><div align="left">Workshops Attended:{{workshops}} </div></td>
-
-        </tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Name</strong></td>
+    <td>{{fname}} {{lname}}</td>
+    
+  </tr>
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Joined Date</strong></td>
+    <td>{{jdate|date("m/d/Y")}}</td>
+    
+  </tr>
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Overall Rating</strong></td>
+    <td>{{overallrating}}</td>
+    
+  </tr>
+        
+         <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Events Participated</strong></td>
+    <td>{{events}}</td>
+     <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Comments</strong></td>
+    <td>{{comments}}</td>
+    
+  </tr>
+     <tr>
+    <td height="34">&nbsp;</td>
+    <td><strong>Workshops Attended </strong></td>
+    <td>{{workshops}} </td>
+    
+  </tr>   
+ 
+        
+        
+      
+        
 
     </table>
+        </div>
+        </section>
+
+        
+      
 
 
 {% endblock %}

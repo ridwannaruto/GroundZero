@@ -5,3 +5,4 @@ workshop_create:
 workshop_submission:
     pattern:  /workshopSubmission
     defaults: { _controller: VolunteerManagementSystemWorkshopBundle:WorkshopSubmission:submitworkshop }
+

@@ -34,7 +34,7 @@ class AdminManagementController extends Controller{
         ));   
         
         $form4 = $this->createForm(new userDetailsType(), new User(),array(
-            'action' => $this->generateUrl('_display'),
+            'action' => $this->generateUrl('_display',array('id'=>$id)),
         ));
         
         return $this->render(

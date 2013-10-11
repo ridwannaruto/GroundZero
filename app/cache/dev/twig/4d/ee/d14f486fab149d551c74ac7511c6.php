@@ -103,9 +103,11 @@ class __TwigTemplate_4deed14f486fab149d551c74ac7511c6 extends Twig_Template
             echo "&pname=";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["project"]) ? $context["project"] : $this->getContext($context, "project")), "getName", array(), "method"), "html", null, true);
             echo "\">
-                        <button>
-                            view details
-                        </button>
+                        <button class=\"a-btn\">
+                <span class=\"a-btn-text\">view</span>
+                <span class=\"a-btn-slide-text\">details</span>
+                <span class=\"a-btn-icon-right\"><span></span></span>
+            </button>
                         </a>
                     </p>
                 </td>
@@ -117,9 +119,9 @@ class __TwigTemplate_4deed14f486fab149d551c74ac7511c6 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['event'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
-        $this->displayBlock('createevent', $context, $blocks);
         // line 50
+        $this->displayBlock('createevent', $context, $blocks);
+        // line 52
         echo "    </table>
 </p>
 
@@ -128,10 +130,10 @@ class __TwigTemplate_4deed14f486fab149d551c74ac7511c6 extends Twig_Template
 ";
     }
 
-    // line 48
+    // line 50
     public function block_createevent($context, array $blocks = array())
     {
-        // line 49
+        // line 51
         echo "        ";
     }
 
@@ -147,6 +149,6 @@ class __TwigTemplate_4deed14f486fab149d551c74ac7511c6 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  135 => 49,  132 => 48,  123 => 50,  121 => 48,  100 => 38,  94 => 35,  91 => 34,  87 => 33,  74 => 23,  69 => 21,  64 => 19,  59 => 17,  54 => 15,  45 => 9,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
+        return array (  137 => 51,  134 => 50,  125 => 52,  123 => 50,  100 => 38,  94 => 35,  91 => 34,  87 => 33,  74 => 23,  69 => 21,  64 => 19,  59 => 17,  54 => 15,  45 => 9,  41 => 7,  38 => 6,  33 => 4,  30 => 3,);
     }
 }

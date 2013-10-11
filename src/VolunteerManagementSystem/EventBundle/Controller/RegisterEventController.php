@@ -4,7 +4,7 @@ namespace VolunteerManagementSystem\EventBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use VolunteerManagementSystem\EventBundle\Form\EventType;
-use VolunteerManagementSystem\EventBundle\Entity\Event;
+use VolunteerManagementSystem\RegistrationBundle\Entity\User;
 use VolunteerManagementSystem\NotificationBundle\Entity\Notification;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -17,7 +17,7 @@ class RegisterEventController extends Controller
         $em =$this->getDoctrine()->getEntityManager();
         $repository =$em->getRepository('VolunteerManagementSystemEventBundle:Event');
         $repository2 =$em->getRepository('VolunteerManagementSystemRegistrationBundle:User');
-        
+        $user =  $repository2->findOneBy(array('id'=>$id));
         $event = $repository->findOneBy(array('id'=>$eid));
        
         if($event){
@@ -46,8 +46,8 @@ class RegisterEventController extends Controller
         $notification = new Notification;
         
         
-        $notification->setName('Team leader Appointed ');
-        $notification->setDetails('Congratulations! You have been appointed as the Team Leader for the following Event');
+        $notification->setName('New Volunteer');
+        $notification->setDetails($user->getFirstname().' has volunteered to work for your event  :'.$event->getName());
         $notification->setDate(new \DateTime());
         $notification->setUserId($teamleaderid);
         
