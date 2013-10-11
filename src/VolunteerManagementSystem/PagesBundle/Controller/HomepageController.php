@@ -32,6 +32,8 @@ class HomepageController extends Controller
            }
            if($user->getAccessLevel()=='Admin'){
            return $this->render('VolunteerManagementSystemPagesBundle:Homepage:homepageadmin.html.twig', array('id' => $id,'notify'=>$notify));
+           echo "Admin";
+           
            }
            
         }
